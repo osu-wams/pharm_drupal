@@ -1,0 +1,39 @@
+# Application 'collegeofpharmacy', environment 'dev'.
+dev:
+  root: /var/www/html/docroot
+  ac-site: collegeofpharmacy
+  ac-env: dev
+  ac-realm: prod
+  uri: collegeofpharmacydev.prod.acquia-sites.com
+  host: collegeofpharmacydev.ssh.prod.acquia-sites.com
+  user: collegeofpharmacy.dev
+  paths:
+    drush-script: drush9
+
+
+# Application 'collegeofpharmacy', environment 'prod'.
+prod:
+  root: /var/www/html/docroot
+  ac-site: collegeofpharmacy
+  ac-env: prod
+  ac-realm: prod
+  uri: collegeofpharmacyprod.prod.acquia-sites.com
+  host: collegeofpharmacyprod.ssh.prod.acquia-sites.com
+  user: collegeofpharmacy.prod
+  paths:
+    drush-script: drush9
+
+
+# Application 'collegeofpharmacy', environment 'stage'.
+stage:
+  root: /var/www/html/docroot
+  ac-site: collegeofpharmacy
+  ac-env: stage
+  ac-realm: prod
+  uri: collegeofpharmacystage.prod.acquia-sites.com
+  host: collegeofpharmacystage.ssh.prod.acquia-sites.com
+  user: collegeofpharmacy.stage
+  paths:
+    drush-script: drush9
+
+
