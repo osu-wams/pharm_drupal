@@ -1,0 +1,552 @@
+uuid: 40e12e4a-f3e0-49d5-9597-b804027f389e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.three_column_image_box_button
+    - field.field.block_content.three_column_image_box_button.field_image_box_button_content
+    - field.field.block_content.three_column_image_box_button.field_image_box_button_icon
+    - field.field.block_content.three_column_image_box_button.field_image_box_button_image
+    - field.field.block_content.three_column_image_box_button.field_image_box_button_link
+    - field.field.block_content.three_column_image_box_button.field_image_box_button_link_text
+    - field.field.block_content.three_column_image_box_button.field_image_box_button_title
+    - field.field.block_content.three_column_image_box_button.field_image_box_button_title_tag
+    - field.field.block_content.three_column_image_box_button.field_image_box_second_content
+    - field.field.block_content.three_column_image_box_button.field_image_box_second_icon
+    - field.field.block_content.three_column_image_box_button.field_image_box_second_image
+    - field.field.block_content.three_column_image_box_button.field_image_box_second_link
+    - field.field.block_content.three_column_image_box_button.field_image_box_second_link_text
+    - field.field.block_content.three_column_image_box_button.field_image_box_second_title
+    - field.field.block_content.three_column_image_box_button.field_image_box_third_content
+    - field.field.block_content.three_column_image_box_button.field_image_box_third_icon
+    - field.field.block_content.three_column_image_box_button.field_image_box_third_image
+    - field.field.block_content.three_column_image_box_button.field_image_box_third_link
+    - field.field.block_content.three_column_image_box_button.field_image_box_third_link_text
+    - field.field.block_content.three_column_image_box_button.field_image_box_third_title
+    - field.field.block_content.three_column_image_box_button.field_second_title_tag
+    - field.field.block_content.three_column_image_box_button.field_third_title_tag
+  module:
+    - field_group
+    - link
+    - nomarkup
+    - options
+    - sdc_display
+    - text
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+  field_group:
+    group_first_column:
+      children:
+        - field_image_box_button_title
+        - field_image_box_button_title_tag
+        - field_image_box_button_image
+        - field_image_box_button_icon
+        - field_image_box_button_content
+        - field_image_box_button_link
+        - field_image_box_button_link_text
+      label: 'First Column'
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: sdc_display
+      format_settings:
+        sdc_field_group:
+          component:
+            machine_name: 'osu:image-box-button'
+            show_deprecated: 0
+          mappings:
+            static:
+              props:
+                title: ''
+                title_tag: h3
+                button_text: null
+                button_url: null
+              slots:
+                content:
+                  value: ''
+                  format: basic_html
+                image:
+                  value: ''
+                  format: basic_html
+                icon:
+                  value: ''
+                  format: basic_html
+            dynamic:
+              props:
+                title: field_image_box_button_title
+                title_tag: field_image_box_button_title_tag
+                button_text: field_image_box_button_link_text
+                button_url: field_image_box_button_link
+              slots:
+                content:
+                  field_image_box_button_content: field_image_box_button_content
+                  field_image_box_button_title: 0
+                  field_image_box_button_title_tag: 0
+                  field_image_box_button_image: 0
+                  field_image_box_button_icon: 0
+                  field_image_box_button_link: 0
+                  field_image_box_button_link_text: 0
+                image:
+                  field_image_box_button_image: field_image_box_button_image
+                  field_image_box_button_title: 0
+                  field_image_box_button_title_tag: 0
+                  field_image_box_button_icon: 0
+                  field_image_box_button_content: 0
+                  field_image_box_button_link: 0
+                  field_image_box_button_link_text: 0
+                icon:
+                  field_image_box_button_icon: field_image_box_button_icon
+                  field_image_box_button_title: 0
+                  field_image_box_button_title_tag: 0
+                  field_image_box_button_image: 0
+                  field_image_box_button_content: 0
+                  field_image_box_button_link: 0
+                  field_image_box_button_link_text: 0
+        id: ''
+        classes: ''
+        show_empty_fields: 0
+    group_second_column:
+      children:
+        - field_image_box_second_title
+        - field_second_title_tag
+        - field_image_box_second_image
+        - field_image_box_second_icon
+        - field_image_box_second_content
+        - field_image_box_second_link
+        - field_image_box_second_link_text
+      label: 'Second Column'
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: sdc_display
+      format_settings:
+        sdc_field_group:
+          component:
+            machine_name: 'osu:image-box-button'
+            show_deprecated: 0
+          mappings:
+            static:
+              props:
+                title: ''
+                title_tag: h3
+                button_text: null
+                button_url: null
+              slots:
+                content:
+                  value: ''
+                  format: basic_html
+                image:
+                  value: ''
+                  format: basic_html
+                icon:
+                  value: ''
+                  format: basic_html
+            dynamic:
+              props:
+                title: field_image_box_second_title
+                title_tag: field_second_title_tag
+                button_text: field_image_box_second_link_text
+                button_url: field_image_box_second_link
+              slots:
+                content:
+                  field_image_box_second_content: field_image_box_second_content
+                  field_image_box_second_title: 0
+                  field_second_title_tag: 0
+                  field_image_box_second_image: 0
+                  field_image_box_second_icon: 0
+                  field_image_box_second_link: 0
+                  field_image_box_second_link_text: 0
+                image:
+                  field_image_box_second_image: field_image_box_second_image
+                  field_image_box_second_title: 0
+                  field_second_title_tag: 0
+                  field_image_box_second_icon: 0
+                  field_image_box_second_content: 0
+                  field_image_box_second_link: 0
+                  field_image_box_second_link_text: 0
+                icon:
+                  field_image_box_second_icon: field_image_box_second_icon
+                  field_image_box_second_title: 0
+                  field_second_title_tag: 0
+                  field_image_box_second_image: 0
+                  field_image_box_second_content: 0
+                  field_image_box_second_link: 0
+                  field_image_box_second_link_text: 0
+        id: ''
+        classes: ''
+        show_empty_fields: 0
+    group_third_column:
+      children:
+        - field_image_box_third_title
+        - field_third_title_tag
+        - field_image_box_third_image
+        - field_image_box_third_icon
+        - field_image_box_third_content
+        - field_image_box_third_link
+        - field_image_box_third_link_text
+      label: 'Third Column'
+      parent_name: ''
+      region: content
+      weight: 2
+      format_type: sdc_display
+      format_settings:
+        sdc_field_group:
+          component:
+            machine_name: 'osu:image-box-button'
+            show_deprecated: 0
+          mappings:
+            static:
+              props:
+                title: ''
+                title_tag: h3
+                button_text: null
+                button_url: null
+              slots:
+                content:
+                  value: ''
+                  format: basic_html
+                image:
+                  value: ''
+                  format: basic_html
+                icon:
+                  value: ''
+                  format: basic_html
+            dynamic:
+              props:
+                title: field_image_box_third_title
+                title_tag: field_third_title_tag
+                button_text: field_image_box_third_link_text
+                button_url: field_image_box_third_link
+              slots:
+                content:
+                  field_image_box_third_content: field_image_box_third_content
+                  field_image_box_third_title: 0
+                  field_third_title_tag: 0
+                  field_image_box_third_image: 0
+                  field_image_box_third_icon: 0
+                  field_image_box_third_link: 0
+                  field_image_box_third_link_text: 0
+                image:
+                  field_image_box_third_image: field_image_box_third_image
+                  field_image_box_third_title: 0
+                  field_third_title_tag: 0
+                  field_image_box_third_icon: 0
+                  field_image_box_third_content: 0
+                  field_image_box_third_link: 0
+                  field_image_box_third_link_text: 0
+                icon:
+                  field_image_box_third_icon: field_image_box_third_icon
+                  field_image_box_third_title: 0
+                  field_third_title_tag: 0
+                  field_image_box_third_image: 0
+                  field_image_box_third_content: 0
+                  field_image_box_third_link: 0
+                  field_image_box_third_link_text: 0
+        id: ''
+        classes: ''
+        show_empty_fields: 0
+id: block_content.three_column_image_box_button.default
+targetEntityType: block_content
+bundle: three_column_image_box_button
+mode: default
+content:
+  field_image_box_button_content:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_image_box_button_icon:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: small
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: '0'
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 4
+    region: content
+  field_image_box_button_image:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: framed_content_box
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: '1'
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 3
+    region: content
+  field_image_box_button_link:
+    type: link
+    label: visually_hidden
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 6
+    region: content
+  field_image_box_button_link_text:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_image_box_button_title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image_box_button_title_tag:
+    type: list_key
+    label: visually_hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
+    region: content
+  field_image_box_second_content:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_image_box_second_icon:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: small
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: '0'
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 7
+    region: content
+  field_image_box_second_image:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: framed_content_box
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: '1'
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 6
+    region: content
+  field_image_box_second_link:
+    type: link
+    label: visually_hidden
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 9
+    region: content
+  field_image_box_second_link_text:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_image_box_second_title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_image_box_third_content:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_image_box_third_icon:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: small
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: '0'
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 11
+    region: content
+  field_image_box_third_image:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: framed_content_box
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: '1'
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 10
+    region: content
+  field_image_box_third_link:
+    type: link
+    label: visually_hidden
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 13
+    region: content
+  field_image_box_third_link_text:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_image_box_third_title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_second_title_tag:
+    type: list_key
+    label: visually_hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 5
+    region: content
+  field_third_title_tag:
+    type: list_key
+    label: visually_hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 9
+    region: content
+hidden:
+  langcode: true

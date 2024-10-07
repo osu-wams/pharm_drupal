@@ -1,0 +1,8 @@
+uuid: 04b65f43-1d7e-4f18-9b17-9137db42b218
+langcode: en
+status: true
+dependencies: {  }
+id: image_overlay_wide_cta
+label: 'Image Overlay Wide CTA'
+revision: false
+description: 'A wide CTA block with an image to the left that slightly overlaps the background.'

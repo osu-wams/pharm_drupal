@@ -1,0 +1,18 @@
+@import '../../src/utils/variables';
+
+.scroll-to-top {
+  .scroll-to-top__button {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+
+    &::before {
+      content: '';
+      background-image: url('./up-arrow.svg');
+      display: block;
+      width: 34px;
+      height: 34px;
+      margin-right: 10px;
+    }
+  }
+}

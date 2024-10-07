@@ -1,0 +1,15 @@
+uuid: d4f955bf-59e0-4d8d-ae32-7642734eca82
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.faculty
+  module:
+    - osu_computed
+id: node.faculty.computed_faculty_node_url
+field_name: computed_faculty_node_url
+label: 'Node URL'
+entity_type: node
+bundle: faculty
+plugin_id: node_url
+plugin_config: {  }

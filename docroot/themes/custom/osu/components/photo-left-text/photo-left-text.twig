@@ -1,0 +1,15 @@
+{% set classes = [
+  "photo-left-text__image",
+  "flex-1-1",
+  "md-flex-2-5",
+  offset|render|raw == 'Yes' ? "square-corner" : "",
+  circle|render|raw == 'Yes' ? "circle" : "",
+] %}
+<div class="component photo-left-text flex-container md-flex-dir-row flex-dir-column md-flex-jc-space-between md-flex-ai-flex-start">
+  <div {{ attributes.addClass(classes) }}>
+    {% block image %}{% endblock %}
+  </div>
+  <div class="photo-left-text__text flex-1-1 md-flex-3-5">
+    {% block content %}{% endblock %}
+  </div>
+</div>

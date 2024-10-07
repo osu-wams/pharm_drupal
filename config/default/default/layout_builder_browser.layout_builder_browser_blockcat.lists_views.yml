@@ -1,0 +1,8 @@
+uuid: d550a63c-d332-4326-a0ed-abd50e81822d
+langcode: en
+status: true
+dependencies: {  }
+id: lists_views
+label: 'Lists (Views)'
+weight: -9
+opened: false

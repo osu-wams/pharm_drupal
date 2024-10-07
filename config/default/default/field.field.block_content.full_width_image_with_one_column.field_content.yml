@@ -1,0 +1,26 @@
+uuid: e141847f-d8a5-4c02-9c9b-2f1c6046e3ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.full_width_image_with_one_column
+    - field.storage.block_content.field_content
+    - filter.format.basic_html
+    - filter.format.full_html
+  module:
+    - text
+id: block_content.full_width_image_with_one_column.field_content
+field_name: field_content
+entity_type: block_content
+bundle: full_width_image_with_one_column
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+    - full_html
+field_type: text_long

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+wget https://admin:S9QtrdYhzMndE4rGXy6snX7Eg29TmVS@share.codekoa.la/osu.sql
+# Import database
+ddev import-db --file=osu.sql
+# Remove that database
+rm osu.sql

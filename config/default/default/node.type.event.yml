@@ -1,0 +1,18 @@
+uuid: 2d01706b-4e11-4f84-8f51-c40d977fe44d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Event
+type: event
+description: 'Event Calendar Items'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

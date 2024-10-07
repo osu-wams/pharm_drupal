@@ -1,0 +1,45 @@
+uuid: 5242902e-9150-444b-b93a-d39189eb9b25
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - block_class
+    - menu_block
+    - node
+  theme:
+    - osu
+third_party_settings:
+  block_class:
+    classes: stickit
+id: osu_mainnavigation_3
+theme: osu
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Faculty & Staff'
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'main:menu_link_content:eeac8365-91af-4c4a-8c9b-2a7fadfef549'
+  render_parent: false
+  suggestion: main
+  hide_on_nonactive: false
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      faculty: faculty

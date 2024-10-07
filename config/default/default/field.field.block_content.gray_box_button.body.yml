@@ -1,0 +1,24 @@
+uuid: 0fe7b644-13c9-469e-bfc0-ba9cd946b375
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.gray_box_button
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.gray_box_button.body
+field_name: body
+entity_type: block_content
+bundle: gray_box_button
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

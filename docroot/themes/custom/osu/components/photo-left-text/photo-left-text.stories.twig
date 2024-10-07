@@ -1,0 +1,40 @@
+{% stories photo_left_text with { title: 'Components/Photo Left + Text' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: { title: 'Unused', offset: 'No' }
+  } %}
+    {% embed 'osu:photo-left-text' with {
+      'title': title,
+    } %}
+      {% block image %}
+        <img class="sized-image padding-bottom-one md-padding-right-two md-padding-left-one" src="https://placekeanu.com/415/325" alt="Random Keanu Reeves placeholder photo">
+      {% endblock %}
+      {% block content %}
+        <h2 class="color-beaver-orange margin-top-zero">Pharm.D. Students</h2>
+        <p>Coursework during the first two years of the Pharm.D. program focuses on developing students' understanding of the pharmaceutical sciences - the relationship between medicine and the human body. Since scientists discover new drugs every year, understanding the science behind how medicine works help Oregon State students become future-ready pharmacists. First and second-year students also learn about communication and teamwork with other pharmacists and other health care providers. They develop their skills in counseling patients, giving immunizations, performing physical assessments, and making ethical healthcare decisions.</p>
+        <div class="button">Pharm.D. Experience</div>
+        <p class="large">Learn More About the Pharm.D. Experience.</p>
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+  {% story offset with {
+    name: '1. Offset',
+    args: { title: 'Unused', offset: 'Yes'}
+  } %}
+    {% embed 'osu:photo-left-text' with {
+      'title': title,
+    } %}
+      {% block image %}
+        <img class="sized-image padding-bottom-one md-padding-right-two md-padding-left-one square-corner" src="https://placekeanu.com/415/325" alt="Random Keanu Reeves placeholder photo">
+      {% endblock %}
+      {% block content %}
+        <h2 class="color-beaver-orange margin-top-zero">Pharm.D. Students</h2>
+        <p>Coursework during the first two years of the Pharm.D. program focuses on developing students' understanding of the pharmaceutical sciences - the relationship between medicine and the human body. Since scientists discover new drugs every year, understanding the science behind how medicine works help Oregon State students become future-ready pharmacists. First and second-year students also learn about communication and teamwork with other pharmacists and other health care providers. They develop their skills in counseling patients, giving immunizations, performing physical assessments, and making ethical healthcare decisions.</p>
+        <div class="button">Pharm.D. Experience</div>
+        <p class="large">Learn More About the Pharm.D. Experience.</p>
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+{% endstories %}

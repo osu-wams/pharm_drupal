@@ -1,0 +1,13 @@
+uuid: fa7d77a0-6ea1-4efc-824c-0f6ca9de384f
+langcode: en
+status: true
+dependencies: {  }
+id: testimony
+label: Testimony
+description: 'A person giving feedback about a program or other.'
+help: ''
+new_revision: true
+revision_expose: false
+revision_log: false
+name_pattern: ''
+has_canonical: false

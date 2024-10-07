@@ -1,0 +1,83 @@
+{% stories header with { title: 'Components/Header' } %}
+
+    {% story default with {
+        name: '1. Default',
+        args: { }
+    } %}
+        {% embed 'osu:header' with {} %}
+        {% endembed %}
+    {% endstory %}
+
+    {% story header_image with {
+        name: '2. Header Image ',
+        args: {
+            heading: 'About OSU College of Pharmacy',
+            eyebrow_text: 'OSU COLLEGE OF PHARMACY',
+        }
+    } %}
+        {% embed 'osu:header' with {
+            'heading': heading,
+            'eyebrow_text': eyebrow_text,
+        } %}
+            {% block image %}
+                <img src="https://placekeanu.com/1800/800" alt="Random kitten placeholder photo">
+            {% endblock %}
+        {% endembed %}
+    {% endstory %}
+
+    {% story header_image_cta with {
+        name: '3. Header Image with CTA ',
+        args: {
+            heading: 'Pharm.D',
+            eyebrow_text: 'OSU College of Pharmacy.',
+        }
+    } %}
+        {% embed 'osu:header' with {
+            'heading': heading,
+            'eyebrow_text': eyebrow_text,
+        } %}
+            {% block image %}
+                <img src="https://placekeanu.com/1800/800" alt="Random kitten placeholder photo">
+            {% endblock %}
+
+            {% block cta %}
+                <div class="header__cta flex-container">
+                    <div class="lg-flex-8 md-flex-8 flex-12">
+                        <p class="top">Fall Application Deadline</p>
+                        <p class="bottom">June 3, 2024</p>
+                    </div>
+                    <div class="header_cta_button lg-flex-4 md-flex-4 flex-12">
+                        <a href="#">Apply Now</a>
+                    </div>
+                </div>
+            {% endblock %}
+        {% endembed %}
+    {% endstory %}
+
+    {% story video with {
+        name: '4. Header Video',
+        args: {
+            heading: 'Transforming health care, one leader at a time',
+        }
+    } %}
+        {% embed 'osu:header' with {
+            'heading': heading,
+        } %}
+            {% block video %}
+                <video autoplay="autoplay" loop="loop" muted="muted" playsinline="" width="1920" height="1080">
+                  <source src="https://pharmacy.madcollective.com/sites/default/files/2024-07/4074364-hd_1280_720_25fps_0.mp4" type="video/mp4">
+                </video>
+            {% endblock %}
+
+            {% block links %}
+                <div class="header_links">
+                    <a href="#">Start your journey</a>
+                    <a href="#">Why OSU Pharmacy?</a>
+                    <a href="#">Explor your options</a>
+                    <a href="#">Request info or apply</a>
+                </div>
+            {% endblock %}
+        {% endembed %}
+    {% endstory %}
+
+{% endstories %}

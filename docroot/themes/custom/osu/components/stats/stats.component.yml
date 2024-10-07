@@ -1,0 +1,42 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Stats
+description: 'A stats component.'
+status: stable
+props:
+  type: object
+  properties:
+    title_one:
+      type: string
+      title: 'First Section Title'
+      description: 'The title of the first stat section.'
+      examples:
+        - 'Graduation Rates'
+    title_two:
+      type: string
+      title: 'Second Section Title'
+      description: 'The title of the second stat section.'
+      examples:
+        - 'Tests & Exams'
+    title_three:
+      type: string
+      title: 'Third Section Title'
+      description: 'The title of the third stat section.'
+      examples:
+        - 'Residency & Placement'
+
+slots:
+  first_stats:
+    title: First Column of Stats
+    description: 'The text of the first stats.'
+  second_stats:
+    title: Image
+    description: 'The text of the second stats.'
+  third_stats:
+    title: Image
+    description: 'The text of the third stats.'
+  bottom_column_one:
+    title: Image
+    description: 'First column on bottom.'
+  bottom_column_two:
+    title: Image
+    description: 'Second column on bottom.'

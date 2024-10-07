@@ -1,0 +1,23 @@
+uuid: 7ddcedf7-b830-4b43-adeb-d3c229ed5995
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.round_photo_text
+    - field.storage.block_content.field_circle_image
+id: block_content.round_photo_text.field_circle_image
+field_name: field_circle_image
+entity_type: block_content
+bundle: round_photo_text
+label: 'Circle Image?'
+description: 'Make the image a Circle.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

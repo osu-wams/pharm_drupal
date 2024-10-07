@@ -1,0 +1,15 @@
+uuid: 78fce334-350a-431d-9a86-36558210be5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+  module:
+    - osu_computed
+id: node.article.computed_formatted_date
+field_name: computed_formatted_date
+label: 'Formatted Date'
+entity_type: node
+bundle: article
+plugin_id: article_date
+plugin_config: {  }

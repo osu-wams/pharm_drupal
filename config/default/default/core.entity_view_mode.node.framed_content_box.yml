@@ -1,0 +1,11 @@
+uuid: 228d3eb8-2dda-4b7f-bc1c-390de7d45933
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.framed_content_box
+label: 'Framed Content Box'
+description: ''
+targetEntityType: node
+cache: true

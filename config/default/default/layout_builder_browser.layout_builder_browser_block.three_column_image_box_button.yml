@@ -1,0 +1,11 @@
+uuid: cefd76a9-0616-4158-813f-5e2f8ed1dc56
+langcode: en
+status: true
+dependencies: {  }
+id: three_column_image_box_button
+block_id: 'inline_block:three_column_image_box_button'
+category: ctas
+label: 'Three Column Image Box Button'
+image_path: /themes/custom/osu/images/lbb/three-column-image-box-button.png
+image_alt: ''
+weight: -15

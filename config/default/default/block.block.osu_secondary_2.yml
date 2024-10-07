@@ -1,0 +1,42 @@
+uuid: faac2bec-110a-4687-a019-f4b59f948b34
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.secondary
+  module:
+    - block_class
+    - menu_block
+    - system
+  theme:
+    - osu
+third_party_settings:
+  block_class:
+    classes: stickit
+id: osu_secondary_2
+theme: osu
+region: sidebar_first
+weight: -9
+provider: null
+plugin: 'menu_block:secondary'
+settings:
+  id: 'menu_block:secondary'
+  label: Secondary
+  label_display: visible
+  provider: menu_block
+  follow: true
+  follow_parent: child_or_active
+  label_link: false
+  label_type: follow_parent
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'secondary:'
+  render_parent: false
+  suggestion: secondary
+  hide_on_nonactive: true
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/alumni-partners\r\n/alumni-partners/*"

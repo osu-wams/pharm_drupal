@@ -1,0 +1,74 @@
+@import '../../src/utils/variables';
+
+.breadcrumb {
+  padding: 2rem 0 0;
+
+  .breadcrumb__inner {
+    position: relative;
+    max-width: $row-width;
+    margin: 0 auto;
+  }
+
+  ol {
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-left: 1rem;
+    
+    @media screen and (min-width: $md) {
+      padding-left: 2.5rem;
+    }
+
+    @media screen and (min-width: $lg) {
+      margin-block-end: 1rem;
+      padding-left: 50px;
+    }
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      font-family: $body-font-family;
+      font-size: 14px;
+
+      &:not(:last-of-type) {
+        display: none;
+      }
+
+      @media screen and (min-width: $lg) {
+        &:not(:last-of-type) {
+          display: flex;
+        }
+      }
+
+      a {
+        color: $color-crater;
+      }
+
+      &:last-of-type {
+        &::before {
+          content: url('../../images/icons/breadcrumb-arrow-left-stratosphere.svg');
+          width: 1rem;
+        }
+
+        a {
+          color: $color-stratosphere;
+        }
+      }
+
+      &::before {
+        content: url('../../images/icons/breadcrumb-arrow-left.svg');
+        width: 1rem;
+      }
+    }
+
+    a {
+      color: $color-star-canvas;
+    }
+  }
+
+  @media screen and (min-width: 1850px) {
+    padding-left: 2.8rem;
+  }
+}

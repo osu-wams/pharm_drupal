@@ -1,0 +1,27 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Photo Left + Text
+description: 'An image offset to the left with a WYSIWYG text block on the right.'
+status: stable
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: 'Title'
+      description: 'Unused - only to make component work'
+    offset:
+      type: string
+      title: 'Offset'
+      description: 'Whether the image should be offset to show the blue corner box.'
+    circle:
+      type: string
+      title: 'Circle'
+      description: 'Whether the image should be a circle.'
+
+slots:
+  image:
+    title: Image
+    description: 'The image render array to render.'
+  content:
+    title: Content
+    description: 'The renderable content array to render.'

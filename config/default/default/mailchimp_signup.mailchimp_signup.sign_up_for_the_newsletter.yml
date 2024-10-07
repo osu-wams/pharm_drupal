@@ -1,0 +1,63 @@
+uuid: a7c2f20a-0833-4f46-8af2-b1f33e811859
+langcode: en
+status: null
+dependencies: {  }
+id: sign_up_for_the_newsletter
+title: 'Sign Up for the Newsletter'
+mc_lists:
+  5520d91171: 5520d91171
+  1875bf8938: 1875bf8938
+  7758d551a3: '0'
+  57f4904d35: '0'
+  2d0be94b3d: '0'
+  ede769fec3: '0'
+  3375d54d44: '0'
+  3c5ce0ba39: '0'
+  283331a30e: '0'
+  ff131fe322: '0'
+  45ed25782e: '0'
+  1b67712b8d: '0'
+  6336faa301: '0'
+  1e7fe6788c: '0'
+  1e7db63111: '0'
+  87f0114350: '0'
+  e042c9af97: '0'
+  864eaeffc0: '0'
+  876bb37a6c: '0'
+  96c8afe606: '0'
+  ca858127ff: '0'
+  e77d1f0cbc: '0'
+  5f70b363b6: '0'
+  426e0a9cac: '0'
+  98cd6a5cbf: '0'
+  efe7c72914: '0'
+  db293f60b4: '0'
+  53dd1a61cc: '0'
+mode: 1
+mergefields:
+  EMAIL: true
+  FNAME: false
+  LNAME: false
+description: 'Get the latest articles and events for:'
+doublein: false
+send_welcome: null
+include_interest_groups: false
+settings:
+  path: ''
+  submit_button: Submit
+  confirmation_message: 'You have been successfully subscribed.'
+  description: 'Get the latest articles and events for:'
+  destination: ''
+  ajax_submit: false
+  mergefields:
+    EMAIL: "O:8:\"stdClass\":8:{s:3:\"tag\";s:5:\"EMAIL\";s:4:\"name\";O:48:\"Drupal\\Core\\StringTranslation\\TranslatableMarkup\":3:{s:9:\"\0*\0string\";s:13:\"Email Address\";s:12:\"\0*\0arguments\";a:0:{}s:10:\"\0*\0options\";a:0:{}}s:4:\"type\";s:5:\"email\";s:8:\"required\";b:1;s:13:\"default_value\";s:0:\"\";s:6:\"public\";b:1;s:13:\"display_order\";i:1;s:7:\"options\";O:8:\"stdClass\":1:{s:4:\"size\";i:25;}}"
+    FNAME: '0'
+    LNAME: '0'
+  doublein: false
+  include_interest_groups: false
+  safe_interest_groups: false
+  configure_groups: false
+  gdpr_consent: false
+  gdpr_checkbox_label: ''
+  gdpr_consent_required: false
+  tags: ''

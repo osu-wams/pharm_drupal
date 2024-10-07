@@ -1,0 +1,8 @@
+uuid: a634410c-2ab5-4ce1-8b21-10d7b7857d72
+langcode: en
+status: true
+dependencies: {  }
+id: upcoming_events_category_filtere
+label: 'Upcoming Events Category Filtered'
+revision: false
+description: 'List of upcoming events for a given category.'

@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: 02e6719e-eeb4-4368-bde4-d0f6fd9e23cc
+name: 'OSU College of Pharmacy'
+mail: info@codekoalas.com
+slogan: ''
+page:
+  403: ''
+  404: /node/229
+  front: /node/1
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: null

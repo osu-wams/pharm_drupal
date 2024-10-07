@@ -1,0 +1,38 @@
+base:
+  version: VERSION
+  css:
+    component:
+      dist/css/global.css: {  }
+  js:
+    js/menus.js: {  }
+    js/layout-builder.js: { }
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/once
+    - core/drupal.ajax
+
+bootstrap-grid:
+  version: VERSION
+  css:
+    component:
+      dist/css/bootstrap-grid.css: {  }
+
+news-slider:
+  version: VERSION
+  js:
+    js/news-slider.js: {  }
+  dependencies:
+    - core/drupalSettings
+    - osu/slick
+
+slick:
+  version: VERSION
+  css:
+    component:
+      https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css: {}
+  js:
+    https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js: {}
+  dependencies:
+  - core/drupal
+  - core/jquery

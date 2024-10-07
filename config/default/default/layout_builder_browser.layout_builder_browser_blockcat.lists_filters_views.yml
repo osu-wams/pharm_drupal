@@ -1,0 +1,8 @@
+uuid: 6a9b9ddb-ad45-43ae-a202-d67825b52e0f
+langcode: en
+status: true
+dependencies: {  }
+id: lists_filters_views
+label: 'Lists Filters (Views)'
+weight: -8
+opened: false

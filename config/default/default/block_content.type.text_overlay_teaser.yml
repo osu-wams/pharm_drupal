@@ -1,0 +1,8 @@
+uuid: da546b75-7ce2-45ad-9009-73469e94f367
+langcode: en
+status: true
+dependencies: {  }
+id: text_overlay_teaser
+label: 'Text Overlay Teaser'
+revision: false
+description: ''

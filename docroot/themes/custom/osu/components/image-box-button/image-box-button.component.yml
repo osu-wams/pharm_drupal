@@ -1,0 +1,35 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Image Box Button
+description: 'Image background with icon and overlay text and button.'
+status: stable
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: 'Title'
+      description: 'Title of the image box.'
+    title_tag:
+      type: string
+      title: 'Title Tag'
+      description: 'HTML tag to use for the title.'
+      default: h3
+    button_text:
+      type: ['string', 'null']
+      title: 'Button Text'
+      description: 'Text to display on the button.'
+    button_url:
+      type: ['string', 'null']
+      title: 'Button URL'
+      description: 'URL to link to when the button is clicked.'
+
+slots:
+  content:
+    title: Content
+    description: 'The renderable content array to render.'
+  image:
+    title: Image
+    description: 'The renderable image array to render.'
+  icon:
+    title: Icon
+    description: 'The renderable icon array to render.'

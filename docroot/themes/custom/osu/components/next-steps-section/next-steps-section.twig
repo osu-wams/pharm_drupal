@@ -1,0 +1,24 @@
+<div class="next-steps-section">
+  <div class="next-steps-section__intersecting_part">
+    <div class="next-steps-section__intersecting_part__rectangle"></div>
+    <div class="next-steps-section__intersecting_part__icon">
+      {% block icon %}{% endblock %}
+    </div>
+  </div>
+  <div class="next-steps-section__content match-heights">
+    <div class="next-steps-section__content__step_statement">
+      <h5>{{ next_step_statement }}</h5>
+    </div>
+    <div class="next-steps-section__description">
+      {% block next_step_description %}{% endblock %}
+    </div>
+    <div class="two_tertiary_buttons__row-column">
+      <div class="two_tertiary_buttons__link_spacing">
+        {% block link_button_1 %}{% endblock %}
+      </div>
+      <div class="two_tertiary_buttons__row-column">
+        {% block link_button_2 %}{% endblock %}
+      </div>
+    </div>
+  </div>
+</div>

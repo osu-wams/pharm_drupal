@@ -1,0 +1,21 @@
+uuid: f7408912-98b2-4612-8a6c-ca17e6d7e350
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.step_flag
+    - field.storage.block_content.field_img_ovly_wide_cta_bg_color
+  module:
+    - options
+id: block_content.step_flag.field_img_ovly_wide_cta_bg_color
+field_name: field_img_ovly_wide_cta_bg_color
+entity_type: block_content
+bundle: step_flag
+label: 'Flag Color'
+description: 'Select the background color for the flag.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

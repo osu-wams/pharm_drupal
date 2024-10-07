@@ -1,0 +1,29 @@
+uuid: 79875efe-5c0e-490b-b561-05044e9827ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_overlay_wide_cta
+    - field.storage.block_content.field_img_ovly_wide_cta_media
+    - media.type.image
+id: block_content.image_overlay_wide_cta.field_img_ovly_wide_cta_media
+field_name: field_img_ovly_wide_cta_media
+entity_type: block_content
+bundle: image_overlay_wide_cta
+label: Media
+description: 'The image to be displayed next to the content. Preferred aspect ratio of 1:1.25 and size 650x650.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

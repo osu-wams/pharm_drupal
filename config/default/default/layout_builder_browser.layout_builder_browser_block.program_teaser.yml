@@ -1,0 +1,11 @@
+uuid: 08d21b7a-8d05-40c1-bc64-b88f14324be3
+langcode: en
+status: true
+dependencies: {  }
+id: program_teaser
+block_id: 'inline_block:program_teaser'
+category: ctas
+label: 'Program Teaser'
+image_path: /themes/custom/osu/images/lbb/text-overlay-teaser.png
+image_alt: ''
+weight: -4

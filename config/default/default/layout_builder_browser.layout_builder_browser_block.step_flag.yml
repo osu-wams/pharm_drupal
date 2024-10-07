@@ -1,0 +1,11 @@
+uuid: 171205c5-ea21-48f4-b61d-af5bd2130e7e
+langcode: en
+status: true
+dependencies: {  }
+id: step_flag
+block_id: 'inline_block:step_flag'
+category: text
+label: 'Step Flag'
+image_path: /themes/custom/osu/images/lbb/step-flag.png
+image_alt: ''
+weight: -100

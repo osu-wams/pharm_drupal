@@ -1,0 +1,18 @@
+uuid: 9b475fdd-3950-4c55-9942-ee47e3b49bdd
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Instagram Post'
+type: instagram_post
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

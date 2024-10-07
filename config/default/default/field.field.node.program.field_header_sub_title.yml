@@ -1,0 +1,19 @@
+uuid: ff3cc7f1-2dc3-4c89-8d03-0e169c795f85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_sub_title
+    - node.type.program
+id: node.program.field_header_sub_title
+field_name: field_header_sub_title
+entity_type: node
+bundle: program
+label: 'Header Sub Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

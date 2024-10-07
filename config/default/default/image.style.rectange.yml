@@ -1,0 +1,15 @@
+uuid: d3bc6982-0ad7-4f14-934f-e5e3d9e538e9
+langcode: en
+status: true
+dependencies: {  }
+name: rectange
+label: 'Rectange (412x300)'
+effects:
+  6b6488bf-2fec-49c3-9abd-9f0c2689064e:
+    uuid: 6b6488bf-2fec-49c3-9abd-9f0c2689064e
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 412
+      height: 300
+      anchor: center-center

@@ -1,0 +1,22 @@
+uuid: d210f3fe-a611-4172-8686-cf5ca5d1340c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: alumni
+label: Alumni
+type: 'canonical_entities:node'
+pattern: 'alumni/[node:title]'
+selection_criteria:
+  814bdd8b-8679-4eef-bba4-4a9a4f7e57f5:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 814bdd8b-8679-4eef-bba4-4a9a4f7e57f5
+    context_mapping:
+      node: node
+    bundles:
+      alumni: alumni
+selection_logic: and
+weight: -5
+relationships: {  }

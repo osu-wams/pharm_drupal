@@ -1,0 +1,45 @@
+uuid: 8b94b910-063f-4a96-9414-add9edc88e2e
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.article_card
+    - field.field.node.event.body
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_link
+    - field.field.node.event.field_event_location
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_header_image
+    - field.field.node.event.field_image
+    - field.field.node.event.field_meta_tags
+    - node.type.event
+  module:
+    - user
+id: node.event.article_card
+targetEntityType: node
+bundle: event
+mode: article_card
+content:
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: article_card
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
+  field_event_date: true
+  field_event_link: true
+  field_event_location: true
+  field_event_type: true
+  field_header_image: true
+  field_meta_tags: true
+  langcode: true

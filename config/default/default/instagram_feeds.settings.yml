@@ -1,0 +1,19 @@
+client_id: '713228704238243'
+client_secret: 499c86a344fa0e9c475cfed0a8a8a0ca
+refresh_frequency: '2592000'
+avatar_uri_scheme: public
+avatar_directory: instagram_avatars
+default_media_bundle: instagram_image
+default_video_bundle: instagram_video
+default_create_post_displays: '1'
+default_post_display_bundle: instagram_post
+default_display_media_field: field_instagram_media
+mapping:
+  image:
+    name: '[instagram-post:media_type]-[instagram-post:id]'
+  instagram_image:
+    name: '[instagram-post:media_type]-[instagram-post:id]'
+  instagram_video:
+    name: '[instagram-post:media_type]-[instagram-post:id]'
+  video:
+    name: '[instagram-post:media_type]-[instagram-post:id]'

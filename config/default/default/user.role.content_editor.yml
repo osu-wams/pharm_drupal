@@ -1,0 +1,285 @@
+uuid: f32a5774-cf5c-4725-87ef-267dbdf69c07
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.back_to_top
+    - block_content.type.basic
+    - block_content.type.four_column_card_with_background
+    - block_content.type.full_image_w_two_column_overlay
+    - block_content.type.full_image_with_text_box_overlay
+    - block_content.type.image_box_button
+    - block_content.type.image_overlay_wide_cta
+    - block_content.type.latest_news_events
+    - block_content.type.next_step
+    - block_content.type.offset_image_cta
+    - block_content.type.photo_text
+    - block_content.type.step_flag
+    - block_content.type.testimonials
+    - core.entity_view_display.node.page.default
+    - core.entity_view_display.node.program.default
+    - filter.format.full_html
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.alumni
+    - node.type.article
+    - node.type.campus
+    - node.type.event
+    - node.type.faculty
+    - node.type.page
+    - node.type.program
+    - node.type.webform
+    - storage.storage_type.testimony
+    - taxonomy.vocabulary.event_type
+    - taxonomy.vocabulary.news_category
+    - taxonomy.vocabulary.research_topics
+    - taxonomy.vocabulary.tags
+    - workflows.workflow.editorial
+  module:
+    - block_content
+    - captcha
+    - coffee
+    - content_moderation
+    - contextual
+    - file
+    - filter
+    - layout_builder
+    - media
+    - menu_link_attributes
+    - node
+    - path
+    - smart_date_recur
+    - storage
+    - system
+    - taxonomy
+    - toolbar
+_core:
+  default_config_hash: e_wG1u7SrGaJbY2-Szgbgl-c8T3kdirU3uTNq2c_QJQ
+id: content_editor
+label: 'Content editor'
+weight: -8
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access block library'
+  - 'access coffee'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access storage overview'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'add storage entities'
+  - 'add testimony storage entities'
+  - 'administer url aliases'
+  - 'cancel smart date recur instances'
+  - 'configure editable page node layout overrides'
+  - 'configure editable program node layout overrides'
+  - 'create alumni content'
+  - 'create and edit custom blocks'
+  - 'create article content'
+  - 'create audio media'
+  - 'create back_to_top block content'
+  - 'create basic block content'
+  - 'create campus content'
+  - 'create document media'
+  - 'create event content'
+  - 'create faculty content'
+  - 'create four_column_card_with_background block content'
+  - 'create full_image_w_two_column_overlay block content'
+  - 'create full_image_with_text_box_overlay block content'
+  - 'create image media'
+  - 'create image_box_button block content'
+  - 'create image_overlay_wide_cta block content'
+  - 'create latest_news_events block content'
+  - 'create media'
+  - 'create next_step block content'
+  - 'create offset_image_cta block content'
+  - 'create page content'
+  - 'create photo_text block content'
+  - 'create program content'
+  - 'create remote_video media'
+  - 'create step_flag block content'
+  - 'create terms in event_type'
+  - 'create terms in news_category'
+  - 'create terms in research_topics'
+  - 'create terms in tags'
+  - 'create testimonials block content'
+  - 'create url aliases'
+  - 'create video media'
+  - 'create webform content'
+  - 'delete any audio media'
+  - 'delete any audio media revisions'
+  - 'delete any back_to_top block content'
+  - 'delete any back_to_top block content revisions'
+  - 'delete any basic block content'
+  - 'delete any basic block content revisions'
+  - 'delete any document media'
+  - 'delete any document media revisions'
+  - 'delete any four_column_card_with_background block content'
+  - 'delete any four_column_card_with_background block content revisions'
+  - 'delete any full_image_w_two_column_overlay block content'
+  - 'delete any full_image_w_two_column_overlay block content revisions'
+  - 'delete any full_image_with_text_box_overlay block content'
+  - 'delete any full_image_with_text_box_overlay block content revisions'
+  - 'delete any image media'
+  - 'delete any image media revisions'
+  - 'delete any image_box_button block content'
+  - 'delete any image_box_button block content revisions'
+  - 'delete any image_overlay_wide_cta block content'
+  - 'delete any image_overlay_wide_cta block content revisions'
+  - 'delete any latest_news_events block content'
+  - 'delete any latest_news_events block content revisions'
+  - 'delete any media'
+  - 'delete any next_step block content'
+  - 'delete any next_step block content revisions'
+  - 'delete any offset_image_cta block content'
+  - 'delete any offset_image_cta block content revisions'
+  - 'delete any photo_text block content'
+  - 'delete any photo_text block content revisions'
+  - 'delete any remote_video media'
+  - 'delete any remote_video media revisions'
+  - 'delete any step_flag block content'
+  - 'delete any step_flag block content revisions'
+  - 'delete any testimonials block content'
+  - 'delete any testimonials block content revisions'
+  - 'delete any video media'
+  - 'delete any video media revisions'
+  - 'delete media'
+  - 'delete own alumni content'
+  - 'delete own audio media'
+  - 'delete own campus content'
+  - 'delete own document media'
+  - 'delete own event content'
+  - 'delete own faculty content'
+  - 'delete own files'
+  - 'delete own image media'
+  - 'delete own page content'
+  - 'delete own program content'
+  - 'delete own remote_video media'
+  - 'delete own storage entities'
+  - 'delete own testimony storage entities'
+  - 'delete own video media'
+  - 'delete own webform content'
+  - 'delete terms in event_type'
+  - 'delete terms in news_category'
+  - 'delete terms in research_topics'
+  - 'delete terms in tags'
+  - 'edit any audio media'
+  - 'edit any back_to_top block content'
+  - 'edit any basic block content'
+  - 'edit any document media'
+  - 'edit any four_column_card_with_background block content'
+  - 'edit any full_image_w_two_column_overlay block content'
+  - 'edit any full_image_with_text_box_overlay block content'
+  - 'edit any image media'
+  - 'edit any image_box_button block content'
+  - 'edit any image_overlay_wide_cta block content'
+  - 'edit any latest_news_events block content'
+  - 'edit any next_step block content'
+  - 'edit any offset_image_cta block content'
+  - 'edit any photo_text block content'
+  - 'edit any remote_video media'
+  - 'edit any step_flag block content'
+  - 'edit any testimonials block content'
+  - 'edit any video media'
+  - 'edit own alumni content'
+  - 'edit own article content'
+  - 'edit own audio media'
+  - 'edit own campus content'
+  - 'edit own document media'
+  - 'edit own event content'
+  - 'edit own faculty content'
+  - 'edit own image media'
+  - 'edit own page content'
+  - 'edit own program content'
+  - 'edit own remote_video media'
+  - 'edit own storage entities'
+  - 'edit own testimony storage entities'
+  - 'edit own video media'
+  - 'edit own webform content'
+  - 'edit terms in event_type'
+  - 'edit terms in news_category'
+  - 'edit terms in research_topics'
+  - 'edit terms in tags'
+  - 'make smart dates recur'
+  - 'reschedule smart date recur instances'
+  - 'revert all revisions'
+  - 'revert alumni revisions'
+  - 'revert any audio media revisions'
+  - 'revert any back_to_top block content revisions'
+  - 'revert any basic block content revisions'
+  - 'revert any document media revisions'
+  - 'revert any four_column_card_with_background block content revisions'
+  - 'revert any full_image_w_two_column_overlay block content revisions'
+  - 'revert any full_image_with_text_box_overlay block content revisions'
+  - 'revert any image media revisions'
+  - 'revert any image_box_button block content revisions'
+  - 'revert any image_overlay_wide_cta block content revisions'
+  - 'revert any latest_news_events block content revisions'
+  - 'revert any next_step block content revisions'
+  - 'revert any offset_image_cta block content revisions'
+  - 'revert any photo_text block content revisions'
+  - 'revert any remote_video media revisions'
+  - 'revert any step_flag block content revisions'
+  - 'revert any testimonials block content revisions'
+  - 'revert any video media revisions'
+  - 'revert article revisions'
+  - 'revert campus revisions'
+  - 'revert event revisions'
+  - 'revert faculty revisions'
+  - 'revert page revisions'
+  - 'revert program revisions'
+  - 'revert testimony storage revisions'
+  - 'revert webform revisions'
+  - 'skip CAPTCHA'
+  - 'update any media'
+  - 'update media'
+  - 'use editorial transition create_new_draft'
+  - 'use menu link attributes'
+  - 'use text format full_html'
+  - 'view all revisions'
+  - 'view all storage revisions'
+  - 'view alumni revisions'
+  - 'view any audio media revisions'
+  - 'view any back_to_top block content history'
+  - 'view any basic block content history'
+  - 'view any document media revisions'
+  - 'view any four_column_card_with_background block content history'
+  - 'view any full_image_w_two_column_overlay block content history'
+  - 'view any full_image_with_text_box_overlay block content history'
+  - 'view any image media revisions'
+  - 'view any image_box_button block content history'
+  - 'view any image_overlay_wide_cta block content history'
+  - 'view any latest_news_events block content history'
+  - 'view any next_step block content history'
+  - 'view any offset_image_cta block content history'
+  - 'view any photo_text block content history'
+  - 'view any remote_video media revisions'
+  - 'view any step_flag block content history'
+  - 'view any testimonials block content history'
+  - 'view any unpublished content'
+  - 'view any video media revisions'
+  - 'view article revisions'
+  - 'view campus revisions'
+  - 'view event revisions'
+  - 'view faculty revisions'
+  - 'view latest version'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view own unpublished storage entities'
+  - 'view own unpublished testimony storage entities'
+  - 'view page revisions'
+  - 'view program revisions'
+  - 'view published storage entities'
+  - 'view published testimony storage entities'
+  - 'view testimony storage revisions'
+  - 'view the administration theme'
+  - 'view unpublished storage entities'
+  - 'view webform revisions'

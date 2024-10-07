@@ -1,0 +1,15 @@
+uuid: f1ae1364-082b-47ea-a046-e855a256f0dd
+langcode: en
+status: true
+dependencies: {  }
+name: small_300x300
+label: 'Small (300x300)'
+effects:
+  60184898-9b05-45de-9727-349450eaf86a:
+    uuid: 60184898-9b05-45de-9727-349450eaf86a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 300
+      anchor: center-center

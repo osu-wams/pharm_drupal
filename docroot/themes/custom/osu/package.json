@@ -1,0 +1,34 @@
+{
+  "name": "osu",
+  "version": "1.0.0",
+  "description": "Compile some sass and lint things",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:js": "eslint .",
+    "lint:scss": "npx stylelint '**/*.scss'",
+    "lint": "npm run lint:js && npm run lint:scss",
+    "build": "gulp",
+    "watch": "gulp watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "breakpoint-sass": "^3.0.0",
+    "eslint": "^8.52.0",
+    "gulp": "^4.0.2",
+    "gulp-eslint": "^6.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sass-lint": "^1.4.0",
+    "koality-flexbox-grid": "^1.0.6",
+    "stylelint": "^15.11.0",
+    "stylelint-scss": "^5.2.1",
+    "stylelint-selector-bem-pattern": "^3.0.1"
+  },
+  "devDependencies": {
+    "gulp-stylelint": "^13.0.0",
+    "stylelint-config-sass-guidelines": "^10.0.0",
+    "stylelint-config-standard-scss": "^11.0.0"
+  }
+}

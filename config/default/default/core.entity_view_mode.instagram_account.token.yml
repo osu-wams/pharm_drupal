@@ -1,0 +1,11 @@
+uuid: 14b8fd15-a747-4e86-8c2a-43011efd5c4e
+langcode: en
+status: true
+dependencies:
+  module:
+    - instagram_feeds
+id: instagram_account.token
+label: Token
+description: ''
+targetEntityType: instagram_account
+cache: true

@@ -1,0 +1,21 @@
+uuid: 38e896b7-6502-4a3c-b9c5-7168959a5860
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_overlay_wide_cta
+    - field.storage.block_content.field_img_ovly_wide_cta_bg_color
+  module:
+    - options
+id: block_content.image_overlay_wide_cta.field_img_ovly_wide_cta_bg_color
+field_name: field_img_ovly_wide_cta_bg_color
+entity_type: block_content
+bundle: image_overlay_wide_cta
+label: 'Background Color'
+description: 'Select the background color for the component.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

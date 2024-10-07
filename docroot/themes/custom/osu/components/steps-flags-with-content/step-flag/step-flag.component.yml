@@ -1,0 +1,26 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Step Flag
+description: 'A "Step" component with a flag and some content.'
+status: stable
+props:
+  type: object
+  properties:
+    flag_text:
+      type: string
+      title: 'Text'
+      description: 'The text within the flag.'
+    flag_color_class:
+      type: string
+      title: 'Color Class'
+      description: 'The color class to apply to the flag.'
+    flag_classes:
+      type: array
+      title: 'Classes'
+      description: 'Additional classes to apply to the flag.'
+      items:
+        type: string
+
+slots:
+  content:
+    title: Content
+    description: 'The renderable content array to render.'

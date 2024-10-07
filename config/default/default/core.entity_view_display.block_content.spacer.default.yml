@@ -1,0 +1,100 @@
+uuid: f9fc9107-c88e-480c-bd48-459dfe48bb39
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.spacer
+    - field.field.block_content.spacer.field_spacer_desktop_padding
+    - field.field.block_content.spacer.field_spacer_lg_desktop_padding
+    - field.field.block_content.spacer.field_spacer_mobile_padding
+    - field.field.block_content.spacer.field_spacer_tablet_padding
+  module:
+    - nomarkup
+    - sdc_display
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: block_content.spacer.default
+targetEntityType: block_content
+bundle: spacer
+mode: default
+content:
+  field_spacer_desktop_padding:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
+    region: content
+  field_spacer_lg_desktop_padding:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 3
+    region: content
+  field_spacer_mobile_padding:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 0
+    region: content
+  field_spacer_tablet_padding:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 1
+    region: content
+hidden:
+  langcode: true

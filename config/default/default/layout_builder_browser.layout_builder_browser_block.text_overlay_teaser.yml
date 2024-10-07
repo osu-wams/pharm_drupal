@@ -1,0 +1,11 @@
+uuid: a9762c9c-22a1-4a78-a635-039ea523eb3e
+langcode: en
+status: true
+dependencies: {  }
+id: text_overlay_teaser
+block_id: 'inline_block:text_overlay_teaser'
+category: ctas
+label: 'Text Overlay Teaser'
+image_path: /themes/custom/osu/images/lbb/text-overlay-teaser.png
+image_alt: ''
+weight: -3

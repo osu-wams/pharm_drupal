@@ -1,0 +1,28 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Department/Contact Information Card - Basic
+description: 'An horizontal style "card" that displays some contact information.'
+status: stable
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: 'Title'
+      description: 'Contact info title.'
+    secondary_title:
+      type: string
+      title: 'Secondary Title'
+      description: 'Contact info secondary title.'
+    email:
+      type: string
+      title: 'Email'
+      description: 'Contact info email.'
+    phone:
+      type: string
+      title: 'Phone'
+      description: 'Contact info phone.'
+
+slots:
+  image:
+    title: Image
+    description: 'The image render array to render.'

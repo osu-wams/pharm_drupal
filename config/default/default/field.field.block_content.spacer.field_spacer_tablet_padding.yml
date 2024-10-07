@@ -1,0 +1,19 @@
+uuid: 6ef5e752-836c-45f8-8875-edfc714d8ec1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.spacer
+    - field.storage.block_content.field_spacer_tablet_padding
+id: block_content.spacer.field_spacer_tablet_padding
+field_name: field_spacer_tablet_padding
+entity_type: block_content
+bundle: spacer
+label: 'Tablet Padding'
+description: 'How much padding should there be at screen size between 767px and 1025px? (Leaving empty will mean 0)'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

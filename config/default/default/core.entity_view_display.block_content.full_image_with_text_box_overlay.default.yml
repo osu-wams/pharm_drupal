@@ -1,0 +1,178 @@
+uuid: ba8dd3e7-61c5-404d-870f-8e0c10fb0488
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.full_image_with_text_box_overlay
+    - field.field.block_content.full_image_with_text_box_overlay.field_body
+    - field.field.block_content.full_image_with_text_box_overlay.field_header
+    - field.field.block_content.full_image_with_text_box_overlay.field_image
+    - field.field.block_content.full_image_with_text_box_overlay.field_link
+    - field.field.block_content.full_image_with_text_box_overlay.field_secondary_link
+    - field.field.block_content.full_image_with_text_box_overlay.field_title_tag
+  module:
+    - link
+    - nomarkup
+    - options
+    - sdc_display
+    - text
+third_party_settings:
+  sdc_display:
+    enabled: true
+    component:
+      machine_name: 'osu:full-width-image-with-text-box-overlay'
+      show_deprecated: null
+    mappings:
+      static:
+        props:
+          title: ''
+          title_tag: h2
+        slots:
+          content:
+            value: ''
+            format: basic_html
+          image:
+            value: ''
+            format: basic_html
+          button:
+            value: ''
+            format: basic_html
+          secondary_button:
+            value: ''
+            format: basic_html
+      dynamic:
+        props:
+          title: field_header
+          title_tag: field_title_tag
+        slots:
+          content:
+            field_body: field_body
+          image:
+            field_image: field_image
+          button:
+            field_link: field_link
+          secondary_button:
+            field_secondary_link: field_secondary_link
+id: block_content.full_image_with_text_box_overlay.default
+targetEntityType: block_content
+bundle: full_image_with_text_box_overlay
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_header:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 0
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: full_width_with_overlay
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: '0'
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: ''
+        referenced_entity: ''
+      sdc_display:
+        enabled: '1'
+        component:
+          machine_name: 'osu:button'
+          show_deprecated: 0
+        mappings:
+          static:
+            props:
+              link_href: ''
+              link_text: ''
+              class: secondary
+          dynamic:
+            mapped: link_href
+    weight: 4
+    region: content
+  field_secondary_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: ''
+        referenced_entity: ''
+      sdc_display:
+        enabled: '1'
+        component:
+          machine_name: 'osu:button'
+          show_deprecated: 0
+        mappings:
+          static:
+            props:
+              link_href: ''
+              link_text: ''
+              class: tertiary
+          dynamic:
+            mapped: link_href
+    weight: 5
+    region: content
+  field_title_tag:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 1
+    region: content
+hidden:
+  langcode: true

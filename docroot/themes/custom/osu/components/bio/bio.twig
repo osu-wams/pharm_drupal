@@ -1,0 +1,68 @@
+<div class="bio">
+  <div class="bio__grid">
+    <div class="bio__image">
+      {{ image }}
+    </div>
+    <h3 class="bio__title">
+      {{ title }}
+    </h3>
+    <div class="bio__position">
+      {{ position }}
+    </div>
+    <div class="bio__bio">
+      {% block body %}{% endblock %}
+    </div>
+    <div class="bio__contact-title">
+      Contact
+    </div>
+    <div class="bio__contact">
+      <div class="bio__contact-email">
+        {% if email %}
+          <a href="mailto:{{ email }}">
+            <span class="icon-link email-icon">
+              <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.793 0.75C13.5039 0.75 14.1055 1.35156 14.1055 2.0625C14.1055 2.5 13.8867 2.88281 13.5586 3.12891L7.625 7.58594C7.29688 7.83203 6.88672 7.83203 6.55859 7.58594L0.625 3.12891C0.296875 2.88281 0.105469 2.5 0.105469 2.0625C0.105469 1.35156 0.679688 0.75 1.41797 0.75H12.793ZM6.03906 8.29688C6.66797 8.76172 7.51562 8.76172 8.14453 8.29688L14.1055 3.8125V9.5C14.1055 10.4844 13.3125 11.25 12.3555 11.25H1.85547C0.871094 11.25 0.105469 10.4844 0.105469 9.5V3.8125L6.03906 8.29688Z" fill="#003B5C"/>
+              </svg>
+              {{ email }}
+            </span>
+          </a>
+        </div>
+      {% endif %}
+      <div class="bio__contact-phone">
+        {% if phone %}
+          <a href="tel:{{ phone }}">
+            <span class="icon-link phone-icon">
+              <svg width="12" height="17" viewBox="0 0 12 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.60547 0.5C10.6992 0.5 11.6055 1.40625 11.6055 2.5V14.5C11.6055 15.625 10.6992 16.5 9.60547 16.5H2.60547C1.48047 16.5 0.605469 15.625 0.605469 14.5V2.5C0.605469 1.40625 1.48047 0.5 2.60547 0.5H9.60547ZM6.10547 15.5C6.63672 15.5 7.10547 15.0625 7.10547 14.5C7.10547 13.9688 6.63672 13.5 6.10547 13.5C5.54297 13.5 5.10547 13.9688 5.10547 14.5C5.10547 15.0625 5.54297 15.5 6.10547 15.5ZM9.60547 2.5H2.60547V12.5H9.60547V2.5Z" fill="#003B5C"/>
+              </svg>
+              {{ phone }}
+            </span>
+          </a>
+        {% endif %}
+        </div>
+    </div>
+    <div class="bio__location">
+      {% if location %}
+        <div class="icon-link location-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.25 17.6367C7.625 15.6055 4 10.7617 4 8.01172C4 4.69922 6.65625 2.01172 10 2.01172C13.3125 2.01172 16 4.69922 16 8.01172C16 10.7617 12.3438 15.6055 10.7188 17.6367C10.3438 18.1055 9.625 18.1055 9.25 17.6367ZM10 10.0117C11.0938 10.0117 12 9.13672 12 8.01172C12 6.91797 11.0938 6.01172 10 6.01172C8.875 6.01172 8 6.91797 8 8.01172C8 9.13672 8.875 10.0117 10 10.0117Z" fill="#003B5C"/>
+          </svg>
+        </div>
+        <div class="bio__location-data">
+          <div class="bio__location-location">
+            {{ location }}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+    <div class="bio__research-topics-title">Research Topics & Highlights</div>
+    <div class="bio__research-topics">
+      <div>
+        {% block research_topics %}{% endblock %}
+      </div>
+    </div>
+    <div class="bio__research-highlights">
+      {% block research_highlights %}{% endblock %}
+    </div>
+  </div>
+</div>

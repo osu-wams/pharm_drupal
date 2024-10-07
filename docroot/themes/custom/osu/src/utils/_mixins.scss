@@ -1,0 +1,133 @@
+@import '../../src/utils/variables';
+
+%bust-out {
+  margin: {
+    left: calc(50% - 50vw);
+    right: calc(50% - 50vw);
+  }
+
+  transform: translateX(calc(50vw - 50%));
+}
+
+@mixin bust-out($margin-right: null, $margin-left: $margin-right, $aspect-ratio: null) {
+  @extend %bust-out !optional; // sass-lint:disable-line no-extends
+}
+
+%button {
+  background-color: $button-color;
+  border-radius: 0;
+  display: inline-block;
+  padding: $button-padding;
+  color: $button-font-color;
+  text-decoration: none;
+  font-family: $body-font-family;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  @media (min-width: $header-font-breakpoint) {
+    font-size: $body-font-size;
+  }
+
+  &:not(.tertiary) + .tertiary {
+    margin-left: 1rem;
+  }
+
+  &.outline {
+    border: 1px solid $color-crater;
+    color: $color-black;
+    background-color: $color-white;
+  }
+
+  &:hover {
+    text-decoration: none;
+    display: inline-block;
+    color: $color-white;
+    background-color: $color-stratosphere;
+    border-color: $color-stratosphere;
+  }
+
+  &.secondary {
+    background-color: $color-beaver-orange;
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-beaver-orange-hover;
+    }
+  }
+
+  &.tertiary {
+    background-color: transparent;
+    border-bottom: 2px solid $color-stratosphere;
+    color: $color-stratosphere;
+    display: inline;
+    line-height: 2;
+    padding: 5px 32px 5px 0 !important; // sass-lint:disable-line no-important
+    position: relative;
+    margin-right: 10px;
+    text-align: left;
+    text-transform: unset;
+    transition: border 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: transparent;
+      color: $color-star-canvas;
+      border-bottom: 2px solid $color-star-canvas;
+    }
+
+    .icon-nowrap {
+      white-space: nowrap;
+
+      &::after {
+        content: url('../../images/icons/link-arrow.svg');
+        height: 20px;
+        width: 20px;
+        display: inline-block;
+        position: absolute;
+        bottom: 7px;
+        margin-left: 6px;
+        margin-right: -30px;
+  
+        @media screen and (min-width: $lg) {
+          bottom: 10px;
+        }
+      }
+    }
+
+    &.nowrap {
+      margin-left: 0;
+      white-space: nowrap;
+
+      @media screen and (min-width: $md) {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  a {
+    display: inline-block;
+    color: $color-white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+%button-outline {
+  border: 1px solid $color-crater;
+  color: $color-black;
+  background-color: $color-white;
+}
+
+// %button-hover {
+//   text-decoration: none;
+//   display: inline-block;
+//   color: $button-color;
+//   background-color: $color-white;
+//   border: 1px solid $color-;
+//   min-height: 40px;
+// }

@@ -1,0 +1,52 @@
+{% if date %}
+  {% set classes = [
+    "with-date",
+    "article__header"
+  ] %}
+{% else %}
+  {% set classes = [
+    "article__header"
+  ]
+  %}
+{% endif %}
+<div class="article">
+  <div class="article__inner">
+    <div class="article__image">
+      {% block image %}{% endblock %}
+    </div>
+    <div class="article__title">
+      <h1>{{ title }}</h1>
+    </div>
+    <div class="article__body">
+      <div{{ attributes.addClass(classes) }}>
+        {% if date %}
+          <div class="article__date">
+            {{ date }}
+          </div>
+        {% endif %}
+        {% if tags %}
+          <div class="article__category-tags">
+          {% block tags %}{% endblock %}
+          </div>
+        {% endif %}
+      </div>
+
+      {% block body %}{% endblock %}
+      {% if when %}
+      <div class="article__when">
+        <b>{{ 'When'|t }}:</b> {{ when }}
+      </div>
+      {% endif %}
+      {% if where %}
+      <div class="article__where">
+        <b>{{ 'Where'|t }}:</b> {{ where }}
+      </div>
+      {% endif %}
+      {% if register_details %}
+      <div class="article__link">
+        {% block register_details %}{% endblock %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

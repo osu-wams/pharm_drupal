@@ -1,0 +1,148 @@
+@import '../../src/utils/variables';
+
+.framed-content-box {
+  background-color: $color-gray;
+  margin: 0 auto;
+  width: 90%;
+
+  @media screen and (min-width: $md) {
+    width: 100%;
+    margin: 0;
+  }
+
+  .framed-content-box__image {
+    position: relative;
+
+    img {
+      width: 100%;
+      min-height: 106px;
+      max-height: 138px;
+      object-fit: cover;
+
+      @media screen and (min-width: $md) {
+        min-height: 217px;
+        max-height: unset;
+      }
+    }
+
+    .overlay {
+      background: rgb(0,0,0);
+      background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 100%);
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      @media screen and (min-width: $md) {
+        display: none;
+      }
+    }
+  }
+
+  .framed-content-box__info {
+    padding: 2rem;
+
+    .framed-content-box__name {
+      color: $color-beaver-orange;
+
+      h2,
+      h3,
+      h4 {
+        margin: 0 0 1rem;
+      }
+
+      h2 {
+        font-size: 22px;
+        font-weight: 400;
+
+        @media screen and (min-width: $md) {
+          font-size: 32px;
+        }
+      }
+    }
+
+    .framed-content__body {
+      color: $color-dark-body-text;
+    }
+
+    .framed-content-box__deadline {
+      .framed-content-box__deadline-date {
+        font-weight: $bold-font-weight;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .address {
+      margin: 1rem 0 0;
+
+      br {
+        display: none;
+      }
+
+      span {
+        display: inline-block;
+      }
+
+      .organization::after,
+      .address-line1::after {
+        content: ', ';
+      }
+
+      .country {
+        display: none;
+      }
+    }
+
+    .framed-content-box__buttons {
+      color: $color-beaver-orange;
+      flex-wrap: wrap;
+
+      @media screen and (min-width: $md) {
+        margin-top: 1rem;
+      }
+
+      @media screen and (min-width: $xl) {
+        flex-wrap: nowrap;
+      }
+    }
+
+    .framed-content-box__row-column {
+      display: flex;
+      flex-direction: column;
+
+      .button {
+        margin-top: 0;
+
+        &.tertiary {
+          padding-top: 0;
+        }
+      }
+    }
+
+    @media screen and (min-width: $sm) {
+      .framed-content-box__row-column {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+
+    .framed-content-box__link_spacing {
+      flex: 0 1 80%;
+      padding: 1rem 1rem 1rem 0;
+
+      @media screen and (min-width: $md) {
+        padding: 0 1rem 0 0;
+        
+      }
+
+      @media screen and (min-width: $xxl) {
+        flex: 0 1 65%;
+      }
+    }
+  }
+}

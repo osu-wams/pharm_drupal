@@ -1,0 +1,23 @@
+uuid: 2eed9aa0-93c5-48e3-92c5-1a7efe2ebcc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_header_cta
+    - node.type.article
+id: node.article.field_show_header_cta
+field_name: field_show_header_cta
+entity_type: node
+bundle: article
+label: 'Show Header CTA'
+description: 'If enabled the header will have a CTA showing over it.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

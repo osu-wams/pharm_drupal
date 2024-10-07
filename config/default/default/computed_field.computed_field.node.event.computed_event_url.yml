@@ -1,0 +1,15 @@
+uuid: 9f11b278-c437-4db5-98c4-97fa731b5966
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.event
+  module:
+    - osu_computed
+id: node.event.computed_event_url
+field_name: computed_event_url
+label: 'Event Url'
+entity_type: node
+bundle: event
+plugin_id: node_url
+plugin_config: {  }

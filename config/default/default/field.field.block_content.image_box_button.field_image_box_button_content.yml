@@ -1,0 +1,24 @@
+uuid: 2bfde517-19aa-4b05-a3cc-90b66ede0e98
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_box_button
+    - field.storage.block_content.field_image_box_button_content
+    - filter.format.basic_html
+  module:
+    - text
+id: block_content.image_box_button.field_image_box_button_content
+field_name: field_image_box_button_content
+entity_type: block_content
+bundle: image_box_button
+label: Content
+description: 'The primary content of the box. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

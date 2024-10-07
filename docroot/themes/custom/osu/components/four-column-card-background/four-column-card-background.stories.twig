@@ -1,0 +1,102 @@
+{# some/path/in/your/code/base/my-card.stories.twig #}
+{% stories four_column_card_background with { title: 'Components/Four Column Card Background' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: {
+      title: 'Open New Doors for You & Your Community in Pharmacy',
+    }
+  } %}
+    {% embed 'osu:four-column-card-background' with {
+      'title': title,
+    } %}
+      {% block cards %}
+        {% embed 'osu:text-overlay-teaser' with {
+          'title': 'Early Assurance Program',
+          'link': '#',
+          'link_text': 'Learn More',
+        } %}
+          {% block body %}
+            <div>
+              <p>
+                EAP is designed for high school seniors, current college students,
+                and post-baccalaureate students to assure the availability of a
+                position in our Pharm.D. program!
+              </p>
+            </div>
+          {% endblock %}
+          {% block image %}
+            <div>
+              <img src="https://placekeanu.com/414/243" alt="Random Keanu Reeves placeholder photo">
+            </div>
+          {% endblock %}
+        {% endembed %}
+        {% embed 'osu:text-overlay-teaser' with {
+          'title': 'Pharm.D. Program',
+          'link': '#',
+          'link_text': 'Learn More',
+        } %}
+          {% block body %}
+            <div>
+              <p>
+                Program graduates are eligible for licensure as a pharmacist anywhere
+                in the United States and are prepared to advance patient care
+                solutions with creativity and confidence.
+              </p>
+            </div>
+          {% endblock %}
+          {% block image %}
+            <div>
+              <img src="https://placekeanu.com/414/243" alt="Random Keanu Reeves placeholder photo">
+            </div>
+          {% endblock %}
+        {% endembed %}
+        {% embed 'osu:text-overlay-teaser' with {
+          'title': 'Masters Program',
+          'link': '#',
+          'link_text': 'Learn More',
+        } %}
+          {% block body %}
+            <div>
+              <p>
+                Study areas of drug discovery, gene regulation and disease,
+                or targeted drug delivery to create the cures of tomorrow.
+              </p>
+            </div>
+          {% endblock %}
+          {% block image %}
+            <div>
+              <img src="https://placekeanu.com/414/243" alt="Random Keanu Reeves placeholder photo">
+            </div>
+          {% endblock %}
+        {% endembed %}
+        {% embed 'osu:text-overlay-teaser' with {
+          'title': 'Ph.D. Program',
+          'link': '#',
+          'link_text': 'Learn More',
+        } %}
+          {% block body %}
+            <div>
+              <p>
+                We offer a research-oriented graduate program of study in
+                pharmaceutical sciences that is individually designed to
+                meet each student's career interests and goals.
+              </p>
+            </div>
+          {% endblock %}
+          {% block image %}
+            <div>
+              <img src="https://placekeanu.com/414/243" alt="Random Keanu Reeves placeholder photo">
+            </div>
+          {% endblock %}
+        {% endembed %}
+      {% endblock %}
+      {% block background_image %}
+        <div>
+          <img src="https://placekeanu.com/1436/792" alt="Random Keanu Reeves placeholder photo">
+        </div>
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+{% endstories %}

@@ -1,0 +1,8 @@
+uuid: 0c4eaa6e-aa81-4736-a804-da463b65a4ff
+langcode: en
+status: true
+dependencies: {  }
+id: spacer
+label: Spacer
+revision: true
+description: 'A component used to create space between other blocks. Enter values in pixels without the "px" declaration'

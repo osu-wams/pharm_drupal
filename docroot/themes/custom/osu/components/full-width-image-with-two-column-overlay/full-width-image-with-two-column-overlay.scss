@@ -1,0 +1,78 @@
+@import '../../src/utils/variables';
+
+.full-width-image-with-two-column-overlay {
+  margin: 2rem 0;
+  position: relative;
+
+  .full-width-image-with-two-column-overlay__text {
+    position: relative;
+    top: 0;
+    flex-direction: column;
+    gap: 0;
+    background-color: $color-black;
+    font-size: 1rem;
+    overflow: hidden;
+    padding: 2rem $gutter-width 3.5rem;
+    width: auto;
+    z-index: 1;
+
+    > div {
+      flex: 1 0 45%;
+      z-index: 1;
+
+      &:last-of-type {
+        flex: 1 0 30%;
+
+        h3,
+        h4,
+        h5 {
+          font-weight: $bold-font-weight;
+        }
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+
+    h3,
+    h4,
+    h5 {
+      color: $color-white;
+      margin-bottom: 12px;
+    }
+
+    .button {
+      padding: 12px 22px;
+    }
+
+    @media screen and (min-width: $md) {
+      flex-direction: row;
+      gap: 4rem;
+      max-width: unset;
+      padding: 4rem 6rem;
+    }
+  }
+}
+
+.full-width-image-with-two-column-overlay__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  filter: grayscale(100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $full-width-image-overlay-background-dark;
+  }
+}

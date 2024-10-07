@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+ddev yarn install;
+ddev composer install;
+ddev db-sync;
+ddev drush updb -y;
+ddev drush cim -y;
+ddev theme-setup;

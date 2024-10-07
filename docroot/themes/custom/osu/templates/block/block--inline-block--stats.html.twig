@@ -1,0 +1,76 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% block content %}
+    {% embed 'osu:stats' with {
+      'title_one': content.field_first_section_title,
+      'title_two': content.field_second_section_title,
+      'title_three': content.field_third_section_title,
+    } %}
+      {% block first_stats %}
+
+        {% for stat in first_stats %}
+          {% set info = stat.info %}
+          {% set graphic = stat.graphic %}
+          {% embed 'osu:stat' with {
+            'stat': stat.value,
+          } %}
+            {% block stat_info %}
+              <div>
+                {{ info|raw }}
+              </div>
+            {% endblock %}
+            {% block stat_graphic %}
+              {% if graphic is not empty %}
+                {{ drupal_image(graphic) }}
+              {% endif %}
+            {% endblock %}
+          {% endembed %}
+        {% endfor %}
+      {% endblock %}
+
+      {% block second_stats %}
+        {% for stat in second_stats %}
+          {% set info = stat.info %}
+          {% set graphic = stat.graphic %}
+          {% embed 'osu:stat' with {
+            'stat': stat.value,
+          } %}
+            {% block stat_info %}
+              <div>
+                {{ info|raw }}
+              </div>
+            {% endblock %}
+            {% block stat_graphic %}
+              {% if graphic is not empty %}
+                {{ drupal_image(graphic) }}
+              {% endif %}
+            {% endblock %}
+          {% endembed %}
+        {% endfor %}
+      {% endblock %}
+
+      {% block third_stats %}
+        {{ third_stats[0].value|raw }}
+      {% endblock %}
+
+      {% block bottom_column_one %}
+        {% if third_stats[0].graphic is not empty %}
+          {{ drupal_image(third_stats[0].graphic) }}
+        {% endif %}
+      {% endblock %}
+
+      {% block bottom_column_two %}
+        {{ third_stats[0].text|raw }}
+      {% endblock %}
+
+    {% endembed %}
+  {% endblock %}
+</div>

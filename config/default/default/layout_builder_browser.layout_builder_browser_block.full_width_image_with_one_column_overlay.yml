@@ -1,0 +1,11 @@
+uuid: 90373d0d-ad50-4de6-a7b7-14fc53a27a12
+langcode: en
+status: true
+dependencies: {  }
+id: full_width_image_with_one_column_overlay
+block_id: 'inline_block:full_width_image_with_one_column'
+category: ctas
+label: 'Full Width Image with One Column Overlay'
+image_path: /themes/custom/osu/images/lbb/image-one-column-overlay.png
+image_alt: 'Full width image with one column overlay preview'
+weight: -12

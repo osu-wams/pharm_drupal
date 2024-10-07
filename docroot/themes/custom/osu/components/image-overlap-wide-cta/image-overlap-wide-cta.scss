@@ -1,0 +1,61 @@
+@import '../../src/utils/variables';
+
+.image-overlap-wide-cta {
+  position: relative;
+  margin: 1.5rem auto 4rem !important;
+  max-width: 100%;
+
+  @media screen and (min-width: $md) {
+    max-width: 96%;
+  }
+
+  p {
+    color: $color-dark-body-text !important;
+  }
+
+  &__content {
+    padding: 0 $gutter-width !important;
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 12px;
+    }
+
+    @media only screen and (min-width: $md) {
+      padding: 2rem 3.5rem !important;
+    }
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -20px;
+
+    img {
+      height: auto;
+      max-width: 90%;
+      max-height: 350px;
+      object-fit: cover;
+    }
+
+    @media screen and (min-width: $md) {
+      img {
+        max-height: 300px;
+      }
+    }
+
+    @media only screen and (min-width: $lg) {
+      left: -20px;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+  }
+}

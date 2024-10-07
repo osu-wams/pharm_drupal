@@ -1,0 +1,38 @@
+uuid: 6dd7235d-065e-4dc3-88d5-c2bc2aec1612
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.faculty_basic_contact
+    - field.field.block_content.faculty_basic_contact.field_faculty_member
+id: block_content.faculty_basic_contact.default
+targetEntityType: block_content
+bundle: faculty_basic_contact
+mode: default
+content:
+  field_faculty_member:
+    type: entity_reference_autocomplete
+    weight: 26
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

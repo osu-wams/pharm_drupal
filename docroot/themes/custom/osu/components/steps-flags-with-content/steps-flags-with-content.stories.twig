@@ -1,0 +1,39 @@
+{# some/path/in/your/code/base/my-card.stories.twig #}
+{% stories steps_flags_with_content with { title: 'Components/Steps Flags + Content' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: {
+      title: 'Get Started Lorem Ipsum',
+    }
+  } %}
+    <div style="max-width: 500px; margin: auto;">
+      {% embed 'osu:steps-flags-with-content' with {
+        'title': title
+      } %}
+        {% block content %}
+          {# Create a loop of embedding some step flag components #}
+          {% for i in 1..3 %}
+            {% embed 'osu:step-flag' with {
+              'flag_text': 'Step ' ~ i,
+              'flag_color_class': 'bg-color-gray',
+              'flag_classes': ['flag--step-' ~ i]
+            } %}
+              {% block content %}
+                {% if i == 1 %}
+                  <h5>Meet Prerequisite Requirements</h5>
+                {% elseif i == 2 %}
+                  <h5>Submit Application</h5>
+                {% else %}
+                  <h5>Complete Orientation</h5>
+                {% endif %}
+                <p>Some lorem ipsum content for step {{ i }}. Let's make it a really long paragraph to better show how the text will wrap. Also want to ensure the mobile and tablet styles accomodate the text length appropriately.</p>
+              {% endblock %}
+            {% endembed %}
+          {% endfor %}
+        {% endblock %}
+      {% endembed %}
+    </div>
+  {% endstory %}
+
+{% endstories %}

@@ -1,0 +1,23 @@
+uuid: af4aeca4-2db6-487d-a51e-b0fcfda1dedd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.three_column_gray_box_button
+    - field.storage.block_content.field_third_link
+  module:
+    - link
+id: block_content.three_column_gray_box_button.field_third_link
+field_name: field_third_link
+entity_type: block_content
+bundle: three_column_gray_box_button
+label: 'Third Link'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

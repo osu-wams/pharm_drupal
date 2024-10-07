@@ -1,0 +1,8 @@
+uuid: dfa13f7e-22c5-47a0-81a6-15e3b737650b
+langcode: en
+status: true
+dependencies: {  }
+id: faculty_basic_contact
+label: 'Faculty Basic Contact'
+revision: false
+description: 'Faculty card using the basic contact card component.'

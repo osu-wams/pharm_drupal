@@ -1,0 +1,11 @@
+uuid: c1fa8b12-f959-4e69-be77-f3a79d2eed31
+langcode: en
+status: true
+dependencies: {  }
+id: two_column_framed_content_box
+block_id: 'inline_block:two_column_framed_content_box'
+category: ctas
+label: 'Two Column Framed Content Box'
+image_path: /themes/custom/osu/images/lbb/two-column-framed-content.png
+image_alt: ''
+weight: -1

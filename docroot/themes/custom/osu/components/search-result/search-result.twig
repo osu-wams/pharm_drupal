@@ -1,0 +1,31 @@
+{% set attributes = create_attribute() %}
+{% set classes = [
+  'search-result',
+  'flex-container',
+  'flex-dir-row',
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  {% if has_image %}
+  <div class="search-result__image">
+    {% block image %}{% endblock %}
+  </div>
+  {% endif %}
+  <div class="search-result__info flex-container flex-dir-column flex-ai-stretch">
+    <h4 class="search-result__title">
+      {{ title }}
+    </h4>
+    <div class="search-result__body">
+      {% block body %}{% endblock %}
+    </div>
+    <div class="search-result__link">
+      {% if link_text %}
+        {% include 'osu:button' with {
+          'class': 'secondary',
+          'link_href': link|default('#'),
+          'link_text': link_text,
+        } %}
+      {% endif %}
+    </div>
+  </div>
+</div>

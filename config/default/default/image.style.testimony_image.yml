@@ -1,0 +1,26 @@
+uuid: 3d44a671-2f72-4198-802e-c4853750bb26
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.icon
+  module:
+    - automated_crop
+name: testimony_image
+label: 'Testimony Image (125x125)'
+effects:
+  c5d1d8dc-50dd-4a2a-a96f-d418d6ae5e90:
+    uuid: c5d1d8dc-50dd-4a2a-a96f-d418d6ae5e90
+    id: automated_crop
+    weight: 1
+    data:
+      crop_type: icon
+      automatic_crop_provider: null
+  04958088-500e-4372-942b-67c63d96d280:
+    uuid: 04958088-500e-4372-942b-67c63d96d280
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 125
+      height: 125
+      anchor: center-center

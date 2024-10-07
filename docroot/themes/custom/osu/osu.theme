@@ -1,0 +1,153 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_preprocess_image_widget().
+ */
+function osu_preprocess_image_widget(array &$variables) {
+  $data = &$variables['data'];
+
+  // This prevents image widget templates from rendering preview container HTML
+  // to users that do not have permission to access these previews.
+  // @todo revisit in https://drupal.org/node/953034
+  // @todo revisit in https://drupal.org/node/3114318
+  if (isset($data['preview']['#access']) && $data['preview']['#access'] === FALSE) {
+    unset($data['preview']);
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function osu_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if (isset($variables['elements']['content']['#block_content']) && !is_null($variables['elements']['content']['#block_content'])) {
+    $block_bundle = $variables['elements']['content']['#block_content']->bundle();
+    $suggestions[] = 'block__' . $block_bundle;
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function osu_preprocess_block(&$variables) {
+  if (isset($variables['elements']['content']['#block_content']) && !is_null($variables['elements']['content']['#block_content'])) {
+    $block_bundle = $variables['elements']['content']['#block_content']->bundle();
+    // Makes the image src available to the template and component via a slot.
+    if ($block_bundle == 'full_image_w_two_column_overlay' || $block_bundle == 'full_width_image_with_one_column') {
+      $img_src = $variables['elements']['content']['#block_content']?->get('field_image')?->entity?->get('field_media_image')?->entity?->get('uri')?->value;
+
+      $variables['content']['component']['#props']['img_src'] = $img_src;
+    }
+
+    if ($block_bundle === 'stats') {
+      $block = $variables['elements']['content']['#block_content'];
+      $variables['first_stats'] = $block?->get('field_first_section_stats')?->getValue();
+      $variables['second_stats'] = $block?->get('field_second_section_stats')?->getValue();
+      $variables['third_stats'] = $block?->get('field_third_section_stats')?->getValue();
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function osu_preprocess_field(&$variables) {
+  if ($variables['field_name'] == 'field_link'
+    || $variables['field_name'] == 'field_secondary_link'
+    || $variables['field_name'] == 'field_second_link'
+    || $variables['field_name'] == 'field_third_link'
+    || $variables['field_name'] == 'field_tour_link'
+    || $variables['field_name'] == 'field_parking_link'
+    || $variables['field_name'] == 'field_event_link') {
+    // If rendering field_link or field_secondary_link
+    // as a button component make it work right.
+    foreach ($variables['items'] as $delta => $item) {
+      if ($item['content']['#type'] === 'component'
+        && $item['content']['#component'] === 'osu:button') {
+        $url = $item['content']['#props']['link_href']['#url']?->toString() ?? '#';
+        if ($url === '#' && array_key_exists('#plain_text', $item['content']['#props']['link_href'])) {
+          $url = $item['content']['#props']['link_href']['#plain_text'];
+        }
+        $link_href = $item['content']['#props']['link_href']['#url']?->toString() ?? '#';
+        $link_text = $item['content']['#props']['link_href']['#title'] ?? '';
+        $variables['items'][$delta]['content']['#props']['link_href'] = $link_href;
+        $variables['items'][$delta]['content']['#props']['link_text'] = $link_text;
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function osu_preprocess_page(&$variables) {
+  // If node page and hide sidebar menu is set, remove sidebar_first region.
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node) {
+    $variables['page_title'] = $node->getTitle();
+    if ($node->hasField('field_hide_sidebar_menu') && $node->field_hide_sidebar_menu->value) {
+      unset($variables['page']['sidebar_first']);
+    }
+    if ($node->hasField('field_header_image') && $node->field_header_image->entity ||
+      $node->hasField('field_header_video') && $node->field_header_video->entity) {
+      $variables['header'] = [];
+      $variables['header']['title'] = $node->getTitle();
+      if ($node->hasField('field_header_title_override') && $node->field_header_title_override->value) {
+        $variables['header']['title'] = $node->field_header_title_override->value;
+      }
+      $variables['header']['subtitle'] = $node?->field_header_sub_title?->value ?? '';
+      $variables['header']['image'] = $node?->field_header_image?->entity?->id();
+      $variables['header']['video'] = $node?->field_header_video?->entity?->id();
+      $variables['header']['show_cta'] = $node?->field_show_header_cta?->value;
+      if ($variables['header']['show_cta']) {
+        $variables['header']['cta_text'] = $node?->field_header_cta_title?->value;
+        $variables['header']['cta_sub_text'] = $node?->field_header_cta_sub_title?->value;
+        $variables['header']['cta_link'] = [];
+        $variables['header']['cta_link']['text'] = $node?->field_header_cta_link?->title;
+        $url = Url::fromUri($node?->field_header_cta_link?->uri)->toString();
+        $variables['header']['cta_link']['url'] = $url;
+      }
+      $variables['header']['show_links'] = $node?->field_show_header_links?->value;
+      if ($variables['header']['show_links']) {
+        $variables['header']['links'] = '<div class="header_links">';
+        foreach ($node?->field_header_links as $link) {
+          $url = Url::fromUri($link->uri)->toString();
+          $variables['header']['links'] .= '<a href="' . $url . '">' . $link->title . '</a>';
+        }
+        $variables['header']['links'] .= '</div>';
+        $variables['header']['subtitle'] = '';
+      }
+
+    }
+
+    // If node type is article.
+    if ($node->getType() == 'article' || $node->getType() == 'alumni' || $node->getType() == 'event') {
+      // Hide the title.
+      $variables['page_title'] = '';
+    }
+    if ($node->getType() == 'faculty') {
+      $variables['page_title'] = 'Directory';
+    }
+  }
+  else {
+    $request = \Drupal::request();
+    $route_match = \Drupal::routeMatch();
+    $title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+    $variables['page_title'] = $title;
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function osu_preprocess_views_view(&$variables) {
+  if ($variables['id'] === 'latest_news') {
+    $variables['#attached']['library'][] = 'osu/news-slider';
+  }
+}

@@ -1,0 +1,8 @@
+uuid: 838387fe-02d3-4c05-bce8-d8e93377197f
+langcode: en
+status: true
+dependencies: {  }
+id: image_box_button
+label: 'Image Box Button'
+revision: false
+description: 'Block representing an Image Box Button component.'

@@ -1,0 +1,9 @@
+uuid: cc20198d-da13-40ea-8398-5ce3d33fb4f1
+langcode: en
+status: true
+dependencies: {  }
+name: 'Event Type'
+vid: event_type
+description: null
+weight: 0
+new_revision: false

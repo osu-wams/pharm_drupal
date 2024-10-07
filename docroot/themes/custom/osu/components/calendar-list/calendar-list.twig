@@ -1,0 +1,47 @@
+{%
+  set start_date_first = start_date|split(' - ')|first
+%}
+{%
+  set end_date_last = end_date|split(' - ')|last
+%}
+{% set title_link = link[0]['#items'][0].value %}
+
+<article class="calendar-list-item">
+  <div class="calendar-list-item__calendar">
+    {% embed 'osu:calendar-icon' with {
+      'date': start_date,
+    } %}
+    {% endembed %}
+  </div>
+  <div class="calendar-list-item__content">
+    <h4><a href={{ title_link }}>{{ title }}</a></h4>
+    <div class="calendar-list-item__content__body">
+      {% block body %}{% endblock %}
+    </div>
+  </div>
+  <div class="calendar-list-item__info">
+    <div class="calendar-list-item__info__time color-dark-body-text">
+      {% if start_date_first|date('i') == '00' %}
+
+      {{ start_date_first|date('g a') }}
+
+      {% else %}
+        {{ start_date_first|date('g:i a') }}
+      {% endif %}
+      to
+      {% if end_date_last|date('i') == '00' %}
+        {{ end_date_last|date('g a') }}
+      {% else %}
+        {{ end_date_last|date('g:i a') }}
+      {% endif %}
+    </div>
+    <div class="calendar-list-item__info__location color-dark-body-text">
+      {{ location }}
+    </div>
+    {% if register_details %}
+      <div class="calendar-list-item__info__link">
+        {% block register_details %}{% endblock %}
+      </div>
+    {% endif %}
+  </div>
+</article>

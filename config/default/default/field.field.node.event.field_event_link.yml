@@ -1,0 +1,28 @@
+uuid: 8848b66a-2bff-4cd2-88f4-12464f261ada
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_link
+    - node.type.event
+  module:
+    - link
+id: node.event.field_event_link
+field_name: field_event_link
+entity_type: node
+bundle: event
+label: 'Register / Details Link'
+description: 'Link to register or see details for the event.'
+required: false
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'internal:/'
+    title: Register
+    options: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

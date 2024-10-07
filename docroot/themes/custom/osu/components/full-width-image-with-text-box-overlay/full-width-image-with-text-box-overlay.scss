@@ -1,0 +1,82 @@
+@import '../../src/utils/variables';
+
+.full-width-image-with-text-box-overlay {
+  position: relative;
+  margin: 2rem 0;
+  overflow: hidden;
+
+  .full-width-image-with-text-box-overlay__text-box {
+    background-color: $color-gray;
+    margin: -25% auto 0;
+    padding: 1rem $gutter-width 2rem;
+    position: relative;
+    width: 90%;
+
+    @media screen and (min-width: $md) {
+      padding: 1rem 4rem 3rem;
+      margin-top: -35%;
+      width: 80%;
+    }
+
+    @media screen and (min-width: $lg) {
+      margin-top: -15%;
+      width: 80%;
+    }
+  }
+
+  .full-width-image-with-text-box-overlay__headline h2 {
+    color: $color-beaver-orange;
+    line-height: 1.1;
+    margin: 1rem auto;
+    max-width: 80%;
+  }
+
+  p {
+    margin: 12px 0;
+    text-align: left;
+
+    @media screen and (min-width: $md) {
+      margin: 24px 0 12px;
+      text-align: center;
+
+    }
+  }
+}
+
+.full-width-image-with-text-box-overlay__buttons {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $md) {
+    flex-direction: row;
+    justify-content: center;
+
+    .button:not(:first-of-type) {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.full-width-image-with-text-box-overlay__image {
+  max-height: 500px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  @media screen and (min-width: $md) {
+    max-height: 600px;
+  }
+
+  img {
+    height: auto;
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+
+    @media screen and (min-width: $md) {
+      height: unset;
+      max-height: unset;
+    }
+  }
+
+}

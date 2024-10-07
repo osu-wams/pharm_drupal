@@ -1,0 +1,14 @@
+<div class="component subscribe-box bg-color-gray padding-around-30">
+  <div class="subscribe-box__content">
+    <p class="subscribe-box__content__text large margin-none">{{ text }}</p>
+    <p class="subscribe-box__content__subtext">{{ subtext }}</p>
+  </div>
+  <div class="subscribe-box__action flex-container flex-dir-row flex-jc-space-between">
+    <input name="email" type="email" class="subscribe-box__action__input" placeholder="yourname@provider.com">
+    {% include 'osu:button' with {
+      'class': 'secondary',
+      'link_href': '#',
+      'link_text': 'Subscribe',
+    } %}
+  </div>
+</div>

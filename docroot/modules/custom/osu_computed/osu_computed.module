@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * This contains all of the hooks needed by Computed Field.
+ */
+
+use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\node\Entity\Node;
+
+/**
+ * Computes the current URL path.
+ *
+ * @param Drupal\Core\Entity\EntityTypeManagerInterface $entityTypeManager
+ *  The entity type manager.
+ * @param Drupal\node\Entity\Node $node
+ *  The entity to compute the value for.
+ * @param array $fields
+ *  The fields that are being computed.
+ * @param int $delta
+ *  The delta of the field being computed.
+ */
+ // phpcs:ignore
+function computed_field_computed_node_url_compute(EntityTypeManagerInterface $entityTypeManager, Node $node, array $fields, int $delta) {
+
+  return $node->toUrl()->toString();
+}

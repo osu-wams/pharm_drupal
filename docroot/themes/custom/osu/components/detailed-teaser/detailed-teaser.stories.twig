@@ -1,0 +1,33 @@
+{# some/path/in/your/code/base/my-card.stories.twig #}
+{% stories detailed_teaser with { title: 'Components/Detailed Teaser' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: {
+      title: 'News Title & Short About',
+      date: "2024-04-04T12:00:00.000Z",
+      link: '#',
+      tag: 'News Type Here'
+    }
+  } %}
+    {% embed 'osu:detailed-teaser' with {
+      'title': title,
+      'date': date,
+      'link': link,
+      'tag': tag
+    } %}
+      {% block body %}
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+        ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur...
+      {% endblock %}
+      {% block image %}
+        <img src="https://placekeanu.com/412/412" alt="Random Keanu Reeves placeholder photo">
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+
+{% endstories %}

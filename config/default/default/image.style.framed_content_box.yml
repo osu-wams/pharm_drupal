@@ -1,0 +1,26 @@
+uuid: 48135cbd-7a04-4935-84e7-c1fb2837f6c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.framed_content_box
+  module:
+    - automated_crop
+name: framed_content_box
+label: 'Framed Content Box (706x308)'
+effects:
+  966aa63d-bbd6-47c1-b2c3-5ce5519f89a7:
+    uuid: 966aa63d-bbd6-47c1-b2c3-5ce5519f89a7
+    id: automated_crop
+    weight: 1
+    data:
+      crop_type: framed_content_box
+      automatic_crop_provider: null
+  60d0c137-a4a9-4c4e-b1cb-7f3ad21965d1:
+    uuid: 60d0c137-a4a9-4c4e-b1cb-7f3ad21965d1
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 706
+      height: 308
+      anchor: center-center

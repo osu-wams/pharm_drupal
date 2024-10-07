@@ -1,0 +1,11 @@
+uuid: 1368f538-2ea4-452f-80ae-6fb992e2f2f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.instagram_video
+id: media.instagram_video
+target_entity_type_id: media
+target_bundle: instagram_video
+default_langcode: site_default
+language_alterable: false

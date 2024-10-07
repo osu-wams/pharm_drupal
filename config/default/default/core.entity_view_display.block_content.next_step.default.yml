@@ -1,0 +1,117 @@
+uuid: 2781ee2a-6112-4484-9e0f-de56ee6da8ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.next_step
+    - field.field.block_content.next_step.body
+    - field.field.block_content.next_step.field_icon
+    - field.field.block_content.next_step.field_link
+    - field.field.block_content.next_step.field_title
+  module:
+    - link
+    - nomarkup
+    - sdc_display
+    - text
+third_party_settings:
+  sdc_display:
+    enabled: true
+    component:
+      machine_name: 'osu:next-steps-section'
+      show_deprecated: null
+    mappings:
+      static:
+        props:
+          next_step_statement: ''
+        slots:
+          icon:
+            value: ''
+            format: basic_html
+          next_step_description:
+            value: ''
+            format: basic_html
+          link_button_1:
+            value: ''
+            format: basic_html
+          link_button_2:
+            value: ''
+            format: basic_html
+      dynamic:
+        props:
+          next_step_statement: field_title
+        slots:
+          icon:
+            field_icon: field_icon
+          next_step_description:
+            body: body
+          link_button_1:
+            field_link: field_link
+id: block_content.next_step.default
+targetEntityType: block_content
+bundle: next_step
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_icon:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: small
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: '0'
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 1
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: ''
+        referenced_entity: ''
+      sdc_display:
+        enabled: '1'
+        component:
+          machine_name: 'osu:button'
+          show_deprecated: 0
+        mappings:
+          static:
+            props:
+              link_href: ''
+              link_text: 'Learn More'
+              class: tertiary
+          dynamic:
+            mapped: link_href
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true

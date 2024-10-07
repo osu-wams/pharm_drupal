@@ -1,0 +1,9 @@
+uuid: 82ac8e67-f945-4988-a748-2c2b457a1dda
+langcode: en
+status: true
+dependencies: {  }
+name: 'Academic Programs'
+vid: academic_programs
+description: 'This vocabulary encompasses all the academic programs offered by our College.'
+weight: 0
+new_revision: false

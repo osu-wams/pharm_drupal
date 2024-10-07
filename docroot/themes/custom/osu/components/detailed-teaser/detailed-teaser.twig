@@ -1,0 +1,33 @@
+<div class="detailed-teaser flex-container flex-dir-column flex-ai-space-between">
+  <div class="detailed-teaser__image">
+    {% block image %}{% endblock %}
+    {% if date|length > 0 %}
+      <div class="detailed-teaser__date">
+        {% embed 'osu:calendar-icon' with {
+          'date': date|default('1715026587'),
+        } %}
+        {% endembed %}
+      </div>
+    {% endif %}
+    {% if tag %}
+      <div class="detailed-teaser__tag bg-color-white">
+        {{ tag }}
+      </div>
+    {% endif %}
+  </div>
+  <div class="detailed-teaser__content bg-color-white flex-container flex-dir-column">
+    <div class="detailed-teaser__title">
+      {{ title }}
+    </div>
+    <div class="detailed-teaser__body">
+      {% block body %}{% endblock %}
+    </div>
+    <div class="detailed-teaser__link">
+      {% include 'osu:button' with {
+        'class': 'tertiary',
+        'link_href': link|default('#'),
+        'link_text': link_title|default('Read More'),
+      } %}
+    </div>
+  </div>
+</div>

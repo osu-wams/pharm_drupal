@@ -1,0 +1,11 @@
+uuid: 387b93b5-2840-40b2-8dba-f6efc273de51
+langcode: en
+status: true
+dependencies: {  }
+id: latest_news_events
+block_id: 'inline_block:latest_news_events'
+category: lists_views
+label: 'Latest News & Events'
+image_path: /themes/custom/osu/images/lbb/latest-news-events.png
+image_alt: ''
+weight: -100

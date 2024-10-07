@@ -1,0 +1,8 @@
+uuid: eb6936fa-01c8-4a80-9a1a-cd5c96da82e5
+langcode: en
+status: true
+dependencies: {  }
+id: full_image_with_text_box_overlay
+label: 'Full Width Image with Text Box Overlay'
+revision: false
+description: 'Background image with a header, body text and two optional buttons contained within an inset box.'

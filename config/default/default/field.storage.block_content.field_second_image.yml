@@ -1,0 +1,20 @@
+uuid: 3c805f78-bdad-495a-820a-4d567b7c2995
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - media
+id: block_content.field_second_image
+field_name: field_second_image
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

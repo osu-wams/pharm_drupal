@@ -1,0 +1,23 @@
+uuid: 95e5afeb-0a5a-4cf1-9f05-57959560bc93
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_box_button
+    - field.storage.block_content.field_image_box_button_title_tag
+  module:
+    - options
+id: block_content.image_box_button.field_image_box_button_title_tag
+field_name: field_image_box_button_title_tag
+entity_type: block_content
+bundle: image_box_button
+label: 'Title Tag'
+description: 'Select the heading level for the title.'
+required: true
+translatable: false
+default_value:
+  -
+    value: h3
+default_value_callback: ''
+settings: {  }
+field_type: list_string

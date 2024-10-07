@@ -1,0 +1,50 @@
+uuid: 984b5902-80b9-4bf4-a107-e1ba1ee3cf9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faculty_address
+    - node.type.faculty
+  module:
+    - address
+id: node.faculty.field_faculty_address
+field_name: field_faculty_address
+entity_type: node
+bundle: faculty
+label: Address
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries:
+    US: US
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: optional
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    organization:
+      override: hidden
+    addressLine1:
+      override: optional
+    addressLine2:
+      override: optional
+    addressLine3:
+      override: hidden
+    postalCode:
+      override: optional
+    sortingCode:
+      override: hidden
+    dependentLocality:
+      override: hidden
+    locality:
+      override: optional
+    administrativeArea:
+      override: optional
+  fields: {  }
+field_type: address

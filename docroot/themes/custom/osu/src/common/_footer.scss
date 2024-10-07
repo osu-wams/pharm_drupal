@@ -1,0 +1,378 @@
+@import '../../src/utils/variables';
+
+.site-footer {
+  color: $color-white;
+  font-family: $body-font-family;
+  position: relative;
+  background-color: $color-black;
+  background: url('../../images/footer-mobile.jpg') no-repeat center center;
+  background-size: cover;
+
+  h2,
+  h4 {
+    color: $color-white;
+  }
+
+  @media screen and (min-width: $lg) {
+    background-image: url('../../images/footer-desktop.jpg');
+  }
+
+  .site-footer__inner {
+    padding: 0 $gutter-width 2rem;
+
+    @media screen and (min-width: $lg) {
+      padding: 0 3rem 1rem;
+
+    }
+  }
+
+  .menu--footer {
+    grid-area: menu;
+
+    ul:not(.contextual-links) {
+      margin: 0;
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      list-style: none;
+      max-width: 350px;
+      padding: 0 0 1rem;
+
+      @media screen and (min-width: $lg) {
+        display: block;
+      }
+
+      li:first-of-type,
+      li:nth-of-type(3) {
+        &::after {
+          content: '|';
+          margin: 0 1rem 0 0.75rem;
+        }
+
+        @media screen and (min-width: $lg) {
+          &::after {
+            content: ' ';
+          }
+        }
+      }
+
+      a {
+        color: $color-white;
+        letter-spacing: 0.075rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 15px
+      }
+    }
+
+    li {
+      padding-bottom: 1rem;
+
+      &:last-of-type {
+        padding-bottom: 0.25rem;
+      }
+    }
+  }
+
+  .menu--social-media {
+    grid-area: social;
+
+    ul:not(.contextual-links) {
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-right: 1.5rem;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+
+      a {
+        color: $color-white;
+        font-size: 14px;
+      }
+
+      img {
+        height: auto;
+        width: 24px;
+      }
+    }
+  }
+
+  .menu--secondary-footer {
+    grid-area: secondary;
+    max-width: 520px;
+
+    @media screen and (min-width: $lg) {
+      max-width: 100%;
+    }
+
+    ul:not(.contextual-links) {
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+
+      @media screen and (min-width: $lg) {
+        display: block;
+      }
+
+      a {
+        color: $color-white;
+        font-size: 14px;
+      }
+    }
+
+    li {
+      flex: 0 0 50%;
+
+      @media screen and (min-width: $lg) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .block-scroll-to-top {
+    grid-area: top;
+  }
+
+  .scroll-to-top {
+    grid-area: top;
+    margin-bottom: 25px;
+  }
+
+  .tertiary {
+    border-bottom: 2px solid $color-white;
+
+    .icon-nowrap {
+      &::after {
+        content: url('../../images/icons/link-arrow-white.svg');
+      }
+    }
+
+    &:hover {
+      border-bottom: 2px solid $color-stratosphere;
+    }
+  }
+}
+
+.site-footer__top {
+  position: relative;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    background-color: $color-white;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  img {
+    max-width: 250px;
+  }
+
+  .region-footer-top {
+    display: inline-block;
+  }
+
+  .return-to-osu {
+    margin: 0;
+
+    p {
+      display: flex;
+      justify-content: flex-start;
+      margin: 0;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      color: $color-white;
+      font-size: 14px;
+      font-weight: 400;
+
+      &::before {
+        content: url('../../images/icons/back-arrow-white.svg');
+        height: 18px;
+        width: 12px;
+        margin-right: 5px;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    @media screen and (min-width: $lg) {
+      margin: -5px 5px 0 0;
+
+      p {
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+.block-views-blockcampuses-campus-teasers {
+  padding: 20px 0;
+  grid-area: campuses;
+  max-width: 520px;
+
+  @media screen and (min-width: $lg) {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 24px;
+    margin: 0 0 10px;
+    font-weight: 400;
+  }
+
+  .views-row {
+    h2 {
+      font-family: $body-font-family;
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+
+  .view-campuses {
+    .view-content {
+      display: flex;
+      justify-content: flex-start;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 17px;
+
+      @media screen and (min-width: $lg) {
+        flex-direction: column;
+      }
+
+      .views-row {
+        flex: 0 0 49%;
+
+        &:first-of-type {
+          margin-right: 1rem;
+        }
+
+        @media screen and (min-width: $md) {
+          &:first-of-type {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .address {
+      font-size: 16px;
+      margin: 0 0 20px;
+    }
+
+    a:active,
+    a:hover {
+      color: $color-white;
+    }
+  }
+
+  .field--name-title {
+    color: $color-white;
+    // font-weight: 600;
+  }
+}
+
+.apply-today-cta {
+  grid-area: info;
+  max-width: 385px;
+
+  h2 {
+    font-size: 24px;
+    margin: 0;
+  }
+}
+
+.site-footer__bottom {
+  grid-area: copyright;
+  margin-top: 10px;
+
+  @media screen and (min-width: $lg) {
+    display: flex;
+    margin-top: 40px;
+  }
+
+  .site-footer__copyright {
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .menu--bottom-footer {
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+
+      @media screen and (min-width: $lg) {
+        display: flex;
+      }
+    }
+
+    li {
+      @media screen and (min-width: $lg) {
+        &:first-of-type::before {
+          content: '|';
+          margin: 0 10px;
+        }
+
+        &::after {
+          content: '|';
+          margin: 0 10px;
+        }
+
+        &:last-of-type::after {
+          content: '';
+          margin: 0;
+        }
+      }
+    }
+
+    a {
+      color: $color-white;
+      font-size: 14px;
+    }
+  }
+}
+
+.region-footer {
+  display: grid;
+  grid-template-areas:
+  'top'
+  'info'
+  'menu'
+  'social'
+  'secondary'
+  'campuses'
+  'copyright';
+  grid-gap: 10px;
+
+  @media screen and (min-width: $lg) {
+    grid-template-areas:
+    'campuses menu secondary info top'
+    'campuses social secondary info top'
+    'copyright copyright copyright copyright copyright';
+    grid-gap: 50px
+  }
+
+}

@@ -1,0 +1,11 @@
+uuid: b847d716-35f4-43ae-8cf4-d3232c13a395
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.article_header
+label: 'Article Header'
+description: ''
+targetEntityType: media
+cache: true

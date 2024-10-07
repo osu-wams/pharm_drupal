@@ -1,0 +1,26 @@
+uuid: 9dd4e4a5-91a3-419f-99c1-9a957e3e6b4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.article_card
+  module:
+    - automated_crop
+name: article_card
+label: 'Article Card (625x281)'
+effects:
+  c3903194-3a90-4a8e-ba55-be28bb55e4e7:
+    uuid: c3903194-3a90-4a8e-ba55-be28bb55e4e7
+    id: automated_crop
+    weight: 1
+    data:
+      crop_type: article_card
+      automatic_crop_provider: null
+  8fd9de5e-3434-4214-a940-f9a433e64b0e:
+    uuid: 8fd9de5e-3434-4214-a940-f9a433e64b0e
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 625
+      height: 281
+      anchor: center-center

@@ -1,0 +1,30 @@
+{# some/path/in/your/code/base/my-card.stories.twig #}
+{% stories button with { title: 'Components/Button' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: { class: '', link_href: '#', link_text: 'Here is my button' }
+  } %}
+    {# Write any Twig for the "default" story. The `args` above will be made #}
+    {# available as variables for the template 👇 #}
+    {% include 'osu:button' with { class, link_href, link_text } %}
+  {% endstory %}
+  {% story secondary with {
+    name: '2. Secondary',
+    args: { class: 'secondary', link_href: '#', link_text: 'Secondary Button' }
+  } %}
+    {# Write any Twig for the "default" story. The `args` above will be made #}
+    {# available as variables for the template 👇 #}
+    {% include 'osu:button' with { class, link_href, link_text } %}
+  {% endstory %}
+  {% story tertiary with {
+    name: '3. Tertiary',
+    args: { class: 'tertiary', link_href: '#', link_text: 'Tertiary Button' }
+  } %}
+    {# Write any Twig for the "default" story. The `args` above will be made #}
+    {# available as variables for the template 👇 #}
+    {% include 'osu:button' with { class, link_href, link_text } %}
+  {% endstory %}
+
+
+{% endstories %}

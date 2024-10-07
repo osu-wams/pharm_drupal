@@ -1,0 +1,40 @@
+{# some/path/in/your/code/base/my-card.stories.twig #}
+{% stories icon_with_content with { title: 'Components/Icon + Content' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: {
+      title: 'Unused',
+    }
+  } %}
+    {% embed 'osu:icon-with-content' with {
+      'title': title
+    } %}
+      {% block image %}
+        <img class="sized-image" src="https://placekeanu.com/200/200" alt="Placeholder image of Keanu Reeves" />
+      {% endblock %}
+      {% block content %}
+        <h3 class="color-beaver-orange margin-top-zero">High visibility to college members</h3>
+        <p>We ensure our Partners are given premier recognition on both our website and in print.</p>
+        <h5>Magazine Spotlights</h5>
+        <p>The college's annual BEAVERx magazine reaches more than 4,000 alumni and friends.</p>
+        <h5>Website Features</h5>
+        <p>The website is continually updated and offers Partners maximum visibility year-round.</p>
+        <h5>Guest Exhibits at Events</h5>
+        <p>The college hosts a number of educational and professional events every year. Pharmacy Partners have the opportunity to exhibit at events as guests of the college. These educational and professional events include:
+          <ul>
+            <li>Invitation to annual Benefactor's Reception</li>
+            <li>White Coat Ceremony</li>
+            <li>P4 Fall & Spring Seminars</li>
+            <li>Student Recognition Banquet</li>
+            <li>Graduation Ceremony</li>
+            <li>Pharm.D. Professionalism & Enrichment Seminars (ongoing)</li>
+            <li>P4 Interview Day</li>
+            <li>Career Days</li>
+          </ul>
+        </p>
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+{% endstories %}

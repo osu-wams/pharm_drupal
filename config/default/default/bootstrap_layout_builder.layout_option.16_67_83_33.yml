@@ -1,0 +1,17 @@
+uuid: beca13d5-bea0-432f-bb9e-79e09e8254df
+langcode: en
+status: true
+dependencies: {  }
+id: '16_67_83_33'
+layout_id: blb_col_2
+label: '16.67% 83.33%'
+structure: '2 10'
+breakpoints:
+  desktop: desktop
+  tablet: tablet
+  mobile: mobile
+default_breakpoints:
+  desktop: '0'
+  tablet: '0'
+  mobile: '0'
+weight: 0

@@ -1,0 +1,17 @@
+uuid: 625c503f-c8c6-4ce8-86ac-54658234f7fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Faculty
+type: faculty
+description: 'A faculty member profile.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

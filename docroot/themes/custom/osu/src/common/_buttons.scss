@@ -1,0 +1,42 @@
+@import '../../src/utils/variables';
+
+.button {
+  @extend %button;
+  margin: 6px 2px;
+}
+
+// Allow two tertiary buttons to be next to each other for screen width >= $sm,
+// but above and below each other for screen widths < $sm.
+.two_tertiary_buttons__row-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: $sm) {
+  .two_tertiary_buttons__row-column {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: $sm) {
+  .two_tertiary_buttons__link_spacing {
+    .tertiary:first-of-type {
+      margin-right: 22px !important;
+    }
+  }
+}
+
+// Allow two tertiary buttons to be next to each other for screen width >= $sm,
+// but above and below each other for screen widths < $sm.
+.two_tertiary_buttons__row-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: $sm) {
+  .two_tertiary_buttons__row-column {
+    display: flex;
+    flex-direction: row;
+  }
+}

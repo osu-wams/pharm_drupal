@@ -1,0 +1,29 @@
+uuid: db766ff5-bacc-4ba4-81f3-94eed951d16d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.upcoming_events_category_filtere
+    - field.storage.block_content.field_category
+    - taxonomy.vocabulary.event_type
+id: block_content.upcoming_events_category_filtere.field_category
+field_name: field_category
+entity_type: block_content
+bundle: upcoming_events_category_filtere
+label: 'Event Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      event_type: event_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

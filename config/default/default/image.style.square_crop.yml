@@ -1,0 +1,26 @@
+uuid: 6e736d1f-f9da-4bf8-b2ef-528685b547aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.square_crop
+  module:
+    - automated_crop
+name: square_crop
+label: 'Square Crop'
+effects:
+  5497b791-0b01-462c-b4f0-e3dde7864add:
+    uuid: 5497b791-0b01-462c-b4f0-e3dde7864add
+    id: automated_crop
+    weight: 1
+    data:
+      crop_type: square_crop
+      automatic_crop_provider: null
+  fad76445-502a-4288-8995-3976bf56a8c0:
+    uuid: fad76445-502a-4288-8995-3976bf56a8c0
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 412
+      height: 412
+      anchor: center-center

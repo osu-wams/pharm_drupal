@@ -1,0 +1,16 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Steps Flags + Content
+description: 'A series of content boxes with a small flag above each one.'
+status: stable
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: 'Title'
+      description: 'The primary title that sits above all the boxes.'
+
+slots:
+  content:
+    title: Content
+    description: 'The embedded content within this component.'

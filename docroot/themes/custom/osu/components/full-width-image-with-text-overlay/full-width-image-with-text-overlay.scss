@@ -1,0 +1,52 @@
+@import '../../src/utils/variables';
+
+.full-width-image-with-text-overlay {
+  position: relative;
+
+  .full-width-image-with-text-overlay__text {
+    padding: $gutter-width;
+
+    @media screen and (min-width: $md) {
+      padding: $gutter-width * 2;
+    }
+
+    @media screen and (min-width: $lg) {
+      padding: ($gutter-width * 2) ($gutter-width * 3);
+    }
+  }
+}
+
+.full-width-image-with-text-overlay__text__subtext {
+  margin: 0 0 $gutter-width;
+}
+
+.full-width-image-with-text-overlay__text__heading {
+  margin: 0;
+}
+
+.full-width-image-with-text-overlay__image {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $full-width-image-overlay-background;
+    background: $full-width-image-overlay-background-gradient;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.full-width-image-with-text-overlay__text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

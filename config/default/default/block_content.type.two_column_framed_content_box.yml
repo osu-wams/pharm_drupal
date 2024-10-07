@@ -1,0 +1,8 @@
+uuid: f84930ba-10ed-4e5e-b0f6-51c00b14aff7
+langcode: en
+status: true
+dependencies: {  }
+id: two_column_framed_content_box
+label: 'Two Column Framed Content Box'
+revision: false
+description: 'Two framed content boxes side by side.'

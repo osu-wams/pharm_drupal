@@ -1,0 +1,11 @@
+uuid: 58bb6c7b-e5e3-4f50-b459-db12202a04ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.framed_content_box
+label: 'Framed Content Box'
+description: ''
+targetEntityType: media
+cache: true

@@ -1,0 +1,23 @@
+uuid: cc03e373-393f-42f9-a41f-b85cb960f64b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_research_highlights
+    - node.type.faculty
+id: node.faculty.field_show_research_highlights
+field_name: field_show_research_highlights
+entity_type: node
+bundle: faculty
+label: 'Show Research Highlights'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

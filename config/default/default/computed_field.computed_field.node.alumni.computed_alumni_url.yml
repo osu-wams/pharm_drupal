@@ -1,0 +1,15 @@
+uuid: 5cb9b4cf-bc49-4996-a61a-875a7f683650
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.alumni
+  module:
+    - osu_computed
+id: node.alumni.computed_alumni_url
+field_name: computed_alumni_url
+label: 'Alumni URL'
+entity_type: node
+bundle: alumni
+plugin_id: node_url
+plugin_config: {  }

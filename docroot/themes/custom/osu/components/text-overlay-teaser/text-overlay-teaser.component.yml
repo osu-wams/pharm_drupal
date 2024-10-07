@@ -1,0 +1,43 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Text Overlay Teaser
+description: 'Text overlay on image standard content teaser.'
+status: stable
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: 'Title'
+      description: 'The title of the content.'
+      examples:
+        - 'Early Assurance Program'
+    link:
+      type: string
+      title: 'Link'
+      description: 'The link of the content.'
+      examples:
+        - '#'
+    link_text:
+      type: string
+      title: 'Link Text'
+      description: 'The link text of the content.'
+      examples:
+        - 'Learn More'
+    hide_content_on_mobile:
+      type: string
+      title: 'Hide Content on Mobile'
+      description: 'Hide content on mobile.'
+      examples:
+        - "False"
+        - "True"
+
+slots:
+  body:
+    title: Body
+    description: 'The text of the teaser.'
+  image:
+    title: Image
+    description: 'The image of the teaser.'
+  links:
+    title: Links
+    description: 'The links of the teaser.'

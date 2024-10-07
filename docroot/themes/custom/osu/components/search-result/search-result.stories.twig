@@ -1,0 +1,64 @@
+{# some/path/in/your/code/base/my-card.stories.twig #}
+{% stories search_result with { title: 'Components/Search Result' } %}
+
+  {% story default with {
+    name: '1. Default (College keyword)',
+    args: {
+      title: 'Early Assurance Program',
+      link: '#',
+      link_text: 'Learn more',
+    }
+  } %}
+    {% embed 'osu:search-result' with {
+      'title': title,
+      'link': link,
+      'link_text': link_text,
+    } %}
+      {% block body %}
+        <div>
+          <p>
+            EAP is designed for high school seniors, current <b>college<b> students,
+            and post-baccalaureate students to assure the availability of a
+            position in our Pharm.D. program!
+          </p>
+        </div>
+      {% endblock %}
+      {% block image %}
+        <div>
+          <img src="https://placekeanu.com/350/250" alt="Random Keanu Reeves placeholder photo">
+        </div>
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+  {% story students_keyword with {
+    name: '1. Default (Students keyword)',
+    args: {
+      title: 'Early Assurance Program',
+      link: '#',
+      link_text: 'Learn more',
+    }
+  } %}
+    {% embed 'osu:search-result' with {
+      'title': title,
+      'link': link,
+      'link_text': link_text,
+    } %}
+    {% block body %}
+      <div>
+        <p>
+          EAP is designed for high school seniors, current college <b>students</b>,
+          and post-baccalaureate <b>students</b> to assure the availability of a
+          position in our Pharm.D. program!
+        </p>
+      </div>
+      {% endblock %}
+      {% block image %}
+        <div>
+          <img src="https://placekeanu.com/350/250" alt="Random Keanu Reeves placeholder photo">
+        </div>
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+{% endstories %}

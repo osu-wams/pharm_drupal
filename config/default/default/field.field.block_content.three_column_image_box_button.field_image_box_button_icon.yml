@@ -1,0 +1,29 @@
+uuid: 497d29c6-8fb8-4a51-b652-c91124f821b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.three_column_image_box_button
+    - field.storage.block_content.field_image_box_button_icon
+    - media.type.image
+id: block_content.three_column_image_box_button.field_image_box_button_icon
+field_name: field_image_box_button_icon
+entity_type: block_content
+bundle: three_column_image_box_button
+label: Icon
+description: 'This icon will be displayed above the title and content.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: name
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

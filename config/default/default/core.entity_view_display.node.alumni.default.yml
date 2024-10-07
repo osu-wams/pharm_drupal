@@ -1,0 +1,148 @@
+uuid: 63b1b1d6-c532-4a1f-ba83-78cc097effd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.alumni.body
+    - field.field.node.alumni.field_graduation_year
+    - field.field.node.alumni.field_image
+    - field.field.node.alumni.field_job_title
+    - field.field.node.alumni.field_meta_tags
+    - node.type.alumni
+  module:
+    - metatag
+    - nomarkup
+    - sdc_display
+    - text
+    - user
+third_party_settings:
+  sdc_display:
+    enabled: true
+    component:
+      machine_name: 'osu:alumni'
+      show_deprecated: null
+    mappings:
+      static:
+        props:
+          title: ''
+          year: ''
+          job_title: ''
+        slots:
+          body:
+            value: ''
+            format: basic_html
+          image:
+            value: ''
+            format: basic_html
+      dynamic:
+        props:
+          title: title
+          year: field_graduation_year
+          job_title: field_job_title
+        slots:
+          body:
+            body: body
+            field_graduation_year: null
+            field_image: null
+            field_job_title: null
+            links: null
+            uid: null
+            title: null
+            created: null
+          image:
+            field_image: field_image
+            body: null
+            field_graduation_year: null
+            field_job_title: null
+            links: null
+            uid: null
+            title: null
+            created: null
+id: node.alumni.default
+targetEntityType: node
+bundle: alumni
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 1
+    region: content
+  field_graduation_year:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 3
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: 650x650
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: '1'
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
+    region: content
+  field_job_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 4
+    region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  computed_alumni_url: true
+  langcode: true

@@ -1,0 +1,11 @@
+uuid: 85bd3a52-3754-4cfe-ab5c-01b30c1022f3
+langcode: en
+status: true
+dependencies: {  }
+id: round_photo_text
+block_id: 'inline_block:round_photo_text'
+category: ctas
+label: 'Round Photo + Text'
+image_path: /themes/custom/osu/images/lbb/rounded-photo-left-text.png
+image_alt: 'Rounded Photo with Text preview'
+weight: -5

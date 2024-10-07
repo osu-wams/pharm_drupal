@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for osu_admin module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function osu_admin_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (str_starts_with($form_id, 'node_') && array_key_exists('field_show_header_cta', $form)) {
+    $form['field_header_cta_link']['#states'] = [
+      'visible' => [
+        ':input[name="field_show_header_cta[value]"]' => ['checked' => TRUE],
+      ],
+    ];
+    $form['field_header_cta_sub_title']['#states'] = [
+      'visible' => [
+        ':input[name="field_show_header_cta[value]"]' => ['checked' => TRUE],
+      ],
+    ];
+    $form['field_header_cta_title']['#states'] = [
+      'visible' => [
+        ':input[name="field_show_header_cta[value]"]' => ['checked' => TRUE],
+      ],
+    ];
+    $form['field_header_links']['#states'] = [
+      'visible' => [
+        ':input[name="field_show_header_links[value]"]' => ['checked' => TRUE],
+      ],
+    ];
+  }
+}

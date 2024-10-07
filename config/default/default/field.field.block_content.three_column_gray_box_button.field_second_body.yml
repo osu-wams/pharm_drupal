@@ -1,0 +1,26 @@
+uuid: c629c8d1-f856-4d7f-9761-4da2f6aa913b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.three_column_gray_box_button
+    - field.storage.block_content.field_second_body
+    - filter.format.basic_html
+    - filter.format.full_html
+  module:
+    - text
+id: block_content.three_column_gray_box_button.field_second_body
+field_name: field_second_body
+entity_type: block_content
+bundle: three_column_gray_box_button
+label: 'Second Body'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+    - full_html
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: 231ba7f0-4519-4677-a3b1-d7a1d3028597
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.instagram_video.field_media_video_file_1
+    - media.type.instagram_video
+id: media.instagram_video.media_library
+targetEntityType: media
+bundle: instagram_video
+mode: media_library
+content: {  }
+hidden:
+  created: true
+  field_media_video_file_1: true
+  langcode: true
+  name: true
+  path: true
+  status: true
+  uid: true

@@ -1,0 +1,455 @@
+uuid: 5f505bb0-f811-41b1-a350-7d66d240d86f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.three_column_gray_box_button
+    - field.field.block_content.three_column_gray_box_button.body
+    - field.field.block_content.three_column_gray_box_button.field_icon
+    - field.field.block_content.three_column_gray_box_button.field_link
+    - field.field.block_content.three_column_gray_box_button.field_second_body
+    - field.field.block_content.three_column_gray_box_button.field_second_icon
+    - field.field.block_content.three_column_gray_box_button.field_second_link
+    - field.field.block_content.three_column_gray_box_button.field_second_title
+    - field.field.block_content.three_column_gray_box_button.field_third_body
+    - field.field.block_content.three_column_gray_box_button.field_third_icon
+    - field.field.block_content.three_column_gray_box_button.field_third_link
+    - field.field.block_content.three_column_gray_box_button.field_third_title
+    - field.field.block_content.three_column_gray_box_button.field_title
+  module:
+    - field_group
+    - link
+    - nomarkup
+    - sdc_display
+    - text
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+  field_group:
+    group_first_column:
+      children:
+        - field_title
+        - field_icon
+        - body
+        - field_link
+      label: 'First Column'
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: sdc_display
+      format_settings:
+        sdc_field_group:
+          component:
+            machine_name: 'osu:gray-box-button'
+            show_deprecated: 0
+          mappings:
+            static:
+              props:
+                unused_title: ''
+              slots:
+                title:
+                  value: ''
+                  format: basic_html
+                icon:
+                  value: ''
+                  format: basic_html
+                body:
+                  value: ''
+                  format: basic_html
+                link_button:
+                  value: ''
+                  format: basic_html
+            dynamic:
+              slots:
+                title:
+                  field_title: field_title
+                  field_icon: 0
+                  body: 0
+                  field_link: 0
+                icon:
+                  field_icon: field_icon
+                  field_title: 0
+                  body: 0
+                  field_link: 0
+                body:
+                  body: body
+                  field_title: 0
+                  field_icon: 0
+                  field_link: 0
+                link_button:
+                  field_link: field_link
+                  field_title: 0
+                  field_icon: 0
+                  body: 0
+              props:
+                unused_title: null
+        id: ''
+        classes: ''
+        show_empty_fields: 0
+    group_second_column:
+      children:
+        - field_second_title
+        - field_second_icon
+        - field_second_body
+        - field_second_link
+      label: 'Second Column'
+      parent_name: ''
+      region: content
+      weight: 5
+      format_type: sdc_display
+      format_settings:
+        sdc_field_group:
+          component:
+            machine_name: 'osu:gray-box-button'
+            show_deprecated: 0
+          mappings:
+            static:
+              props:
+                unused_title: ''
+              slots:
+                title:
+                  value: ''
+                  format: basic_html
+                icon:
+                  value: ''
+                  format: basic_html
+                body:
+                  value: ''
+                  format: basic_html
+                link_button:
+                  value: ''
+                  format: basic_html
+            dynamic:
+              slots:
+                title:
+                  field_second_title: field_second_title
+                  field_second_icon: 0
+                  field_second_body: 0
+                  field_second_link: 0
+                icon:
+                  field_second_icon: field_second_icon
+                  field_second_title: 0
+                  field_second_body: 0
+                  field_second_link: 0
+                body:
+                  field_second_body: field_second_body
+                  field_second_title: 0
+                  field_second_icon: 0
+                  field_second_link: 0
+                link_button:
+                  field_second_link: field_second_link
+                  field_second_title: 0
+                  field_second_icon: 0
+                  field_second_body: 0
+              props:
+                unused_title: null
+        id: ''
+        classes: ''
+        show_empty_fields: 0
+    group_third_column:
+      children:
+        - field_third_title
+        - field_third_icon
+        - field_third_body
+        - field_third_link
+      label: 'Third Column'
+      parent_name: ''
+      region: content
+      weight: 6
+      format_type: sdc_display
+      format_settings:
+        sdc_field_group:
+          component:
+            machine_name: 'osu:gray-box-button'
+            show_deprecated: 0
+          mappings:
+            static:
+              props:
+                unused_title: ''
+              slots:
+                title:
+                  value: ''
+                  format: basic_html
+                icon:
+                  value: ''
+                  format: basic_html
+                body:
+                  value: ''
+                  format: basic_html
+                link_button:
+                  value: ''
+                  format: basic_html
+            dynamic:
+              slots:
+                title:
+                  field_third_title: field_third_title
+                  field_third_icon: 0
+                  field_third_body: 0
+                  field_third_link: 0
+                icon:
+                  field_third_icon: field_third_icon
+                  field_third_title: 0
+                  field_third_body: 0
+                  field_third_link: 0
+                body:
+                  field_third_body: field_third_body
+                  field_third_title: 0
+                  field_third_icon: 0
+                  field_third_link: 0
+                link_button:
+                  field_third_link: field_third_link
+                  field_third_title: 0
+                  field_third_icon: 0
+                  field_third_body: 0
+              props:
+                unused_title: null
+        id: ''
+        classes: ''
+        show_empty_fields: 0
+id: block_content.three_column_gray_box_button.default
+targetEntityType: block_content
+bundle: three_column_gray_box_button
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 5
+    region: content
+  field_icon:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: small
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: '0'
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 4
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: ''
+        referenced_entity: ''
+      sdc_display:
+        enabled: '1'
+        component:
+          machine_name: 'osu:button'
+          show_deprecated: 0
+        mappings:
+          static:
+            props:
+              link_href: ''
+              link_text: ''
+              class: default
+          dynamic:
+            mapped: link_href
+    weight: 6
+    region: content
+  field_second_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 9
+    region: content
+  field_second_icon:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_second_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: ''
+        referenced_entity: ''
+      sdc_display:
+        enabled: '1'
+        component:
+          machine_name: 'osu:button'
+          show_deprecated: 0
+        mappings:
+          static:
+            props:
+              link_href: ''
+              link_text: ''
+              class: default
+          dynamic:
+            mapped: link_href
+    weight: 10
+    region: content
+  field_second_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 7
+    region: content
+  field_third_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 11
+    region: content
+  field_third_icon:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: small
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: '0'
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 10
+    region: content
+  field_third_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: ''
+        referenced_entity: ''
+      sdc_display:
+        enabled: '1'
+        component:
+          machine_name: 'osu:button'
+          show_deprecated: 0
+        mappings:
+          static:
+            props:
+              link_href: ''
+              link_text: ''
+              class: default
+          dynamic:
+            mapped: link_href
+    weight: 12
+    region: content
+  field_third_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 9
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 3
+    region: content
+hidden:
+  langcode: true

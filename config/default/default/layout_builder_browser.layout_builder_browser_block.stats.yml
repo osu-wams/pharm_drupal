@@ -1,0 +1,11 @@
+uuid: 650eaf55-7373-4b31-a8e9-75c19a9bff60
+langcode: en
+status: true
+dependencies: {  }
+id: stats
+block_id: 'inline_block:stats'
+category: ctas
+label: Stats
+image_path: /themes/custom/osu/images/lbb/stats.png
+image_alt: ''
+weight: null

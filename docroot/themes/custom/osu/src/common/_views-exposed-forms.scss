@@ -1,0 +1,50 @@
+@import '../utils/variables';
+
+.views-exposed-form {
+  &.block-views-exposed-filter-blocklatest-news-news-listing {
+    padding: $padding-base * 3px;
+    margin-right: 0;
+  }
+
+  [data-drupal-selector="edit-category-id"] {
+    > legend {
+      display: none;
+    }
+  }
+
+  > form {
+    margin: 0;
+
+    > .form--inline {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+    }
+
+    .form-actions {
+      display: none;
+      margin: 0 auto;
+    }
+  }
+
+  fieldset {
+    margin: 0;
+
+    fieldset {
+      margin: $padding-base * 2px,
+    }
+  }
+
+  .form-radios {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      > ul {
+        margin-left: $padding-base * 2px;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+<div class="stats">
+  <div class="stats__section-title stats__first__title">
+    {{ title_one }}
+  </div>
+  <div class="stats__section-content stats__first__content">
+    {% block first_stats %}{% endblock %}
+  </div>
+  <div class="stats__section-title stats__second__title">
+    {{ title_two }}
+  </div>
+  <div class="stats__section-content stats__second__content">
+    {% block second_stats %}{% endblock %}
+  </div>
+  <div class="stats__section-title stats__third__title">
+    {{ title_three }}
+  </div>
+  <div class="stats__section-content stats__third__content">
+    {% block third_stats %}{% endblock %}
+  </div>
+  <div class="stats__fourth">
+    <div class="stats__column graphic">
+      {% block bottom_column_one %}{% endblock %}
+    </div>
+    <div class="stats__column text">
+      {% block bottom_column_two %}{% endblock %}
+    </div>
+  </div>
+</div>

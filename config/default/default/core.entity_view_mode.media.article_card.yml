@@ -1,0 +1,11 @@
+uuid: 56df7622-cfb9-43c8-bc76-46139587f6ca
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.article_card
+label: 'Article Card'
+description: 'Teaser Image for Article on the Article Card'
+targetEntityType: media
+cache: true

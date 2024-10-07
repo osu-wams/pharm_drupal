@@ -1,0 +1,24 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Full Width Image with Text Overlay
+description: 'A full width image with text overlay.'
+status: stable
+props:
+  type: object
+  properties:
+    text:
+      type: string
+      title: 'Text'
+      description: 'The text overlaid the image.'
+      examples:
+        - 'About OSU College of Pharmacy'
+    subtext:
+      type: string
+      title: 'Subtext'
+      description: 'The small subtext above the text.'
+      examples:
+        - 'OSU COLLEGE OF PHARMACY'
+
+slots:
+  image:
+    title: Image
+    description: 'The image render array to render.'

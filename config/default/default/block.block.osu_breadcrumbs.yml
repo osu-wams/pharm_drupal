@@ -1,0 +1,26 @@
+uuid: 90eca551-7b79-493b-8a9a-6ddb4868a558
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - osu
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: osu_breadcrumbs
+theme: osu
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

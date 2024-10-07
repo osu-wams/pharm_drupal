@@ -1,0 +1,8 @@
+uuid: 7d764278-936d-4978-9d50-c20a6fc7459c
+langcode: en
+status: true
+dependencies: {  }
+id: featured_alumni
+label: 'Featured Alumni'
+revision: false
+description: 'Insert a single Alumni using the Featured Person component.'

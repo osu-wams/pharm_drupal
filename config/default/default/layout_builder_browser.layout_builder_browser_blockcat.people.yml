@@ -1,0 +1,8 @@
+uuid: b4b328c0-8436-454a-9249-ffe3c7b2fd01
+langcode: en
+status: true
+dependencies: {  }
+id: people
+label: People
+weight: -7
+opened: false

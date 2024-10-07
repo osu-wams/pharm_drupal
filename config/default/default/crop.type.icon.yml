@@ -1,0 +1,12 @@
+uuid: d0b0709c-14a7-486c-9b02-86e70911027a
+langcode: en
+status: true
+dependencies: {  }
+label: Icon
+id: icon
+description: 'Crop an icon-style image to keep at a max size.'
+aspect_ratio: '1:1'
+soft_limit_width: 150
+soft_limit_height: 150
+hard_limit_width: 100
+hard_limit_height: 100

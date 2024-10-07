@@ -1,0 +1,11 @@
+uuid: 4d300e60-589f-45e0-a9e1-19f712fa7fae
+langcode: en
+status: true
+dependencies: {  }
+id: wysiwyg_content
+block_id: 'inline_block:basic'
+category: text
+label: 'WYSIWYG Content'
+image_path: /themes/custom/osu/images/lbb/wysiwyg-content.png
+image_alt: ''
+weight: -100

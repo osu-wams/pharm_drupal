@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for osu_layout_builder_ux module.
+ */
+
+/**
+ * Alter the browser render array.
+ *
+ * @param array $build
+ *   The render array to alter.
+ * @param array $context
+ *   Contextual information like the section storage, delta and region.
+ *
+ * @return void
+ *   No return value.
+ */
+function osu_layout_builder_ux_layout_builder_browser_alter(array &$build, array $context) {
+  // Alter the placeholder of the search textfield.
+  $build['filter']['#placeholder'] = t('Block name');
+
+  // Collapse the categories other than "Common".
+  foreach ($build['block_categories'] as $category_key => &$category) {
+    // For each of the $category['links'] elements let's reconfigure the 'label'
+    // to have SOME markup around it so it can be styled easily.
+    $found = stripos($category_key, '#');
+    if ($found !== 0) {
+      foreach ($build['block_categories'][$category_key]['links'] as $link_key => &$link) {
+        // Now we can add a class to the link.
+        $current_label = $link['#title']['label']['#markup'];
+        $link['#title']['label'] = ['#markup' => "<div class='small osu-layout-builder-ux-category-link'>$current_label</div>"];
+      }
+    }
+  }
+}

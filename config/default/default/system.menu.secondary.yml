@@ -1,0 +1,8 @@
+uuid: d8d3ec66-34f9-4326-bb7d-85b852e174a3
+langcode: en
+status: true
+dependencies: {  }
+id: secondary
+label: Secondary
+description: 'Smaller top navigation'
+locked: false

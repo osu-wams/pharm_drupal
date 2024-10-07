@@ -1,0 +1,19 @@
+uuid: aa5265ec-9f7d-4a45-a983-6e498a1b9300
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.three_column_gray_box_button
+    - field.storage.block_content.field_second_title
+id: block_content.three_column_gray_box_button.field_second_title
+field_name: field_second_title
+entity_type: block_content
+bundle: three_column_gray_box_button
+label: 'Second Title'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

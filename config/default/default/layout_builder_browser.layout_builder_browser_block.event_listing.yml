@@ -1,0 +1,11 @@
+uuid: 6f86ed46-a66e-4a86-8356-72073a447777
+langcode: en
+status: true
+dependencies: {  }
+id: event_listing
+block_id: 'views_block:events-upcoming_events'
+category: lists_views
+label: 'Event Listing'
+image_path: /themes/custom/osu/images/lbb/event-listing.png
+image_alt: ''
+weight: -100

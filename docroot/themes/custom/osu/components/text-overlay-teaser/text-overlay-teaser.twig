@@ -1,0 +1,32 @@
+{% set attributes = create_attribute() %}
+{% set hide = hide_content_on_mobile == "True" %}
+{% set classes = [
+  'text-overlay-teaser',
+  'flex-container',
+  'flex-dir-column',
+  hide ? 'hide-content-on-mobile',
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="text-overlay-teaser__image">
+    {% block image %}{% endblock %}
+    <h4 class="text-overlay-teaser__overlay color-white">
+      {{ title }}
+    </h4>
+  </div>
+  <div class="text-overlay-teaser__info">
+    <div class="text-overlay-teaser__body">
+      {% block body %}{% endblock %}
+    </div>
+    <div class="text-overlay-teaser__link">
+      {% if link_text %}
+        {% include 'osu:button' with {
+          'class': 'secondary',
+          'link_href': link|default('#'),
+          'link_text': link_text,
+        } %}
+      {% endif %}
+      {% block links %}{% endblock %}
+    </div>
+  </div>
+</div>

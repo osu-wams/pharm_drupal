@@ -1,0 +1,33 @@
+{# some/path/in/your/code/base/my-card.stories.twig #}
+{% stories campus_box with { title: 'Components/Campus Box' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: {
+      name: 'Portland Campus',
+      address: '2730 SW Moody Ave., CL5CP Portland, OR 97201'
+    }
+  } %}
+    {% embed 'osu:campus-box' %}
+      {% block image %}
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Montes_Carpatus-A._Ferruggia.jpg" alt="Montes Carpatus">
+      {% endblock %}
+      {% block schedule_a_tour_link %}
+        {% include 'osu:button' with {
+          'class': 'tertiary',
+          'link_href': '#',
+          'link_text': 'Schedule a Tour',
+        } %}
+      {% endblock %}
+      {% block parking_directions_link %}
+        {% include 'osu:button' with {
+          'class': 'tertiary',
+          'link_href': '#',
+          'link_text': 'Parking Directions',
+        } %}
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+
+{% endstories %}

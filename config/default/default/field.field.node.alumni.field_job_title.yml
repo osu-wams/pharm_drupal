@@ -1,0 +1,19 @@
+uuid: f1feb899-7517-47f8-8f6f-e2bbda62a71d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_title
+    - node.type.alumni
+id: node.alumni.field_job_title
+field_name: field_job_title
+entity_type: node
+bundle: alumni
+label: 'Job Title'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

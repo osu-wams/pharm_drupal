@@ -1,0 +1,24 @@
+uuid: c766aba5-20c4-4db1-bba3-da10cb07cb15
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.three_column_card_with_backgroun
+    - field.storage.block_content.field_card_one
+    - filter.format.full_html
+  module:
+    - text
+id: block_content.three_column_card_with_backgroun.field_card_one
+field_name: field_card_one
+entity_type: block_content
+bundle: three_column_card_with_backgroun
+label: 'Card One'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

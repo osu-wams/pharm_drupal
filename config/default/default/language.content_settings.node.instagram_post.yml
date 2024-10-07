@@ -1,0 +1,11 @@
+uuid: ab020181-f5c5-4d07-97ec-17818931a383
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.instagram_post
+id: node.instagram_post
+target_entity_type_id: node
+target_bundle: instagram_post
+default_langcode: site_default
+language_alterable: false

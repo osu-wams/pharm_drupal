@@ -1,0 +1,29 @@
+uuid: 05a4c56b-3c73-4d8e-b64b-4c4975ffd17c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faculty_research_topics
+    - node.type.faculty
+    - taxonomy.vocabulary.research_topics
+id: node.faculty.field_faculty_research_topics
+field_name: field_faculty_research_topics
+entity_type: node
+bundle: faculty
+label: 'Research Topics'
+description: 'Research topics this faculty member is involved with.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      research_topics: research_topics
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

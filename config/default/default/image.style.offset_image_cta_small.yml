@@ -1,0 +1,26 @@
+uuid: b9b81e23-17f8-4290-8cde-c6e7df801bbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.offset_image_cta_small
+  module:
+    - automated_crop
+name: offset_image_cta_small
+label: 'Offset Image CTA Small (294x248)'
+effects:
+  2d55b30b-c2fc-47b5-b36c-df3def9cedef:
+    uuid: 2d55b30b-c2fc-47b5-b36c-df3def9cedef
+    id: automated_crop
+    weight: 1
+    data:
+      crop_type: offset_image_cta_small
+      automatic_crop_provider: null
+  1e83a78f-3e62-4d12-bebd-67e146aab8df:
+    uuid: 1e83a78f-3e62-4d12-bebd-67e146aab8df
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 294
+      height: 248
+      anchor: center-center

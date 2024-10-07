@@ -1,0 +1,10 @@
+uuid: 44705b81-cfd1-4ef3-9d27-099a06165b4b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: z2gP53l-qees_gzxC5Gtc0Z0d3YjscK3f-0WRyecg7k
+id: desktop
+label: Desktop
+base_class: lg-flex
+weight: -9

@@ -1,0 +1,35 @@
+{# some/path/in/your/code/base/my-card.stories.twig #}
+{% stories article_card with { title: 'Components/Article Card' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: {
+      title: 'Faculty Advancements',
+      date: "May 7, 2021",
+      link: "#",
+      tags: ['Research', 'Faculty'],
+    }
+  } %}
+    <div style="max-width: 600px;">
+      {% embed 'osu:article-card' %}
+        {% block image %}
+          <div>
+            <img src="https://placekeanu.com/625/281" alt="Placeholder Iamge">
+          </div>
+        {% endblock %}
+        {% block body %}
+          <div>
+            <p>
+              A short lead of this article orem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Morbi tincidunt augue interdum velit euismod
+              in. Urna nunc id cursus metus aliquam eleifend mi in nulla.
+            </p>
+          </div>
+        {% endblock %}
+      {% endembed %}
+    </div>
+  {% endstory %}
+
+
+{% endstories %}

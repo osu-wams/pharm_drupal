@@ -1,0 +1,39 @@
+uuid: 16a96082-296e-4f02-b5a8-c1c676770269
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.offset_image_cta_large
+    - image.style.offset_image_cta_small
+  theme:
+    - osu
+id: offset_image_cta
+label: 'Offset Image CTA'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: offset_image_cta_large
+    breakpoint_id: osu.extra_large
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: offset_image_cta_large
+    breakpoint_id: osu.large
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: offset_image_cta_large
+    breakpoint_id: osu.medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: offset_image_cta_small
+    breakpoint_id: osu.small
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: offset_image_cta_small
+    breakpoint_id: osu.extra_small
+    multiplier: 1x
+breakpoint_group: osu
+fallback_image_style: offset_image_cta_small

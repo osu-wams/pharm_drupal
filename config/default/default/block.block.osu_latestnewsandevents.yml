@@ -1,0 +1,30 @@
+uuid: 5657b74a-6d7d-4d5c-add0-0a977eb83105
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:latest_news_events:c75b9dda-f9f3-4ddf-bb13-7bec60981f30'
+  module:
+    - block_content
+    - system
+  theme:
+    - osu
+id: osu_latestnewsandevents
+theme: osu
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:c75b9dda-f9f3-4ddf-bb13-7bec60981f30'
+settings:
+  id: 'block_content:c75b9dda-f9f3-4ddf-bb13-7bec60981f30'
+  label: 'Latest News and Events'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/events/*'

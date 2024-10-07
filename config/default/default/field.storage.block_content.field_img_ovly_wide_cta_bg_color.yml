@@ -1,0 +1,51 @@
+uuid: 86dbd202-ac74-428f-bb7e-834dc23ca0e3
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_img_ovly_wide_cta_bg_color
+field_name: field_img_ovly_wide_cta_bg_color
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: bg-color-white
+      label: White
+    -
+      value: bg-color-black
+      label: Black
+    -
+      value: bg-color-beaver-orange
+      label: 'Beaver Orange'
+    -
+      value: bg-color-moondust
+      label: Moondust
+    -
+      value: bg-color-moondust-2
+      label: 'Moondust 2'
+    -
+      value: bg-color-stratosphere
+      label: Stratosphere
+    -
+      value: bg-color-star-canvas
+      label: 'Star Canvas'
+    -
+      value: bg-color-gray
+      label: Gray
+    -
+      value: bg-color-crater
+      label: Crater
+    -
+      value: bg-color-dark-blue
+      label: 'Dark Blue'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

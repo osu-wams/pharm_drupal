@@ -1,0 +1,11 @@
+uuid: 5f6d3e20-4b78-447c-b7de-54b883ef20bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.campus_address
+label: 'Campus Address'
+description: ''
+targetEntityType: node
+cache: true

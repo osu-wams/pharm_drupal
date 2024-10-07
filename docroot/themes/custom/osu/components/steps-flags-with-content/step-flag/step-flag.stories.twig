@@ -1,0 +1,25 @@
+{# some/path/in/your/code/base/my-card.stories.twig #}
+{% stories step_flag with { title: 'Components/Step Flag' } %}
+
+  {% story default with {
+      name: '1. Default',
+      args: {
+        flag_text: 'Step 01',
+        flag_color_class: 'bg-color-gray',
+        flag_classes: ['flag--step-01']
+      }
+    } %}
+      {% embed 'osu:step-flag' with {
+          'flag_text': flag_text,
+          'flag_color_class': flag_color_class,
+          'flag_classes': flag_classes
+      } %}
+        {% block content %}
+          <h5>Meet Prerequisite Requirements</h5>
+          <p>Some lorem ipsum content for step 01. Let's make it a really long paragraph to better show how the text will wrap. Also want to ensure the mobile and tablet styles accomodate the text length appropriately.</p>
+        {% endblock %}
+      {% endembed %}
+  {% endstory %}
+
+{% endstories %}
+

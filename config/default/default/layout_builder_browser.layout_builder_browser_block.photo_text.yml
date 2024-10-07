@@ -1,0 +1,11 @@
+uuid: edfcc3f7-56e1-42f4-9466-48cb251f961f
+langcode: en
+status: true
+dependencies: {  }
+id: photo_text
+block_id: 'inline_block:photo_text'
+category: ctas
+label: 'Photo + Text'
+image_path: /themes/custom/osu/images/lbb/photo-text.png
+image_alt: ''
+weight: -6

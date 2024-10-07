@@ -1,0 +1,8 @@
+uuid: 7889b1c9-65f0-4667-bbdc-5764c36e6c02
+langcode: en
+status: true
+dependencies: {  }
+id: three_column_image_box_button
+label: 'Three Column Image Box Button'
+revision: false
+description: 'Block representing an Image Box Button component.'

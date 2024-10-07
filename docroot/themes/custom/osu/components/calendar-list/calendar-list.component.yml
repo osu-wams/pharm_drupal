@@ -1,0 +1,42 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Calendar List
+description: 'An individual calendar item that shows in a list.'
+status: stable
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: 'Title'
+      description: 'The Event Title.'
+      examples:
+        - 'Optimizisg Lipids Nanoparticles for Retinal Gene Editing'
+    start_date:
+      type: string
+      title: 'Start Date'
+      description: 'The date of the event, should be timestamp.'
+      examples:
+        - '1709702607'
+    end_date:
+      type: string
+      title: 'End Date'
+      description: 'The end date of the event, should be timestamp.'
+      examples:
+        - '1709702800'
+    location:
+      type: string
+      title: 'Location'
+      description: 'The location of the event.'
+      examples:
+        - 'The Main Building'
+
+slots:
+  body:
+    title: Body
+    description: 'The body text to display in the calendar list.'
+  register_details:
+    title: 'Register/Details Link'
+    description: 'The link to the registration or article details.'
+  link:
+    title: Link
+    description: 'The link to the event.'

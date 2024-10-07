@@ -1,0 +1,16 @@
+_core:
+  default_config_hash: B-qrrA7oRcyy2W-a4OjHSgOhpMNFBK4dP9yb2KHC6v4
+langcode: en
+api_key: ''
+domain: osu.ddev.site
+use_oauth: true
+api_timeout: 10
+cron: false
+batch_limit: 100
+api_classname: Mailchimp\Mailchimp
+test_mode: false
+enable_connected: false
+connected_id: null
+connected_paths: null
+webhook_hash: 35c2ee1782c7fadf769bc089106e2d2e
+optin_check_email_msg: 'Please check your email to confirm your subscription.'

@@ -1,0 +1,27 @@
+uuid: c9a8e551-0056-41b5-acb5-8a04deac235f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.latest_news_events
+id: block_content.latest_news_events.default
+targetEntityType: block_content
+bundle: latest_news_events
+mode: default
+content:
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

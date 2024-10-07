@@ -1,0 +1,19 @@
+uuid: daa4ccd9-46a7-4b18-88c2-3a3367aa9168
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+id: block_content.field_image_box_second_content
+field_name: field_image_box_second_content
+entity_type: block_content
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

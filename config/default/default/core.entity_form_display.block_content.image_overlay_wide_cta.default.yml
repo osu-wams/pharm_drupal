@@ -1,0 +1,47 @@
+uuid: 9420c2aa-5be3-42d1-b33e-ba16e3bfdb40
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_overlay_wide_cta
+    - field.field.block_content.image_overlay_wide_cta.field_img_ovly_wide_cta_bg_color
+    - field.field.block_content.image_overlay_wide_cta.field_img_ovly_wide_cta_content
+    - field.field.block_content.image_overlay_wide_cta.field_img_ovly_wide_cta_media
+  module:
+    - media_library
+    - text
+id: block_content.image_overlay_wide_cta.default
+targetEntityType: block_content
+bundle: image_overlay_wide_cta
+mode: default
+content:
+  field_img_ovly_wide_cta_bg_color:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_img_ovly_wide_cta_content:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_img_ovly_wide_cta_media:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden:
+  info: true

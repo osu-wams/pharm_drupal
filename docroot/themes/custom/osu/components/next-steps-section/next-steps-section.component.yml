@@ -1,0 +1,37 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Next Steps Section
+description: 'A box showing information about a step in the admissions process'
+status: stable
+props:
+  type: object
+  properties:
+    next_step_statement:
+      type: string
+      title: 'Next Step Statement'
+      description: 'A brief single sentence that describes the next step. May be in the form of a question.'
+      examples:
+        - 'contact an advisor'
+        - 'join an information session'
+        - 'what comes after school?'
+
+slots:
+  icon:
+    title: 'Icon'
+    description: 'An icon that represents the step visually'
+  next_step_description:
+    title: 'Next Step Description'
+    description: 'A more detailed description of the step.'
+    examples:
+      'Join us via Zoom for one of our Prospective Student Information Sessions to learn more about what the College of Pharmacy has to offer!'
+  link_button_1:
+    title: 'Link Button 1'
+    description: 'A link to information about this step.'
+    examples:
+      'Schedule an appointment'
+      'Register'
+  link_button_2:
+    title: 'Link Button 2'
+    description: 'A second link to information about this step.'
+    examples:
+        'Reach out'
+        'Student performance data'

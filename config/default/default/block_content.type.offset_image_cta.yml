@@ -1,0 +1,8 @@
+uuid: 335c6b83-b690-4b13-a950-b207551c978e
+langcode: en
+status: true
+dependencies: {  }
+id: offset_image_cta
+label: 'Offset Image CTA'
+revision: false
+description: 'Blue background text with image overlaid that is offset.'

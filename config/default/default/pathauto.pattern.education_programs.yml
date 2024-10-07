@@ -1,0 +1,22 @@
+uuid: 1fd31c85-0168-4b57-bea3-e483d2c92853
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: education_programs
+label: Education/Programs
+type: 'canonical_entities:node'
+pattern: '[node:menu-link:parents:join-path]/[node:title]'
+selection_criteria:
+  c06bba0d-d6fe-4121-959c-ffb2f6f9516b:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: c06bba0d-d6fe-4121-959c-ffb2f6f9516b
+    context_mapping:
+      node: node
+    bundles:
+      program: program
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,23 @@
+uuid: 4f547564-5df9-4c2a-99ed-ea36520706c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.three_column_image_box_button
+    - field.storage.block_content.field_third_title_tag
+  module:
+    - options
+id: block_content.three_column_image_box_button.field_third_title_tag
+field_name: field_third_title_tag
+entity_type: block_content
+bundle: three_column_image_box_button
+label: 'Third Title Tag'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: h3
+default_value_callback: ''
+settings: {  }
+field_type: list_string

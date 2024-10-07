@@ -1,0 +1,35 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Gray Box Button
+description: 'Gray box with centered content, icon, header, and default styled CTA button(s). Usually seen in a 3-column layout.'
+status: stable
+props:
+  type: object
+  properties:
+    unused_title:
+      type: string
+      title: 'Unused Title'
+      description: 'Unused title of the gray box.'
+      examples:
+        - 'Drug discovery'
+        - 'Gene regulation & disease'
+
+slots:
+  title:
+    title: 'Title'
+    description: 'Title of the gray box.'
+    examples:
+        - 'Drug discovery'
+        - 'Gene regulation & disease'
+  icon:
+    title: 'Icon'
+    description: 'An icon that represents the step visually'
+  body:
+    title: 'Body'
+    description: 'Body content of the gray box.'
+    examples:
+      'Join us via Zoom for one of our Prospective Student Information Sessions to learn more about what the College of Pharmacy has to offer!'
+  link_button:
+    title: 'Link Button'
+    description: 'A CTA Button.'
+    examples:
+      'Learn More'

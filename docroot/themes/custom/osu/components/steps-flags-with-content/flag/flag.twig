@@ -1,0 +1,6 @@
+{% set text_attributes = create_attribute() %}
+{% set attributes = create_attribute() %}
+
+<div {{ attributes.addClass("component", "flag", "flex-container", "flex-dir-column", "flex-jc-center", color_class) }}>
+	<p {{ text_attributes.addClass("flag__text", "text-small", "text-bold", "text-uppercase", classes) }}>{{ text }}</p>
+</div>

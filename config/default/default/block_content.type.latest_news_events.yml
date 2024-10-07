@@ -1,0 +1,8 @@
+uuid: ba4d2840-cfcf-4532-8fc5-7dfc214f6f87
+langcode: en
+status: true
+dependencies: {  }
+id: latest_news_events
+label: 'Latest News & Events'
+revision: false
+description: 'Show teasers of three news/events.'

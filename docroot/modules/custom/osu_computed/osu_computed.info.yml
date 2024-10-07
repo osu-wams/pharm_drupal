@@ -1,0 +1,5 @@
+name: 'OSU Computed'
+type: module
+description: 'A module to modify computed fields.'
+package: Custom
+core_version_requirement: ^10 || ^11

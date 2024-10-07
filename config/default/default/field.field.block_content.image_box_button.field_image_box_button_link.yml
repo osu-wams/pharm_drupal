@@ -1,0 +1,23 @@
+uuid: 345c5f80-2637-416c-a205-0448deb0eb6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_box_button
+    - field.storage.block_content.field_image_box_button_link
+  module:
+    - link
+id: block_content.image_box_button.field_image_box_button_link
+field_name: field_image_box_button_link
+entity_type: block_content
+bundle: image_box_button
+label: Link
+description: 'The URL this box links to.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

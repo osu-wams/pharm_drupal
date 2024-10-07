@@ -1,0 +1,175 @@
+uuid: 86d34b41-84ce-4c3b-87cf-882d6caf4b85
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.text_overlay_teaser
+    - field.field.node.program.field_header_cta_link
+    - field.field.node.program.field_header_cta_sub_title
+    - field.field.node.program.field_header_cta_title
+    - field.field.node.program.field_header_image
+    - field.field.node.program.field_header_sub_title
+    - field.field.node.program.field_hide_sidebar_menu
+    - field.field.node.program.field_image
+    - field.field.node.program.field_meta_tags
+    - field.field.node.program.field_program_overview
+    - field.field.node.program.field_show_header_cta
+    - field.field.node.program.layout_builder__layout
+    - node.type.program
+  module:
+    - layout_builder
+    - link
+    - nomarkup
+    - sdc_display
+    - smart_trim
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  sdc_display:
+    enabled: true
+    component:
+      machine_name: 'osu:text-overlay-teaser'
+      show_deprecated: null
+    mappings:
+      static:
+        props:
+          title: ''
+          link: ''
+          link_text: 'Learn More'
+          hide_content_on_mobile: ''
+        slots:
+          body:
+            value: ''
+            format: basic_html
+          image:
+            value: ''
+            format: basic_html
+          links:
+            value: ''
+            format: basic_html
+      dynamic:
+        props:
+          title: title
+          link: computed_node_url
+          link_text: null
+          hide_content_on_mobile: null
+        slots:
+          body:
+            field_program_overview: field_program_overview
+            computed_node_url: null
+            field_image: null
+            links: null
+            uid: null
+            title: null
+            created: null
+          image:
+            field_image: field_image
+            computed_node_url: null
+            field_program_overview: null
+            links: null
+            uid: null
+            title: null
+            created: null
+          links:
+            computed_node_url: null
+            field_image: null
+            field_program_overview: null
+            links: null
+            uid: null
+            title: null
+            created: null
+id: node.program.text_overlay_teaser
+targetEntityType: node
+bundle: program
+mode: text_overlay_teaser
+content:
+  computed_node_url:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 3
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: text_overlay_teaser
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: '1'
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 1
+    region: content
+  field_program_overview:
+    type: smart_trim
+    label: hidden
+    settings:
+      trim_length: 170
+      trim_type: chars
+      trim_suffix: ''
+      wrap_output: false
+      wrap_class: trimmed
+      more:
+        display_link: false
+        target_blank: false
+        link_trim_only: false
+        class: more-link
+        text: More
+        aria_label: 'Read more about [node:title]'
+      summary_handler: trim
+      trim_options:
+        text: false
+        trim_zero: false
+        replace_tokens: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_header_cta_link: true
+  field_header_cta_sub_title: true
+  field_header_cta_title: true
+  field_header_image: true
+  field_header_sub_title: true
+  field_hide_sidebar_menu: true
+  field_meta_tags: true
+  field_show_header_cta: true
+  langcode: true
+  layout_builder__layout: true

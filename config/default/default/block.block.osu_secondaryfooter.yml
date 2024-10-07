@@ -1,0 +1,25 @@
+uuid: 6a3ffbd4-0c88-4900-9ca0-c04f99839918
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.secondary-footer
+  module:
+    - system
+  theme:
+    - osu
+id: osu_secondaryfooter
+theme: osu
+region: footer
+weight: -6
+provider: null
+plugin: 'system_menu_block:secondary-footer'
+settings:
+  id: 'system_menu_block:secondary-footer'
+  label: 'Secondary Footer'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

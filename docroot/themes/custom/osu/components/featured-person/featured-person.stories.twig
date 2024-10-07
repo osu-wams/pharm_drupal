@@ -1,0 +1,48 @@
+{# some/path/in/your/code/base/my-card.stories.twig #}
+{% stories featured_person with { title: 'Components/Featured Person' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: {
+      name: 'Michel Daher',
+      job_title: 'Job Title',
+      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+      link: '#',
+    }
+  } %}
+    {% embed 'osu:featured-person' with {
+      'name': name,
+      'year': "2013",
+      'job_title': job_title,
+      'bio': bio,
+      'link': link,
+    } %}
+      {% block image %}
+        <div>
+          <img src="https://placekeanu.com/247/247" alt="Random Keanu Image">
+        </div>
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+
+  {% story reduced with {
+    name: '2. Reduced Content',
+    args: {
+      name: 'Michel Daher',
+      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+    }
+  } %}
+    {% embed 'osu:featured-person' with {
+      'name': name,
+      'bio': bio,
+    } %}
+      {% block image %}
+        <div>
+          <img src="https://placekeanu.com/247/247" alt="Random Keanu Image">
+        </div>
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+{% endstories %}

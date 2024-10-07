@@ -1,0 +1,8 @@
+@import 'utils/init';
+
+.ck-content {
+  @import 'common/typography';
+  @import 'common/color';
+  @import 'common/buttons';
+}
+

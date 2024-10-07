@@ -1,0 +1,13 @@
+uuid: 58f51356-8d24-4423-b245-6b9fc14dc481
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.latest_news_events
+id: block_content.latest_news_events.default
+targetEntityType: block_content
+bundle: latest_news_events
+mode: default
+content: {  }
+hidden:
+  langcode: true

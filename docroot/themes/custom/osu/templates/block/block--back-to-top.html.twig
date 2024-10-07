@@ -1,0 +1,15 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'block-scroll-to-top',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% block content %}
+    {{ include('osu:scroll-to-top') }}
+  {% endblock %}
+</div>

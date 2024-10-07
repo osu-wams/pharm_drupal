@@ -1,0 +1,26 @@
+uuid: 538ac31d-683b-4633-82a3-677443312443
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.full_image_w_two_column_overlay
+    - field.storage.block_content.field_content_column_1
+    - filter.format.basic_html
+    - filter.format.full_html
+  module:
+    - text
+id: block_content.full_image_w_two_column_overlay.field_content_column_1
+field_name: field_content_column_1
+entity_type: block_content
+bundle: full_image_w_two_column_overlay
+label: 'Column One'
+description: 'Content for the left column - Top on mobile'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+    - full_html
+field_type: text_long

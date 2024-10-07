@@ -1,0 +1,15 @@
+uuid: 3576f331-180d-4f4e-a93d-4ef51ad2762e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.faculty
+  module:
+    - osu_computed
+id: node.faculty.computed_full_name
+field_name: computed_full_name
+label: 'Full Name'
+entity_type: node
+bundle: faculty
+plugin_id: full_name
+plugin_config: {  }

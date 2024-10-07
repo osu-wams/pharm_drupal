@@ -1,0 +1,16 @@
+<div class="testimonial">
+  <div class="testimonial__image text-center">
+    {% block image %}{% endblock %}
+  </div>
+  <div class="testimonial__content color-dark-body-text">
+    {% block testimony %}{% endblock %}
+  </div>
+  <div class="testimonial__author color-dark-body-text">
+    <span class="testimonial__author-name">
+      {{ name }},
+    </span>
+    <span class="testimonial__author-title">
+      {{ title }}
+    </span>
+  </div>
+</div>

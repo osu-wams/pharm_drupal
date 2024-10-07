@@ -1,0 +1,11 @@
+uuid: e3fd8f38-122c-467b-a096-01b43b229363
+langcode: en
+status: true
+dependencies: {  }
+id: three_column_gray_box_button
+block_id: 'inline_block:three_column_gray_box_button'
+category: ctas
+label: 'Three Column Gray Box Button'
+image_path: /themes/custom/osu/images/lbb/three-column-gray-box-button.png
+image_alt: ''
+weight: -16

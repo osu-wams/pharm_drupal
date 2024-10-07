@@ -1,0 +1,11 @@
+uuid: 2f6c0c23-0bb7-44dc-9b1e-82f6fcb39fb8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.basic_contact
+label: 'Basic Contact'
+description: ''
+targetEntityType: node
+cache: true

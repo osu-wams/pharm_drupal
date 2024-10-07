@@ -1,0 +1,45 @@
+uuid: 75d5bdcf-3ebc-46a0-9fb7-d768b5185693
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.upcoming_events_category_filtere
+    - field.field.block_content.upcoming_events_category_filtere.field_category
+  module:
+    - nomarkup
+    - sdc_display
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: block_content.upcoming_events_category_filtere.default
+targetEntityType: block_content
+bundle: upcoming_events_category_filtere
+mode: default
+content:
+  field_category:
+    type: entity_reference_entity_id
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 1
+    region: content
+hidden:
+  langcode: true

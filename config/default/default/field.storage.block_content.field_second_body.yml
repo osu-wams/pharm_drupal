@@ -1,0 +1,19 @@
+uuid: a7bd308a-5501-453a-9d4d-1ffc551424c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+id: block_content.field_second_body
+field_name: field_second_body
+entity_type: block_content
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

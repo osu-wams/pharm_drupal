@@ -1,0 +1,61 @@
+@import '../utils/variables';
+
+// Styles for a tags and link-like elements.
+
+.link-with-arrow {
+  color: $color-stratosphere;
+  text-decoration: underline;
+  text-decoration-color: $color-stratosphere;
+
+  &:hover {
+    color: $color-star-canvas;
+    text-decoration-color: $color-star-canvas;
+    animation: color 300ms ease-in-out, text-decoration-color 300ms ease-in-out;
+  }
+
+  // Now the after element which is a right chevron with a circle around it.
+  &::after {
+    content: '\203A'; // unicode for right chevron
+    color: $color-stratosphere;
+    border: 1px solid $color-stratosphere;
+    border-radius: 50%;
+  }
+}
+
+.icon-link {
+  margin-bottom: 5px;
+  white-space: nowrap;
+
+  &::before {
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
+
+  &.mail-link::before {
+    content: url('/themes/custom/osu/images/icons/envelope.svg');
+  }
+
+  &.phone-link::before {
+    content: url('/themes/custom/osu/images/icons/mobile-alt.svg');
+  }
+}
+
+.block-inline-blockbasic {
+  a[href^="mailto:"] {
+    white-space: nowrap;
+
+    &::before {
+      margin-right: 0.25rem;
+      vertical-align: middle;
+      content: url('/themes/custom/osu/images/icons/envelope.svg');
+    }
+  }
+
+  a[href^="tel:"] {
+    &::before {
+      margin-right: 0.25rem;
+      vertical-align: middle;
+      content: url('/themes/custom/osu/images/icons/mobile-alt.svg');
+    }
+  }
+}

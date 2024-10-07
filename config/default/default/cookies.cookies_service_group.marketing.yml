@@ -1,0 +1,11 @@
+uuid: 7c3ecfca-7b05-45ad-b723-5bbe1e6c4651
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: JkP6try0AxX_f4RpFEletep5NHSlVB1BbGw0snW4MO8
+id: marketing
+label: Marketing
+weight: 20
+title: Marketing
+details: 'Customer communication and marketing tools.'

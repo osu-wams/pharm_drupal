@@ -1,0 +1,29 @@
+uuid: 2d2c2a40-38db-4c9c-bb4c-95cd12920c5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_image
+    - media.type.image
+    - node.type.campus
+id: node.campus.field_header_image
+field_name: field_header_image
+entity_type: node
+bundle: campus
+label: 'Header Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,11 @@
+uuid: 82af95d6-a8c1-49a8-9e61-9193ac0e9c59
+langcode: en
+status: true
+dependencies: {  }
+id: gray_box_button
+block_id: 'inline_block:gray_box_button'
+category: ctas
+label: 'Gray Box Button'
+image_path: /themes/custom/osu/images/lbb/gray-box-button.png
+image_alt: 'Gray box button icon'
+weight: -10

@@ -1,0 +1,30 @@
+uuid: 3f7055a2-ec8c-49c1-b488-02babb581f20
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.research_topics.field_research_highlights
+    - taxonomy.vocabulary.research_topics
+  module:
+    - text
+id: taxonomy_term.research_topics.default
+targetEntityType: taxonomy_term
+bundle: research_topics
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_research_highlights:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

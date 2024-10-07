@@ -1,0 +1,115 @@
+@import '../utils/variables';
+
+// Built-in Drupal search form styles.
+
+.search-form {
+  background-color: $color-moondust-3;
+  border: 1px solid $color-moondust-2;
+  padding: 1rem 1.5rem;
+  margin: 0 0 2rem 1.5rem;
+  max-width: 92%;
+
+  @media screen and (min-width: $md) {
+    margin: 0 0 2rem 3rem;
+    max-width: 100%;
+  }
+
+  // Want to make the advanced options look nicer on desktop.
+  .search-advanced {
+    margin-top: $padding-base * 4px;
+    padding: $padding-base * 2px;
+    border: 1px solid $color-crater;
+    background-color: $color-white;
+  }
+
+  .form-type-checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    input {
+      margin: 0;
+      accent-color: $color-stratosphere;
+      transform: scale(1.33);
+    }
+
+    label {
+      margin-left: $padding-base * 2px;
+    }
+  }
+}
+
+.osu-search-enhanced {
+  .item-list {
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+  }
+
+  .search-results {
+    list-style: none;
+    margin: 0;
+    margin-block-start: 0;
+    padding-inline-start: 0;
+
+    .search-result {
+      padding: 2rem 0;
+
+      @media screen and (min-width: $md) {
+        padding: 2rem;
+      }
+    }
+  }
+
+  .pager {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: $padding-base * 4px;
+
+    .pager__items {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      padding: 0;
+    }
+
+    .pager__item {
+      &[class*="pager__item--"] {
+        padding: $padding-base * 1px;
+        border: 1px solid $color-moondust-2;
+        background-color: $color-moondust-3;
+        text-decoration: none;
+      }
+
+      &:not(:first-child) {
+        margin-left: $padding-base * 3px;
+        font-size: $body-font-size;
+      }
+
+      &.is-active {
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        text-decoration-thickness: 2px;
+        text-decoration-color: $color-stratosphere;
+      }
+    }
+  }
+}
+
+.osu-search-enhanced__search-results {
+  // Move the list upwards so the results and sidebar are matching at the top and the
+  // results found text sits right above it.
+  margin: -30px 0 0;
+
+  @media screen and (min-width: $md) {
+    margin: -30px 0 0 6rem;
+  }
+}
+
+.osu-search-enhanced__title__count {
+  height: 100%;
+  max-height: 25px;
+  padding: 0.5rem 1.5rem 0 0;
+}

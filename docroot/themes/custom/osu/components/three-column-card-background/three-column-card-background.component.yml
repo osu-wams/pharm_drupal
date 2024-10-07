@@ -1,0 +1,27 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Three Column Card With Background Image
+description: 'Background image with cards overlayed.'
+status: stable
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: 'Title'
+      description: 'The title to show over the background.'
+      examples:
+        - 'Open New Doors for You & Your Community in Pharmacy'
+
+slots:
+  background_image:
+    title: 'Image'
+    description: 'A image to show in the background.'
+  card_1:
+    title: 'Card 1'
+    description: 'The first card to print here.'
+  card_2:
+    title: 'Card 2'
+    description: 'The second card to print here.'
+  card_3:
+    title: 'Card 3'
+    description: 'The third card to print here.'

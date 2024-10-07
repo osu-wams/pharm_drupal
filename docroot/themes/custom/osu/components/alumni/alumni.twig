@@ -1,0 +1,33 @@
+<div class="alumni">
+  <div class="alumni__inner">
+    <div class="alumni__body">
+      <div class="alumni__title">
+        <h1>{{ title }}</h1>
+      </div>
+      <div class="alumni__header">
+        {% if year %}
+          <span class="alumni__date">
+            {{ year }} |
+          </span>
+        {% endif %}
+        {% if job_title %}
+          <span class="alumni__job-title">
+            {{ job_title }}
+          </span>
+        {% endif %}
+      </div>
+      {% block body %}{% endblock %}
+    </div>
+    <div class="alumni__image">
+      {% block image %}{% endblock %}
+    </div>
+  </div>
+</div>
+
+<div class="alumni__link margin-bottom-two">
+  {% include 'osu:button' with {
+    'class': '',
+    'link_href': '#',
+    'link_text': '< Back to All Stories'|t,
+  } %}
+</div>

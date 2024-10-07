@@ -1,0 +1,11 @@
+uuid: 054c65ca-11cf-4bcb-93a4-cbffa20be06f
+langcode: en
+status: true
+dependencies: {  }
+id: campus_list
+block_id: 'views_block:campuses-block_1'
+category: lists_views
+label: 'Campus List'
+image_path: /themes/custom/osu/images/lbb/campus-list.png
+image_alt: ''
+weight: -100

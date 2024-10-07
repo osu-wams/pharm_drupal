@@ -1,0 +1,26 @@
+uuid: 9161865e-6fda-4104-837a-d3395cfdd426
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.offset_image_cta_large
+  module:
+    - automated_crop
+name: offset_image_cta_large
+label: 'Offset Image CTA Large (674x435)'
+effects:
+  3111e227-52d0-4fa3-aad5-7c5d13ac1aaf:
+    uuid: 3111e227-52d0-4fa3-aad5-7c5d13ac1aaf
+    id: automated_crop
+    weight: 1
+    data:
+      crop_type: offset_image_cta_large
+      automatic_crop_provider: null
+  f12ef404-2539-45fe-88ba-b65ea15fba78:
+    uuid: f12ef404-2539-45fe-88ba-b65ea15fba78
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 674
+      height: 435
+      anchor: center-center

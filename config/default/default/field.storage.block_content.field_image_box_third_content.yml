@@ -1,0 +1,19 @@
+uuid: 5d4c5309-c575-43df-809f-0631608531fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+id: block_content.field_image_box_third_content
+field_name: field_image_box_third_content
+entity_type: block_content
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

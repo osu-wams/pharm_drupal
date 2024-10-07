@@ -1,0 +1,65 @@
+@import '../../src/utils/variables';
+
+.detailed-teaser {
+  border: 1px solid $color-crater;
+
+  .detailed-teaser__image {
+    max-height: unset;
+    overflow: hidden;
+    position: relative;
+
+    @media screen and (min-width: $lg) {
+      max-height: 190px;
+    }
+
+    @media screen and (min-width: $xl) {
+      max-height: 225px;
+    }
+
+    @media screen and (min-width: $xxl) {
+      max-height: 300px;
+    }
+
+    img,
+    picture {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .detailed-teaser__date {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .detailed-teaser__title {
+    font-size: 20px;
+    font-family: $header-font-family;
+    margin-bottom: 10px;
+
+    @media screen and (min-width: $md){
+      font-size: 24px;
+    }
+  }
+
+  .detailed-teaser__content {
+    padding: 12px;
+
+    .detailed-teaser__title,
+    .detailed-teaser__link {
+      flex: 0 0 auto;
+    }
+
+    .detailed-teaser__link {
+      padding: 1rem 0;
+    }
+  }
+
+  .detailed-teaser__tag {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,28 @@
+uuid: 1871e144-cfbd-4391-a248-b0cf2bf50019
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+  module:
+    - eca_workflow
+id: process_zi2uh2o
+modeller: bpmn_io
+label: 'Content In Review'
+version: ''
+weight: null
+events:
+  WorkflowNotificationEmailStart:
+    plugin: 'workflow:transition'
+    label: Start
+    configuration:
+      type: 'node article'
+      from_state: ''
+      to_state: draft
+    successors:
+      -
+        id: WorkflowNotificationsLoadAdmins
+        condition: ''
+conditions: {  }
+gateways: {  }
+actions: {  }

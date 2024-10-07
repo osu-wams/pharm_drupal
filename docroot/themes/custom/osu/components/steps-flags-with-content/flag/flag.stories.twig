@@ -1,0 +1,21 @@
+{# some/path/in/your/code/base/my-card.stories.twig #}
+{% stories flag with { title: 'Components/Flag' } %}
+
+  {% story default with {
+      name: '1. Default',
+      args: {
+        text: 'Step 01',
+        color_class: 'bg-color-gray',
+        classes: ['flag--step-01']
+      }
+    } %}
+      {% embed 'osu:flag' with {
+        'text': text,
+        'color_class': color_class,
+        'classes': classes
+      } %}
+    {% endembed %}
+  {% endstory %}
+
+{% endstories %}
+

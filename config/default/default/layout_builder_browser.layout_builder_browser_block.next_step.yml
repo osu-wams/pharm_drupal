@@ -1,0 +1,11 @@
+uuid: 593374d1-bc11-4681-bf40-cf03986ad295
+langcode: en
+status: true
+dependencies: {  }
+id: next_step
+block_id: 'inline_block:next_step'
+category: ctas
+label: 'Next Step'
+image_path: /themes/custom/osu/images/lbb/next-step.png
+image_alt: ''
+weight: -8

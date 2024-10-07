@@ -1,0 +1,38 @@
+<div class="article-card">
+  <div class="article-card__inner">
+    <div class="article-card__image">
+      {% block image %}{% endblock %}
+    </div>
+    <div class="article-card__content">
+      <div class="article-card__category">
+        {% if tags %}
+          {% for tag in tags %}
+            <span class="article-card__category-tag bg-color-moondust color-dark-blue">
+              {{ tag }}
+            </span>
+          {% endfor %}
+        {% endif %}
+      </div>
+      <h3 class="article-card__title">
+        {{ title }}
+      </h3>
+      <div class="article-card__date color-dark-body-text">
+        {% set trimmed_date = date|render|striptags|trim %}
+        {% if date|split(' - ')|length > 1 %}
+          {% set trimmed_date = trimmed_date|split(' - ')|first %}
+        {% endif %}
+        {{ trimmed_date|date('F j, Y') }}
+      </div>
+      <div class="article-card__summary">
+        {% block body %}{% endblock %}
+      </div>
+    </div>
+  </div>
+  <div class="article-card__link">
+    {% include 'osu:button' with {
+      'class': '',
+      'link_href': link|default('#'),
+      'link_text': 'Read More'|t,
+    } %}
+  </div>
+</div>

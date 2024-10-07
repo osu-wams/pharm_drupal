@@ -1,0 +1,21 @@
+uuid: 67250269-152e-4aeb-9b50-0478ce735dfd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.photo_text
+    - field.storage.block_content.field_offset_corner
+id: block_content.photo_text.field_offset_corner
+field_name: field_offset_corner
+entity_type: block_content
+bundle: photo_text
+label: 'Offset corner?'
+description: 'Offset the image and overlap a smaller blue box.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

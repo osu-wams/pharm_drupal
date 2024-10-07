@@ -1,0 +1,34 @@
+{# some/path/in/your/code/base/my-card.stories.twig #}
+{% stories text_overlay_teaser with { title: 'Components/Text Overlay Teaser' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: {
+      title: 'Early Assurance Program',
+      link: '#',
+      link_text: 'Learn more',
+    }
+  } %}
+    {% embed 'osu:text-overlay-teaser' with {
+      'title': title,
+      'link': link,
+      'link_text': link_text,
+    } %}
+      {% block body %}
+        <div>
+          <p>
+            EAP is designed for high school seniors, current college students,
+            and post-baccalaureate students to assure the availability of a
+            position in our Pharm.D. program!
+          </p>
+        </div>
+      {% endblock %}
+      {% block image %}
+        <div>
+          <img src="https://placekeanu.com/414/243" alt="Random Keanu Reeves placeholder photo">
+        </div>
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+{% endstories %}

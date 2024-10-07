@@ -1,0 +1,24 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Image Overlap Wide CTA
+description: "A wide CTA component with an image to the left that's offset from the background."
+status: stable
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: 'Title'
+      description: 'Unused - only to make component work'
+    background_color:
+      type: string
+      title: 'Background Color'
+      description: 'The background color of the component.'
+      default: ''
+
+slots:
+  image:
+    title: Image
+    description: 'The image render array to render.'
+  content:
+    title: Content
+    description: 'The renderable content array to render.'

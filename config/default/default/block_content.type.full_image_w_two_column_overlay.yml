@@ -1,0 +1,8 @@
+uuid: f8f6f170-a0b0-4a6f-bf1d-d7d892eb9771
+langcode: en
+status: true
+dependencies: {  }
+id: full_image_w_two_column_overlay
+label: 'Full Width Image with Two Column Overlay'
+revision: false
+description: 'Desaturated background image with two columns of WYSIWYG content.'

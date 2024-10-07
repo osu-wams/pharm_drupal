@@ -1,0 +1,8 @@
+uuid: 7f0c8155-10ef-4219-a9f4-dfcfed158de9
+langcode: en
+status: true
+dependencies: {  }
+id: four_column_card_with_background
+label: 'Four Column Card With Background Image'
+revision: false
+description: 'A background image with title, then with four cards that break outside of the image.'

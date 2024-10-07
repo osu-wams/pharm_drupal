@@ -1,0 +1,11 @@
+uuid: a6b79a1a-9326-4b78-ab7d-0199486c959e
+langcode: en
+status: true
+dependencies: {  }
+id: latest_news
+block_id: 'views_block:latest_news-news_listing'
+category: lists_views
+label: 'Latest News'
+image_path: /themes/custom/osu/images/lbb/article-listing.png
+image_alt: ''
+weight: -100

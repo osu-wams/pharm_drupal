@@ -1,0 +1,19 @@
+uuid: 822e5e17-1eb0-4e5f-9564-234826834b21
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.step_flag
+    - field.storage.block_content.field_flag_text
+id: block_content.step_flag.field_flag_text
+field_name: field_flag_text
+entity_type: block_content
+bundle: step_flag
+label: 'Flag Text'
+description: 'Should be like "Step 01"'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
