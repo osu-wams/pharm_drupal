@@ -22,7 +22,7 @@ $databases['default']['default']['driver'] = $driver;
 
 $settings['hash_salt'] = '523b43ba7661933a711f83cb056db52f281d836193bf5cde7d74d5cbf121a43d';
 
-// Recommended setting for Drupal 10 only
+// Recommended setting for Drupal 10 only.
 $settings['state_cache'] = TRUE;
 
 // This will prevent Drupal from setting read-only permissions on sites/default.

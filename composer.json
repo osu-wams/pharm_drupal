@@ -1,21 +1,25 @@
 {
-    "name": "osu-wams/pharm_drupal",
-    "description": "Drupal Project for Oregon State University - College of Pharmacy",
+    "name": "codekoalas/koality-drupal",
+    "description": "Project template for Drupal 10 projects with composer: with some pre-installed things needed on every site",
     "type": "project",
-    "license": "GPL-2.0-or-later",
-    "homepage": "https://www.drupal.org/project/drupal",
-    "support": {
-        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
-        "chat": "https://www.drupal.org/node/314178"
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "",
+            "role": ""
+        }
+    ],
+    "candlekeep": {
+        "Lead Developer": "",
+        "Developers": [],
+        "Production URL": "",
+        "Staging URL": "",
+        "Active Maintenance": "Yes"
     },
     "repositories": [
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
         }
     ],
     "require": {
@@ -29,7 +33,7 @@
         "drupal/automated_crop": "^3.0",
         "drupal/better_exposed_filters": "^6.0",
         "drupal/block_class": "^2.0",
-        "drupal/bootstrap_layout_builder": "^2.2",
+        "drupal/bootstrap_layout_builder": "^2.1",
         "drupal/bootstrap_styles": "^1.1",
         "drupal/bpmn_io": "^2.0",
         "drupal/calendar_view": "^2.1",
@@ -135,20 +139,16 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "platform": {
-            "php": "8.2"
-        },
+        "sort-packages": true,
         "allow-plugins": {
             "composer/installers": true,
+            "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
+            "zaporylie/composer-drupal-optimizations": true,
             "phpstan/extension-installer": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "php-http/discovery": true,
-            "cweagans/composer-patches": true,
-            "tbachert/spi": true,
-            "zaporylie/composer-drupal-optimizations": true
-        },
-        "sort-packages": true
+            "php-http/discovery": true
+        }
     },
     "autoload": {
         "classmap": [
@@ -171,7 +171,7 @@
         "post-update-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
         ]
-    },    
+    },
     "extra": {
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
@@ -204,7 +204,8 @@
         },
         "patches": {
             "drupal/bootstrap_layout_builder": {
-                "#3375928": "https://www.drupal.org/files/issues/2023-07-20/3375928-depecated_notice_when_configuring_columns-3.patch"
+                "#3325151": "https://git.drupalcode.org/project/bootstrap_layout_builder/-/merge_requests/22.diff",
+                "#3375928": "https://git.drupalcode.org/project/bootstrap_layout_builder/-/merge_requests/26.diff"
             },
             "drupal/ckeditor5_font": {
                 "https://www.drupal.org/project/ckeditor5_font/issues/3368736 ('no config schema' Error)": "https://www.drupal.org/files/issues/2024-07-18/ckeditor5_font-schema-fix-10_3_x-3368736-53.patch"
@@ -219,7 +220,7 @@
                 "https://www.drupal.org/project/sdc_display/issues/3377609 (token replacement)": "https://git.drupalcode.org/project/sdc_display/-/merge_requests/1.patch"
             },
             "drupal/menu_block": {
-                "https://www.drupal.org/project/menu_block/issues/758184": "https://www.drupal.org/files/issues/2024-08-28/menu_block-active_level_fallback_when_no_children-758184-46.patch"
+                "https://www.drupal.org/project/menu_block/issues/758184": "https://www.drupal.org/files/issues/2024-05-24/menu_block-active_level_fallback_when_no_children-758184-45.patch"
             },
             "drupal/simple_menu_icons": {
                 "#3459278": "https://git.drupalcode.org/project/simple_menu_icons/-/merge_requests/10.diff"
