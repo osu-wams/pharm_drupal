@@ -1,0 +1,39 @@
+.alumni {
+  border: 1px solid #A8CBE2;
+  padding: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  position: relative;
+  color: #535651;
+}
+@media (min-width: 768px) {
+  .alumni .alumni__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 768px) {
+  .alumni .alumni__body {
+    flex-basis: 60%;
+    padding-right: 40px;
+  }
+}
+.alumni .alumni__title {
+  color: #000;
+}
+.alumni .alumni__image {
+  transform: translateY(-25%);
+}
+.alumni .alumni__image img,
+.alumni .alumni__image picture {
+  border-radius: 50%;
+  max-width: 440px;
+  height: auto;
+}
+.alumni .alumni__header {
+  margin-top: 10px;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+}

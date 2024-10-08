@@ -1,0 +1,135 @@
+.four-column-card-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.four-column-card-background .four-column-card-background__image {
+  position: absolute;
+  height: 100%;
+}
+@media screen and (min-width: 1025px) {
+  .four-column-card-background .four-column-card-background__image {
+    width: 85%;
+  }
+}
+.four-column-card-background .four-column-card-background__image div {
+  height: 100%;
+}
+.four-column-card-background .four-column-card-background__image img,
+.four-column-card-background .four-column-card-background__image picture,
+.four-column-card-background .four-column-card-background__image video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.four-column-card-background .four-column-card-background__title {
+  position: relative;
+  line-height: 27px;
+}
+@media screen and (min-width: 1025px) {
+  .four-column-card-background .four-column-card-background__title {
+    max-width: 625px;
+    line-height: 48px;
+    margin: 1.5rem auto 3rem;
+  }
+}
+.four-column-card-background .four-column-card-background__content {
+  padding: 25px 5%;
+}
+@media screen and (min-width: 1025px) {
+  .four-column-card-background .four-column-card-background__content {
+    padding: 25px;
+  }
+}
+.four-column-card-background .four-column-card-background__cards {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1025px) {
+  .four-column-card-background .four-column-card-background__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+}
+.four-column-card-background .four-column-card-background__cards > div {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1025px) {
+  .four-column-card-background .four-column-card-background__cards > div {
+    margin-bottom: 0;
+  }
+}
+.four-column-card-background .four-column-card-background__cards > div:first-child {
+  margin-bottom: 35px;
+}
+@media screen and (min-width: 1025px) {
+  .four-column-card-background .four-column-card-background__cards > div:first-child {
+    margin-bottom: 0;
+  }
+}
+.four-column-card-background .four-column-card-background__cards > div:last-child {
+  margin-bottom: 0;
+}
+.four-column-card-background .text-overlay-teaser {
+  position: relative;
+  cursor: pointer;
+}
+@media screen and (min-width: 1025px) {
+  .four-column-card-background .text-overlay-teaser {
+    cursor: default;
+  }
+}
+.four-column-card-background .text-overlay-teaser.is-active .text-overlay-teaser__body {
+  display: flex !important;
+}
+.four-column-card-background .text-overlay-teaser.is-active .text-overlay-teaser__link,
+.four-column-card-background .text-overlay-teaser.is-active .text-overlay-teaser__info {
+  position: relative !important;
+}
+.four-column-card-background .text-overlay-teaser.is-active a {
+  text-indent: 0 !important;
+  position: static !important;
+  background: #D73F09 !important;
+  display: inline-block !important;
+}
+.four-column-card-background .text-overlay-teaser .text-overlay-teaser__body {
+  display: none;
+}
+@media screen and (min-width: 1025px) {
+  .four-column-card-background .text-overlay-teaser .text-overlay-teaser__body {
+    display: flex;
+  }
+}
+.four-column-card-background .text-overlay-teaser:not(:first-child) .text-overlay-teaser__link,
+.four-column-card-background .text-overlay-teaser:not(:first-child) .text-overlay-teaser__info, .four-column-card-background .text-overlay-teaser:not(.is-active) .text-overlay-teaser__link,
+.four-column-card-background .text-overlay-teaser:not(.is-active) .text-overlay-teaser__info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+@media screen and (min-width: 1025px) {
+  .four-column-card-background .text-overlay-teaser:not(:first-child) .text-overlay-teaser__link,
+  .four-column-card-background .text-overlay-teaser:not(:first-child) .text-overlay-teaser__info, .four-column-card-background .text-overlay-teaser:not(.is-active) .text-overlay-teaser__link,
+  .four-column-card-background .text-overlay-teaser:not(.is-active) .text-overlay-teaser__info {
+    position: relative;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .four-column-card-background .text-overlay-teaser:not(:first-child) .text-overlay-teaser__link a,
+  .four-column-card-background .text-overlay-teaser:not(:first-child) .text-overlay-teaser__info a, .four-column-card-background .text-overlay-teaser:not(.is-active) .text-overlay-teaser__link a,
+  .four-column-card-background .text-overlay-teaser:not(.is-active) .text-overlay-teaser__info a {
+    text-indent: -9999px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: none;
+    display: none;
+  }
+}

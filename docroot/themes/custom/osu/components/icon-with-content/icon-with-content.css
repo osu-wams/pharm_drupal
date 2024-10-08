@@ -1,0 +1,6 @@
+.icon-with-content {
+  position: relative;
+}
+.icon-with-content .icon-with-content__image img {
+  max-width: 300px;
+}

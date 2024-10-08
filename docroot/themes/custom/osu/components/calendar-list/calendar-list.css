@@ -1,0 +1,45 @@
+.calendar-list-item {
+  margin-bottom: 40px;
+  display: grid;
+  gap: 20px;
+  grid-template-areas: "date content" "date location";
+  grid-template-columns: 70px auto;
+}
+@media screen and (min-width: 768px) {
+  .calendar-list-item {
+    grid-template-areas: "date content location";
+    grid-template-columns: 120px auto 33%;
+  }
+}
+.calendar-list-item .calendar-list-item__calendar {
+  grid-area: date;
+}
+.calendar-list-item .calendar-list-item__content {
+  grid-area: content;
+}
+.calendar-list-item .calendar-list-item__content h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.calendar-list-item .calendar-list-item__content h4 a {
+  color: #000;
+}
+.calendar-list-item .calendar-list-item__content__body {
+  font-size: 16px;
+}
+.calendar-list-item .calendar-list-item__content__body p {
+  margin: 0;
+}
+.calendar-list-item .calendar-list-item__location {
+  grid-area: location;
+}
+.calendar-list-item .calendar-list-item__info {
+  border-left: 1px solid #8E9089;
+  line-height: 27px;
+  padding-left: 13px;
+  font-weight: 400;
+  font-size: 17px;
+}
+.calendar-list-item .calendar-list-item__info__link {
+  margin-top: 10px;
+}

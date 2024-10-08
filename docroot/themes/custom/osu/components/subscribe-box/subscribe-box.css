@@ -1,0 +1,8 @@
+.subscribe-box {
+  width: auto;
+  max-width: 400px;
+}
+.subscribe-box input {
+  display: block;
+  height: 100%;
+}

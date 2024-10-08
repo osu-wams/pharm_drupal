@@ -1,0 +1,32 @@
+.contact-card-basic {
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-card-basic__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-card-basic__title-wrapper p {
+  margin: 0;
+}
+
+.contact-card-basic__image {
+  max-width: 135px;
+  max-height: 135px;
+  overflow: hidden;
+}
+.contact-card-basic__image img,
+.contact-card-basic__image picture {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+}
+
+.contact-card-basic__title-wrapper__divider {
+  margin: 0 5px;
+}

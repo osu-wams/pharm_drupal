@@ -1,0 +1,45 @@
+.featured-person {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .featured-person {
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    text-align: left;
+  }
+}
+.featured-person .featured-person__image {
+  overflow: hidden;
+  display: flex;
+}
+.featured-person .featured-person__image img,
+.featured-person .featured-person__image picture {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  max-width: 130px;
+  margin: auto;
+}
+@media screen and (min-width: 1025px) {
+  .featured-person .featured-person__image img,
+  .featured-person .featured-person__image picture {
+    max-width: 100%;
+  }
+}
+.featured-person .featured-person__name {
+  margin-bottom: 15px;
+}
+.featured-person .featured-person__bio {
+  font-size: 18px;
+  line-height: 24px;
+}
+.featured-person .featured-person__info {
+  font-family: Georgia, serif;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-style: italic;
+}

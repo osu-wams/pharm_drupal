@@ -1,0 +1,20 @@
+.calendar-icon {
+  width: 63px;
+  height: 74px;
+  box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.1019607843);
+  background-color: #FFF;
+}
+.calendar-icon .calendar-icon__month {
+  height: 22px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+}
+.calendar-icon .calendar-icon__day {
+  height: 52px;
+  font-size: 28px;
+  font-family: Georgia, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

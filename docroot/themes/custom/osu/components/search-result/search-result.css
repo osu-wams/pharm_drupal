@@ -1,0 +1,14 @@
+.search-result {
+  position: relative;
+  border-bottom: 1px solid #F1F1F1;
+}
+.search-result h2,
+.search-result h3,
+.search-result h4,
+.search-result h5,
+.search-result h6 {
+  margin: 0.5rem 0 1rem;
+}
+.search-result .search-result__snippet {
+  margin-top: 0;
+}

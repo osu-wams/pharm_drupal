@@ -1,0 +1,23 @@
+.stat {
+  display: flex;
+  gap: 15px;
+}
+.stat .stat__content__stat {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 45px;
+  margin-bottom: 5px;
+}
+.stat .stat__info {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+.stat .stat__info p {
+  font-size: 14px;
+  line-height: 16px;
+}
+.stat .stat__info i,
+.stat .stat__info em {
+  font-size: 12px;
+}

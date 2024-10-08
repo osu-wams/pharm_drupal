@@ -1,0 +1,69 @@
+.full-width-image-with-two-column-overlay {
+  margin: 2rem 0;
+  position: relative;
+}
+.full-width-image-with-two-column-overlay .full-width-image-with-two-column-overlay__text {
+  position: relative;
+  top: 0;
+  flex-direction: column;
+  gap: 0;
+  background-color: #000;
+  font-size: 1rem;
+  overflow: hidden;
+  padding: 2rem 5% 3.5rem;
+  width: auto;
+  z-index: 1;
+}
+.full-width-image-with-two-column-overlay .full-width-image-with-two-column-overlay__text > div {
+  flex: 1 0 45%;
+  z-index: 1;
+}
+.full-width-image-with-two-column-overlay .full-width-image-with-two-column-overlay__text > div:last-of-type {
+  flex: 1 0 30%;
+}
+.full-width-image-with-two-column-overlay .full-width-image-with-two-column-overlay__text > div:last-of-type h3,
+.full-width-image-with-two-column-overlay .full-width-image-with-two-column-overlay__text > div:last-of-type h4,
+.full-width-image-with-two-column-overlay .full-width-image-with-two-column-overlay__text > div:last-of-type h5 {
+  font-weight: 700;
+}
+.full-width-image-with-two-column-overlay .full-width-image-with-two-column-overlay__text p {
+  margin: 0;
+}
+.full-width-image-with-two-column-overlay .full-width-image-with-two-column-overlay__text h3,
+.full-width-image-with-two-column-overlay .full-width-image-with-two-column-overlay__text h4,
+.full-width-image-with-two-column-overlay .full-width-image-with-two-column-overlay__text h5 {
+  color: #FFF;
+  margin-bottom: 12px;
+}
+.full-width-image-with-two-column-overlay .full-width-image-with-two-column-overlay__text .button {
+  padding: 12px 22px;
+}
+@media screen and (min-width: 768px) {
+  .full-width-image-with-two-column-overlay .full-width-image-with-two-column-overlay__text {
+    flex-direction: row;
+    gap: 4rem;
+    max-width: unset;
+    padding: 4rem 6rem;
+  }
+}
+
+.full-width-image-with-two-column-overlay__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  filter: grayscale(100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+.full-width-image-with-two-column-overlay__image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+}

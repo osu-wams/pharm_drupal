@@ -1,0 +1,19 @@
+.campus-box {
+  background-color: #F1F1F1;
+  max-width: 706px;
+}
+.campus-box .campus-box__map-image img {
+  width: 100%;
+  min-height: 308px;
+  object-fit: cover;
+}
+.campus-box .campus-box__info {
+  padding-left: 31px;
+  padding-bottom: 31px;
+}
+.campus-box .campus-box__info .campus-box__name {
+  color: #D73F09;
+}
+.campus-box .campus-box__info .campus-box__address {
+  color: #535651;
+}
