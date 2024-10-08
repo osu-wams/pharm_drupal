@@ -9,13 +9,6 @@
             "role": ""
         }
     ],
-    "candlekeep": {
-        "Lead Developer": "",
-        "Developers": [],
-        "Production URL": "",
-        "Staging URL": "",
-        "Active Maintenance": "Yes"
-    },
     "repositories": [
         {
             "type": "composer",
