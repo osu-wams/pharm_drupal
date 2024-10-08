@@ -1,0 +1,113 @@
+{# some/path/in/your/code/base/my-card.stories.twig #}
+{% stories stats with { title: 'Components/Stats' } %}
+
+  {% story default with {
+    name: '1. Full Stats Section',
+    args: {
+      title_one: 'Graduation Rates',
+      title_two: 'Tests & Exams',
+      title_three: 'Residency & Placement'
+    }
+  } %}
+    {% embed 'osu:stats' with {
+      'title_one': title_one,
+      'title_two': title_two,
+      'title_three': title_three,
+    } %}
+      {% block first_stats %}
+        {% embed 'osu:stat' with {
+          'stat': '93%',
+        } %}
+          {% block stat_info %}
+            <div>
+              2018 4-Year<br>
+              Graduation Rate
+            </div>
+          {% endblock %}
+        {% endembed %}
+        {% embed 'osu:stat' with {
+          'stat': '94%',
+        } %}
+          {% block stat_info %}
+            <div>
+              2018 5-Year<br>
+              Graduation Rate
+            </div>
+          {% endblock %}
+        {% endembed %}
+      {% endblock %}
+
+      {% block second_stats %}
+        {% embed 'osu:stat' with {
+          'stat': '89%',
+        } %}
+          {% block stat_info %}
+            <div>
+              2022 NAPLEX<br>
+              First-Attempt Pass Rate<br>
+              <i><span style="font-size: 14px;">State-wide Pass Rate: 82%</span></i><br>
+              <i><span style="font-size: 14px;">National Pass Rate: 80%</span></i>
+            </div>
+          {% endblock %}
+          {% block stat_graphic %}
+            <div>
+              <img src="https://placekeanu.com/129/174" alt="Random Keanu Reeves placeholder photo">
+            </div>
+          {% endblock %}
+        {% endembed %}
+
+        {% embed 'osu:stat' with {
+          'stat': '82%',
+        } %}
+          {% block stat_info %}
+            <div>
+              2022 NAPLEX<br>
+              First-Attempt Pass Rate<br>
+              <i><span style="font-size: 14px;">State-wide Pass Rate: 84%</span></i><br>
+              <i><span style="font-size: 14px;">National Pass Rate: 76%</span></i>
+            </div>
+          {% endblock %}
+          {% block stat_graphic %}
+            <div>
+              <img src="https://placekeanu.com/129/174" alt="Random Keanu Reeves placeholder photo">
+            </div>
+          {% endblock %}
+        {% endembed %}
+      {% endblock %}
+
+      {% block third_stats %}
+        <div>
+          <p>
+            Oregon State University PharmD students exceed the national
+            average in registering for the residency match process,
+            actively listing in the process, and matching with a program.
+          </p>
+
+          <p>
+            Recent residency outcomes for applicants include:
+          </p>
+
+          <ul>
+            <li>88% match rate among the 2023 graduates who had an active listing in the residency matching process, compared to the national average of 82%.</li>
+            <li>83% match rate among the 2023 graduates who registered for the residency matching process, compared to the national average of 71%.</li>
+            <li>61% match rate among the entire graduating class of 2023 (n=74).</li>
+          </ul>
+        </div>
+      {% endblock %}
+
+      {% block bottom_column_one %}
+        <img src="https://placekeanu.com/266/270" alt="">
+      {% endblock %}
+
+      {% block bottom_column_two %}
+        <p>
+          Over seven years, College of Pharmacy graduates completed
+          residency programs at over 110 unique residency placement
+          sites across the country in 34 different states.
+        </p>
+      {% endblock %}
+
+    {% endembed %}
+  {% endstory %}
+
+{% endstories %}

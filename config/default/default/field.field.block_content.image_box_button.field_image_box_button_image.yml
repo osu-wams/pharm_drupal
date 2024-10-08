@@ -1,0 +1,29 @@
+uuid: 86570b3b-13d5-4d58-acd3-4ef0872fa503
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_box_button
+    - field.storage.block_content.field_image_box_button_image
+    - media.type.image
+id: block_content.image_box_button.field_image_box_button_image
+field_name: field_image_box_button_image
+entity_type: block_content
+bundle: image_box_button
+label: Image
+description: 'This image will be displayed behind the box underneath a dark semi translucent layer.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: name
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

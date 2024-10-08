@@ -1,0 +1,11 @@
+uuid: c9e29c94-398e-43ac-bd8d-e54578c46f9d
+langcode: en
+status: true
+dependencies: {  }
+id: full_width_image_with_two_column_overlay
+block_id: 'inline_block:full_image_w_two_column_overlay'
+category: ctas
+label: 'Full Width Image with Two Column Overlay'
+image_path: /themes/custom/osu/images/lbb/image-two-column-overlay.png
+image_alt: 'Desaturated background image with two columns of content. Text on the left, buttons on the right.'
+weight: -11

@@ -1,0 +1,11 @@
+uuid: 3117b98c-b2e1-4465-a4ce-2340b085ddf0
+langcode: en
+status: true
+dependencies: {  }
+id: featured_alumni
+block_id: 'inline_block:featured_alumni'
+category: people
+label: 'Featured Alumni'
+image_path: /themes/custom/osu/images/lbb/featured-alumni.png
+image_alt: 'Featured Alumni Preview'
+weight: -15

@@ -1,0 +1,38 @@
+// A class that can applied to img tags to make them automatically
+// resize to fit their container.
+.sized-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.circle-image {
+  border-radius: 50%;
+}
+
+.square-corner {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 30px;
+    height: 30px;
+    background-color: $color-stratosphere;
+  }
+}
+
+.circle {
+  overflow: hidden;
+
+  img,
+    picture {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      overflow: hidden;
+      aspect-ratio: 1/1;
+    }
+}

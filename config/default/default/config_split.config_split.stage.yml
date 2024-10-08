@@ -1,0 +1,16 @@
+uuid: 2801ed5e-6ff9-4848-81f2-fc8197fee403
+langcode: en
+status: true
+dependencies: {  }
+id: stage
+label: Stage
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/default/stage
+module: {  }
+theme: {  }
+complete_list: {  }
+partial_list: {  }

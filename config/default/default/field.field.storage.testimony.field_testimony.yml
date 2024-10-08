@@ -1,0 +1,19 @@
+uuid: 8f58d15c-3b87-44e5-8263-2397b27128f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.storage.field_testimony
+    - storage.storage_type.testimony
+id: storage.testimony.field_testimony
+field_name: field_testimony
+entity_type: storage
+bundle: testimony
+label: Testimony
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

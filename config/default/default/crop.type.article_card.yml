@@ -1,0 +1,12 @@
+uuid: 28a457c1-aa83-4471-875a-059a466a5a12
+langcode: en
+status: true
+dependencies: {  }
+label: 'Article Card'
+id: article_card
+description: ''
+aspect_ratio: '625:281'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: 625
+hard_limit_height: 281

@@ -1,0 +1,11 @@
+uuid: 5d9a650e-93bd-4a80-bdf5-3cf36734b870
+langcode: en
+status: true
+dependencies: {  }
+id: four_column_card_with_background_image
+block_id: 'inline_block:four_column_card_with_background'
+category: lists_views
+label: 'Four Column Card With Background Image'
+image_path: /themes/custom/osu/images/lbb/four-column-card-background.png
+image_alt: ''
+weight: -100

@@ -1,0 +1,12 @@
+<div class="component full-width-image-with-two-column-overlay flex-container flex-jc-space-between flex-dir-column">
+  <div class="full-width-image-with-two-column-overlay__text flex-container">
+  <div class="full-width-image-with-two-column-overlay__image" style="background-image: url( {{ file_url(img_src) }}">
+  </div>
+    <div class="full-width-image-with-two-column-overlay__body color-white">
+      {% block content_col_1 %}{% endblock %}
+    </div>
+    <div class="full-width-image-with-two-column-overlay__body color-white">
+      {% block content_col_2 %}{% endblock %}
+    </div>
+  </div>
+</div>

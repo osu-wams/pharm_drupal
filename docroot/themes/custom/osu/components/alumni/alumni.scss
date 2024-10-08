@@ -1,0 +1,48 @@
+@import '../../src/utils/variables';
+
+.alumni {
+  border: 1px solid $color-moondust-2;
+  padding: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  position: relative;
+  color: $color-dark-body-text;
+
+  .alumni__inner {
+
+    @media (min-width: $md) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .alumni__body {
+    @media (min-width: $md) {
+      flex-basis: 60%;
+      padding-right: 40px;
+    }
+  }
+
+  .alumni__title {
+    color: $color-black;
+  }
+
+  .alumni__image {
+    transform: translateY(-25%);
+
+    img,
+    picture {
+      border-radius: 50%;
+      max-width: 440px;
+      height: auto;
+    }
+  }
+
+  .alumni__header {
+    margin-top: 10px;
+    font-family: $header-font-family;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+  }
+}

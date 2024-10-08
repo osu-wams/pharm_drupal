@@ -1,0 +1,39 @@
+uuid: 84f59df3-65bf-4b1b-819a-b09a322cdee0
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.hero_desktop
+    - image.style.hero_mobile
+  theme:
+    - osu
+id: hero
+label: Hero
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_desktop
+    breakpoint_id: osu.extra_large
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_desktop
+    breakpoint_id: osu.large
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_desktop
+    breakpoint_id: osu.medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_mobile
+    breakpoint_id: osu.small
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: hero_mobile
+    breakpoint_id: osu.extra_small
+    multiplier: 1x
+breakpoint_group: osu
+fallback_image_style: hero_mobile

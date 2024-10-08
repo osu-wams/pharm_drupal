@@ -1,0 +1,127 @@
+@import '../../src/utils/variables';
+
+.block-inline-blockthree-column-gray-box-button {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  @media (min-width: $md) {
+    flex-direction: row;
+
+    .gray-box-button {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      height: auto;
+      margin: 0;
+      max-width: unset;
+    }
+  }
+}
+
+.block-inline-blockgray-box-button {
+  height: 100%;
+  overflow: hidden;
+}
+
+.gray-box-button {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 90%;
+
+  @media screen and (min-width: $md) {
+    margin: unset;
+    max-width: 100%;
+  }
+
+  .gray-box-button__intersecting_part {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .gray-box-button__intersecting_part__rectangle {
+    grid-column: 1 / 4;
+    grid-row: 3 / 5;
+    background-color: $color-gray;
+  }
+
+  .gray-box-button__intersecting_part__icon {
+    display: block;
+    justify-self: center;
+    align-self: center;
+    grid-column: 2;
+    grid-row: 1 / 5;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      height: 90px;
+      width: 90px;
+      object-fit: cover;
+    }
+
+    @media screen and (min-width: $md) {
+      img {
+        height: 120px;
+        width: auto;
+      }
+    }
+  }
+
+  .gray-box-button__content {
+    padding: 1px 25px 14px;
+    background-color: $color-gray;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .gray-box-button__content__title {
+      font-weight: $bold-font-weight;
+      text-transform: uppercase;
+
+      h2 {
+        font-family: $body-font-family;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.045rem;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 1rem;
+
+        @media screen and (min-width: $md) {
+          font-size: 22px;
+        }
+      }
+    }
+
+    .gray-box-button__description {
+      color: $color-dark-body-text;
+      text-align: center;
+
+      p {
+        margin-top: 0;
+        font-size: $body-font-size-small;
+      }
+
+      @media (min-width: $header-font-breakpoint) {
+        p {
+          font-size: $body-font-size;
+        }
+      }
+
+      p:empty {
+        display: none;
+      }
+    }
+  }
+
+  .button {
+    margin-bottom: 1rem;
+  }
+}

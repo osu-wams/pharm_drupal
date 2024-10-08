@@ -1,0 +1,19 @@
+uuid: 7a5a2877-4eef-4e09-859a-be1d7e05be94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_title_override
+    - node.type.page
+id: node.page.field_header_title_override
+field_name: field_header_title_override
+entity_type: node
+bundle: page
+label: 'Header Title Override'
+description: 'Text in here will override the default title which is the title of the page. For example on Home page the page is named "home" but you want something else to show in the header.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Stat
+description: 'A stat component.'
+status: stable
+props:
+  type: object
+  properties:
+    stat:
+      type: string
+      title: 'Stat'
+      description: 'The stat number.'
+      examples:
+        - '93%'
+
+slots:
+  stat_info:
+    title: Info for the stat
+  stat_graphic:
+    title: Graphic for the stat

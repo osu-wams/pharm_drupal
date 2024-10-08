@@ -1,0 +1,11 @@
+uuid: cb95d924-f3ec-40a7-a4e4-8bb5e8e43bce
+langcode: en
+status: true
+dependencies: {  }
+id: faculty_basic_contact_info
+block_id: 'inline_block:faculty_basic_contact'
+category: people
+label: 'Faculty Basic Contact Info'
+image_path: /themes/custom/osu/images/lbb/faculty-basic-contact.png
+image_alt: 'Faculty Basic Contact Preview'
+weight: -13

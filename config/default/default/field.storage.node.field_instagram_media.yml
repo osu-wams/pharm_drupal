@@ -1,0 +1,20 @@
+uuid: d3630148-23e0-4a24-a1e7-1e8593ff4551
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - node
+id: node.field_instagram_media
+field_name: field_instagram_media
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

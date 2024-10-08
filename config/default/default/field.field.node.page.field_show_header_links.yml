@@ -1,0 +1,23 @@
+uuid: 15df30cf-f6a8-45b2-b221-6c541ef9a685
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_header_links
+    - node.type.page
+id: node.page.field_show_header_links
+field_name: field_show_header_links
+entity_type: node
+bundle: page
+label: 'Show Header Links'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

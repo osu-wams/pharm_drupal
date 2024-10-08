@@ -1,0 +1,11 @@
+uuid: 5c6337d5-9775-4ec3-a20a-1a105a20c6c5
+langcode: en
+status: true
+dependencies: {  }
+id: three_column_card_with_background_image
+block_id: 'inline_block:three_column_card_with_backgroun'
+category: ctas
+label: 'Three Column Card With Background Image'
+image_path: /themes/custom/osu/images/lbb/three-column-card-background.png
+image_alt: ''
+weight: -2

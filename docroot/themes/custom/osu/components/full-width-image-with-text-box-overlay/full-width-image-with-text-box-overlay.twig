@@ -1,0 +1,17 @@
+<div class="component full-width-image-with-text-box-overlay flex-container flex-ai-flex-start flex-dir-column">
+  <div class="full-width-image-with-text-box-overlay__image">
+    {% block image %}{% endblock %}
+  </div>
+  <div class="full-width-image-with-text-box-overlay__text-box">
+    <div class="full-width-image-with-text-box-overlay__headline text-center">
+      <{{ title_tag }} class="full-width-image-with-text-box-overlay__text__heading">{{ title }}</{{ title_tag }}>
+    </div>
+    <div class="full-width-image-with-text-box-overlay__body text-center">
+      {% block content %}{% endblock %}
+    </div>
+      <div class="full-width-image-with-text-box-overlay__buttons text-center flex-ai-center">
+        {% block button %}{% endblock %}
+        {% block secondary_button %}{% endblock %}
+      </div>
+  </div>
+</div>

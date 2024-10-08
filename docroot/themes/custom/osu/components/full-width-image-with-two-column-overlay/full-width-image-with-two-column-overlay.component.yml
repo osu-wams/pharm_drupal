@@ -1,0 +1,28 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Full Width Image with Two column Overlay
+description: 'A full width image with two column overlay.'
+status: stable
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: 'Title'
+      description: 'Title of the image box.'
+      examples:
+        - 'Getting Started'
+    img_src:
+      type: string
+      title: 'Image Source'
+      description: 'The image path.'
+
+slots:
+  content_col_1:
+    title: Content Column 1
+    description: 'The content render array to render.'
+  content_col_2:
+    title: Content Column 2
+    description: 'The content render array to render.'
+  image:
+    title: Image
+    description: 'The image render array to render.'

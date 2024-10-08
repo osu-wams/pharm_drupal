@@ -1,0 +1,38 @@
+uuid: 1439a929-d042-4680-b5f0-a1945f7af087
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_faculty
+    - field.field.block_content.featured_faculty.field_faculty_member
+id: block_content.featured_faculty.default
+targetEntityType: block_content
+bundle: featured_faculty
+mode: default
+content:
+  field_faculty_member:
+    type: entity_reference_autocomplete
+    weight: 26
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

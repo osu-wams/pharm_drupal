@@ -1,0 +1,40 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Framed Content Box
+description: ''
+status: stable
+props:
+  type: object
+  properties:
+    name:
+      type: string
+      title: 'Name'
+      description: 'The name of the program.'
+      examples:
+        - 'Early Assurance Program'
+        - 'Ph.D. Program'
+    deadline_description:
+      type: string
+      title: 'Deadline Description'
+      description: 'The semester for which application is due.'
+      examples:
+        - 'Fall Application Deadline:'
+    deadline_date:
+      type: string
+      title: 'Deadline Date'
+      description: 'The month, day and year that application is due.'
+      examples:
+        - '2024-06-03T12:00:00.000Z'
+
+slots:
+  image:
+    title: 'Image'
+    description: 'A representative image for the program.'
+  content_body:
+    title: 'Content Body'
+    description: 'Main text for content.'
+  schedule_a_tour_link:
+    title: 'Schedule a Tour Link'
+    description: 'A link to a form for scheduling a campus tour.'
+  parking_directions_link:
+    title: 'Parking Directions Link'
+    description: 'A link to directions to campus parking.'

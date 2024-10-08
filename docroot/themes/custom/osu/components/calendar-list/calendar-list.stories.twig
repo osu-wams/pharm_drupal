@@ -1,0 +1,36 @@
+{# some/path/in/your/code/base/my-card.stories.twig #}
+{% stories calendar_list with { title: 'Components/Calendar List' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: {
+      title: 'Optimizing Lipids Nanoparticles for Retinal Gene Editing',
+      start_date: "2024-04-04T12:00:00.000Z",
+      end_date: "2024-04-04T17:00:00.000Z",
+      location: 'The Main Building',
+    }
+  } %}
+    {% embed 'osu:calendar-list' with {
+      'title': title,
+      'start_date': start_date,
+      'end_date': end_date,
+      'location': location,
+    } %}
+      {% block body %}
+        Optio quaerat omnis et aut incidunt suscipit ut unde. Nisi eos non vero
+        totam dolorum est. Molestias blanditiis qui id nisi omnis molestiae.
+        Ut quae vel est ad nihil aut ut. Iste rerum quia voluptas non omnis.
+        Nisi iste voluptates eveniet ut et amet. Iure
+      {% endblock %}
+      {% block link %}
+        {% include 'osu:button' with {
+          'class': 'tertiary',
+          'link_href': '#',
+          'link_text': 'Register',
+        } %}
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+
+{% endstories %}

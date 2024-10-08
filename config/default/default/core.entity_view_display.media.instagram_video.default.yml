@@ -1,0 +1,34 @@
+uuid: ef5cf849-b73f-4b0d-901b-1a00b6d0a0f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.instagram_video.field_media_video_file_1
+    - media.type.instagram_video
+  module:
+    - file
+id: media.instagram_video.default
+targetEntityType: media
+bundle: instagram_video
+mode: default
+content:
+  field_media_video_file_1:
+    type: file_video
+    label: visually_hidden
+    settings:
+      controls: true
+      autoplay: false
+      loop: false
+      multiple_file_display_type: tags
+      muted: false
+      width: 640
+      height: 480
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

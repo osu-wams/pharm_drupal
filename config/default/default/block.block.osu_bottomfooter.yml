@@ -1,0 +1,25 @@
+uuid: f1a96356-b6e3-4669-b9c7-854bf4e2bb76
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.bottom-footer
+  module:
+    - system
+  theme:
+    - osu
+id: osu_bottomfooter
+theme: osu
+region: footer_bottom
+weight: 0
+provider: null
+plugin: 'system_menu_block:bottom-footer'
+settings:
+  id: 'system_menu_block:bottom-footer'
+  label: 'Bottom Footer'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

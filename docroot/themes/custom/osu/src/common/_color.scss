@@ -1,0 +1,99 @@
+@use "sass:color";
+
+$colors: (
+  color-white: $color-white,
+  color-bucktooth-white: $color-white,
+  color-black: $color-black,
+  color-paddletail-black: $color-black,
+  color-beaver-orange: $color-beaver-orange,
+  color-moondust: $color-moondust,
+  color-stratosphere: $color-stratosphere,
+  color-star-canvas: $color-star-canvas,
+  color-gray: $color-gray,
+  color-crater: $color-crater,
+  color-dark-body-text: $color-dark-body-text,
+  color-moondust-2: $color-moondust-2,
+  color-dark-blue: $color-dark-blue,
+  );
+
+// pass in color and it sets alt color
+@function set-color($color) {
+  @if (lightness($color) > 50) { //this needs to be 50 to catch some AAA stuff
+    @return $color-black;
+  }
+  @else {
+    @return $color-white;
+  }
+
+}
+
+@each $key, $color in $colors {
+  .#{$key} {
+    color: $color !important;
+  }
+
+  .border-#{$key} {
+    border-color: $color !important;
+
+    &::before,
+    &::after {
+      border-color: $color !important;
+    }
+  }
+
+  .fill-#{$key} {
+    fill: $color !important;
+
+    svg {
+      fill: $color !important;
+    }
+  }
+
+  .fill-inverse-#{$key} {
+    fill: set-color($color) !important;
+
+    svg {
+      fill: set-color($color) !important;
+    }
+  }
+
+  .bg-#{$key} {
+    background-color: $color !important;
+    color: set-color($color) !important;
+
+    body {
+      color: set-color($color) !important;
+
+      a {
+        color: set-color($color) !important;
+      }
+    }
+
+    &[class^='button'],
+    &.button {
+      border-color: $color !important;
+      color: set-color($color) !important;
+
+      &:hover {
+        background-color: color.adjust($color, $lightness: -20%) !important;
+        border-color: color.adjust($color, $lightness: -20%) !important;
+      }
+    }
+
+    &.button-alt,
+    &.button.outline {
+      color: $color !important;
+      background-color: transparent !important;
+
+      &:hover {
+        background-color: $color !important;
+        border-color: $color !important;
+        color: set-color($color) !important;
+      }
+    }
+
+    hr {
+      color: set-color($color) !important;
+    }
+  }
+}

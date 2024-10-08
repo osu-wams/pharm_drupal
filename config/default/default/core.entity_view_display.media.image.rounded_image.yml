@@ -1,0 +1,62 @@
+uuid: 8f952ab1-f21f-46f6-9e78-cf0c36f3719f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.rounded_image
+    - field.field.media.image.field_media_image
+    - image.style.rounded_image_450x450
+    - media.type.image
+  module:
+    - image
+    - layout_builder
+    - nomarkup
+    - sdc_display
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+_core:
+  default_config_hash: 73xaTNkI5J6sfFcBmNYeuk070X3mQS_iwwWaPYyfG2M
+id: media.image.rounded_image
+targetEntityType: media
+bundle: image
+mode: rounded_image
+content:
+  field_media_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: rounded_image_450x450
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 1
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

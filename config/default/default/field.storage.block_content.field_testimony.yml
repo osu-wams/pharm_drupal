@@ -1,0 +1,20 @@
+uuid: 5fb89e7c-8e6d-4dd4-b395-f66b8daea303
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - storage
+id: block_content.field_testimony
+field_name: field_testimony
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: storage
+module: core
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

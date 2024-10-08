@@ -1,0 +1,93 @@
+uuid: 6c38831c-97ed-4f3e-8016-7b0313e046bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.round_photo_text
+    - field.field.block_content.round_photo_text.body
+    - field.field.block_content.round_photo_text.field_circle_image
+    - field.field.block_content.round_photo_text.field_image
+  module:
+    - nomarkup
+    - sdc_display
+    - text
+third_party_settings:
+  sdc_display:
+    enabled: true
+    component:
+      machine_name: 'osu:photo-left-text'
+      show_deprecated: null
+    mappings:
+      static:
+        props:
+          title: ''
+          offset: ''
+          circle: ''
+        slots:
+          image:
+            value: ''
+            format: basic_html
+          content:
+            value: ''
+            format: basic_html
+      dynamic:
+        props:
+          title: ''
+          offset: ''
+          circle: field_circle_image
+        slots:
+          image:
+            field_image: field_image
+          content:
+            body: body
+id: block_content.round_photo_text.default
+targetEntityType: block_content
+bundle: round_photo_text
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_circle_image:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: news_teaser
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: '1'
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 1
+    region: content
+hidden:
+  langcode: true

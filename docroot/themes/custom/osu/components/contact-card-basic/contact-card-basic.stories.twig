@@ -1,0 +1,47 @@
+{% stories contact_card_basic with { title: 'Components/Directory/Contact Information Card - Basic' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: {
+      title: 'Chrissa Kiossi',
+      secondary_title: 'Professor and Chair',
+      email: 'email@oregonstate.edu',
+      phone: '(123) 456-7890'
+    }
+  } %}
+    <div style="max-width: 600px;">
+      {% embed 'osu:contact-card-basic' with {
+        'title': title,
+        'secondary_title': secondary_title,
+        'email': email,
+        'phone': phone
+      } %}
+        {% block image %}
+          <img class="sized-image circle-image" src="https://placekeanu.com/325/325" alt="Random Keanu Reeves placeholder photo">
+        {% endblock %}
+      {% endembed %}
+    </div>
+  {% endstory %}
+
+  {% story no_image with {
+    name: '2. No Image',
+    args: {
+      title: 'Josh Doe',
+      secondary_title: 'Lead Organizer',
+      email: 'email@oregonstate.edu',
+      phone: '(123) 456-7899'
+    }
+  } %}
+    <div style="max-width: 600px;">
+      {% embed 'osu:contact-card-basic' with {
+        'title': title,
+        'secondary_title': secondary_title,
+        'email': email,
+        'phone': phone
+      } %}
+      {% endembed %}
+    </div>
+  {% endstory %}
+
+
+{% endstories %}

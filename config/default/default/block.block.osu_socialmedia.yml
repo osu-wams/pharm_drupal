@@ -1,0 +1,25 @@
+uuid: 727d92e5-9bb4-4044-93b1-614a4120465c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social-media
+  module:
+    - system
+  theme:
+    - osu
+id: osu_socialmedia
+theme: osu
+region: footer
+weight: -7
+provider: null
+plugin: 'system_menu_block:social-media'
+settings:
+  id: 'system_menu_block:social-media'
+  label: 'Social Media'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,29 @@
+uuid: 2bcb5b5e-6fbf-4fcf-842a-ca614a9bdc08
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_alumni
+    - field.storage.block_content.field_alumni
+    - node.type.alumni
+id: block_content.featured_alumni.field_alumni
+field_name: field_alumni
+entity_type: block_content
+bundle: featured_alumni
+label: Alumni
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      alumni: alumni
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

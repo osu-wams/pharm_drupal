@@ -1,0 +1,33 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Alumni
+description: 'Alumni'
+status: stable
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: 'Title'
+      description: 'The name of the Alumni.'
+      examples:
+        - 'Michel Daher'
+    year:
+      type: string
+      title: 'Year'
+      description: 'The graduation year.'
+      examples:
+        - '2013'
+    job_title:
+      type: string
+      title: 'Job Title'
+      description: 'The job title of the Alumni.'
+      examples:
+        - 'Software Engineer'
+
+slots:
+  body:
+    title: 'Alumni Body'
+    description: 'The body of the article.'
+  image:
+    title: 'Alumni Image'
+    description: 'The image of the Alumni.'

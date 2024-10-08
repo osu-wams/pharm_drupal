@@ -1,0 +1,42 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Featured Person
+description: 'A calendar showing month and day'
+status: stable
+props:
+  type: object
+  properties:
+    name:
+      type: string
+      title: 'Name'
+      description: 'The name of the person'
+      examples:
+        - 'Michel Daher'
+    year:
+      type: string
+      title: 'Year'
+      description: 'The year the person started'
+      examples:
+        - '2013'
+    job_title:
+      type: string
+      title: 'Job Title'
+      description: 'The job title of the person'
+      examples:
+        - 'Professor'
+    bio:
+      type: string
+      title: 'Bio'
+      description: 'The bio of the person'
+      examples:
+        - 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.'
+    link:
+      type: string
+      title: 'Link'
+      description: 'The link to the person'
+      examples:
+        - '#'
+
+slots:
+  image:
+    title: Image
+    description: 'The image for the person.'

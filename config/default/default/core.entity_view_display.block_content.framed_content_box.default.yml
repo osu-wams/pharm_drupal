@@ -1,0 +1,137 @@
+uuid: ccad813c-e26c-4077-8c4b-809ac3aa7a46
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.framed_content_box
+    - field.field.block_content.framed_content_box.body
+    - field.field.block_content.framed_content_box.field_image
+    - field.field.block_content.framed_content_box.field_link
+    - field.field.block_content.framed_content_box.field_title
+  module:
+    - link
+    - nomarkup
+    - sdc_display
+    - text
+third_party_settings:
+  sdc_display:
+    enabled: true
+    component:
+      machine_name: 'osu:framed-content-box'
+      show_deprecated: null
+    mappings:
+      static:
+        props:
+          name: ''
+          deadline_description: ''
+          deadline_date: ''
+        slots:
+          image:
+            value: ''
+            format: basic_html
+          content_body:
+            value: ''
+            format: basic_html
+          schedule_a_tour_link:
+            value: ''
+            format: basic_html
+          parking_directions_link:
+            value: ''
+            format: basic_html
+      dynamic:
+        props:
+          name: field_title
+        slots:
+          image:
+            field_image: field_image
+          content_body:
+            body: body
+          schedule_a_tour_link:
+            field_link: field_link
+id: block_content.framed_content_box.default
+targetEntityType: block_content
+bundle: framed_content_box
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 0
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: full_width_with_overlay
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: '0'
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: ''
+        referenced_entity: ''
+      sdc_display:
+        enabled: '1'
+        component:
+          machine_name: 'osu:button'
+          show_deprecated: 0
+        mappings:
+          static:
+            props:
+              link_href: ''
+              link_text: ''
+              class: secondary
+          dynamic:
+            mapped: link_href
+    weight: 4
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
+    region: content
+hidden:
+  langcode: true

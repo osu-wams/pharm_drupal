@@ -1,0 +1,45 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Detailed Teaser
+description: 'Background image with cards overlayed.'
+status: stable
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: 'Title'
+      description: 'The title of the item.'
+      examples:
+        - 'News Title & Short About'
+    link:
+      type: string
+      title: 'Link'
+      description: 'The link of the item.'
+      examples:
+        - '#'
+    link_title:
+      type: string
+      title: 'Link Title'
+      description: 'The link title of the item.'
+      examples:
+        - 'Read More'
+    tag:
+      type: string
+      title: 'Tag'
+      description: 'The tag of the item.'
+      examples:
+        - 'News'
+    date:
+      type: string
+      title: 'Date'
+      description: 'The date of the item.'
+      examples:
+        - '1715026587'
+
+slots:
+  body:
+    title: 'Body'
+    description: 'The summary for the teaser.'
+  image:
+    title: 'Image'
+    description: 'The image for the teaser.'

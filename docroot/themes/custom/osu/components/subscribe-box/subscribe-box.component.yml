@@ -1,0 +1,19 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Subscribe Box
+description: 'A subscription box'
+status: stable
+props:
+  type: object
+  properties:
+    text:
+      type: string
+      title: 'Text'
+      description: 'The text above the input.'
+      examples:
+        - 'Sign Up for The Newsletter'
+    subtext:
+      type: string
+      title: 'Subtext'
+      description: 'The text below the input.'
+      examples:
+        - 'Get the latest articles and events.'

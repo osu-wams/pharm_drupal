@@ -1,0 +1,19 @@
+uuid: cb9ebe10-3907-485e-9b3d-fb2174f667df
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - link
+id: block_content.field_third_link
+field_name: field_third_link
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

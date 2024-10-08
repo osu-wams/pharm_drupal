@@ -1,0 +1,32 @@
+{# some/path/in/your/code/base/my-card.stories.twig #}
+{% stories offset_image_cta with { title: 'Components/Offset Image CTA' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: {
+      text: "Want more details about the kinds of support you'll receive at OSU College of Pharmacy?"
+    }
+  } %}
+    {% embed 'osu:offset-image-cta' with {
+      'text': text,
+    } %}
+      {% block image %}
+        <img src="https://placekeanu.com/674/435" alt="Random Keanu Reeves placeholder photo">
+      {% endblock %}
+      {% block buttons %}
+        {% include 'osu:button' with {
+          'class': 'tertiary',
+          'link_href': '#',
+          'link_text': 'Student Resources',
+        } %}
+        {% include 'osu:button' with {
+          'class': 'tertiary',
+          'link_href': '#',
+          'link_text': 'Performance Data',
+        } %}
+      {% endblock %}
+
+    {% endembed %}
+  {% endstory %}
+
+{% endstories %}

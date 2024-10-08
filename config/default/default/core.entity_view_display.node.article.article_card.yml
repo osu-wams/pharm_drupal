@@ -1,0 +1,167 @@
+uuid: ecaf4d36-18b3-4bbd-b254-5d189f8ee244
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.article_card
+    - field.field.node.article.body
+    - field.field.node.article.field_article_category
+    - field.field.node.article.field_header_cta_link
+    - field.field.node.article.field_header_cta_sub_title
+    - field.field.node.article.field_header_cta_title
+    - field.field.node.article.field_header_image
+    - field.field.node.article.field_image
+    - field.field.node.article.field_meta_tags
+    - field.field.node.article.field_show_header_cta
+    - image.style.article_card
+    - node.type.article
+  module:
+    - layout_builder
+    - media
+    - nomarkup
+    - sdc_display
+    - smart_trim
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  sdc_display:
+    enabled: true
+    component:
+      machine_name: 'osu:article-card'
+      show_deprecated: null
+    mappings:
+      static:
+        props:
+          title: ''
+          date: ''
+          link: ''
+        slots:
+          image:
+            value: ''
+            format: basic_html
+          body:
+            value: ''
+            format: basic_html
+          tags:
+            value: ''
+            format: basic_html
+      dynamic:
+        props:
+          title: title
+          date: created
+          link: computed_node_url
+        slots:
+          image:
+            field_image: field_image
+          body:
+            body: body
+          tags:
+            field_article_category: field_article_category
+id: node.article.article_card
+targetEntityType: node
+bundle: article
+mode: article_card
+content:
+  body:
+    type: smart_trim
+    label: hidden
+    settings:
+      trim_length: 256
+      trim_type: chars
+      trim_suffix: ''
+      wrap_output: false
+      wrap_class: trimmed
+      more:
+        display_link: false
+        target_blank: false
+        link_trim_only: false
+        class: more-link
+        text: More
+        aria_label: 'Read more about [node:title]'
+      summary_handler: trim
+      trim_options:
+        text: true
+        trim_zero: false
+        replace_tokens: true
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 1
+    region: content
+  computed_node_url:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 4
+    region: content
+  field_article_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
+    region: content
+  field_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: article_card
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  computed_formatted_date: true
+  field_header_cta_link: true
+  field_header_cta_sub_title: true
+  field_header_cta_title: true
+  field_header_image: true
+  field_meta_tags: true
+  field_show_header_cta: true
+  langcode: true

@@ -1,0 +1,106 @@
+@import '../../src/utils/variables';
+
+.offset-image-cta {
+  margin: 0 auto -100px;
+  max-width: 90%;
+  position: relative;
+
+  @media screen and (min-width: $lg) {
+    max-width: calc(100% - 50px);
+  }
+
+  .offset-image-cta__content {
+    padding: 20px;
+    aspect-ratio: 312/359;
+    max-width: 93%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transform: translateY(-30%);
+
+    // Fallback set width, multiply by aspect ratio to get height
+    @supports not (aspect-ratio: 312/359) {
+      width: 312px;
+      height: calc(312px * 359/312);
+    }
+
+    @media screen and (min-width: $sm) {
+      transform: translateY(-45%);
+    }
+
+    @media screen and (min-width: $md) {
+      aspect-ratio: 511/339;
+      max-width: 511px;
+      padding: 40px;
+
+      // Fallback set width, multiply by aspect ratio to get height
+      @supports not (aspect-ratio: 511/339) {
+        width: 511px;
+        height: calc(511px * 339/511);
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      transform: translateY(-16%);
+    }
+
+    @media screen and (min-width: 992px) {
+      transform: translateY(-28%);
+    }
+
+    @media screen and (min-width: 1134px) {
+      transform: translateY(-41%);
+    }
+  }
+
+  .offset-image-cta__text {
+    font-family: $header-font-family;
+    font-size: 20px;
+    font-style: italic;
+
+    @media screen and (min-width: $md) {
+      font-style: normal;
+    }
+  }
+
+  .offset-image-cta__image {
+    max-width: calc(100% - 10%);
+    position: relative;
+    transform: translateX(11%);
+    z-index: 1;
+
+    @media screen and (min-width: $md) {
+      max-width: 100%;
+    }
+
+    img,
+    picture {
+      width: 100%;
+      max-width: 675px;
+      height: auto;
+    }
+  }
+
+  .offset-image-cta__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media screen and (min-width: $lg) {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .button {
+      margin-top: 10px;
+      margin-left: 2px !important;
+      font-size: 14px;
+      width: auto;
+      align-self: flex-start;
+
+      @media screen and (min-width: $md) {
+        font-size: 16px;
+      }
+    }
+  }
+}

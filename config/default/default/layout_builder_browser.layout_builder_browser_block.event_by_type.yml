@@ -1,0 +1,11 @@
+uuid: b4f5d4c3-c1bb-4822-ade9-4559a11021a2
+langcode: en
+status: true
+dependencies: {  }
+id: event_by_type
+block_id: 'inline_block:upcoming_events_category_filtere'
+category: lists_views
+label: 'Event By Type'
+image_path: /themes/custom/osu/images/lbb/event-by-type.png
+image_alt: ''
+weight: -100

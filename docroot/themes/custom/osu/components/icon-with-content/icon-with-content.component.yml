@@ -1,0 +1,19 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Icon + Content
+description: 'An icon set above a WYSIWYG text block below.'
+status: stable
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: 'Title'
+      description: 'Unused only for getting component to work'
+
+slots:
+  content:
+    title: Content
+    description: 'The renderable content array to render.'
+  image:
+    title: Image
+    description: 'The renderable image array to render.'

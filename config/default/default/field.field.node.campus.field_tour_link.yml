@@ -1,0 +1,23 @@
+uuid: c175e634-1104-4c37-be2a-f69a3421477d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tour_link
+    - node.type.campus
+  module:
+    - link
+id: node.campus.field_tour_link
+field_name: field_tour_link
+entity_type: node
+bundle: campus
+label: 'Tour Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

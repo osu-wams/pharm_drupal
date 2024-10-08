@@ -1,0 +1,8 @@
+uuid: b8c9b234-ae85-4735-8d17-5106c456a52e
+langcode: en
+status: true
+dependencies: {  }
+id: three_column_gray_box_button
+label: 'Three Column Gray Box Button'
+revision: false
+description: 'Three Gray boxes with centered content, icon, header, and default styled CTA button(s).'

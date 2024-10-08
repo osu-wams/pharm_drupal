@@ -1,0 +1,17 @@
+{% stories full_width_image_with_one_column_overlay with { title: 'Components/Full Width Image with One Column Overlay' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: {
+      img_src: 'https://placekeanu.com/1800/800'
+    }
+  } %}
+    {% embed 'osu:full-width-image-with-one-column-overlay' %}
+      {% block content %}
+        <h4>Ready to get started?</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed fermentum sapien. Duis a luctus lacus. Praesent dapibus congue laoreet. Nulla ullamcorper, nulla ac suscipit elementum, enim nibh hendrerit lorem, congue malesuada justo nibh a felis.</p>
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+{% endstories %}

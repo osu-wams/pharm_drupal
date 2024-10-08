@@ -1,0 +1,14 @@
+<div {{ attributes.addClass("component", "step-flag") }}>
+  <div class="step-flag__flag">
+    {% embed 'osu:flag' with {
+      'text': flag_text|default('Step 01'),
+      'color_class': flag_color_class|default(''),
+      'classes': flag_classes|default(['']),
+    } %}
+    {% endembed %}
+  </div>
+  <div class="step-flag__content">
+    {% block content %}{% endblock %}
+  </div>
+</div>
+

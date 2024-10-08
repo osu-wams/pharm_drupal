@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+vendor/bin/phpcs --standard=Drupal --extensions=php,module,inc,install,test,profile,theme,md,yml --ignore=node_modules,bower_components,vendor,dist ./docroot/modules/custom/
+vendor/bin/phpcs --standard=Drupal --extensions=php,module,inc,install,test,profile,theme,md,yml --ignore=node_modules,bower_components,vendor,dist ./docroot/themes/custom/

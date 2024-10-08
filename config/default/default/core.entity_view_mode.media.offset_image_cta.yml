@@ -1,0 +1,11 @@
+uuid: 2ca71882-661d-43b8-9d60-fe0c119d0790
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.offset_image_cta
+label: 'Offset Image CTA'
+description: ''
+targetEntityType: media
+cache: true

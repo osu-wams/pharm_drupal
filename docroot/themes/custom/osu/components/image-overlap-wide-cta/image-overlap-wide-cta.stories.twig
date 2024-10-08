@@ -1,0 +1,33 @@
+{% stories image_overlap_wide_cta with { title: 'Components/Image Overlap Wide CTA' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: { title: 'Unused', background_color: 'bg-color-gray' }
+  } %}
+    <div style="margin: 50px;">
+      {% embed 'osu:image-overlap-wide-cta' with {
+        'title': title,
+        'background_color': background_color,
+      } %}
+        {% block image %}
+          <img class="sized-image" src="https://placekeanu.com/650/650" alt="Random Keanu Reeves placeholder photo">
+        {% endblock %}
+        {% block content %}
+          <div class="padding-one">
+            <h2 class="margin-top-zero">Our Campuses</h2>
+            <p>Students spend the first two years of the Pharm.D. program in Corvallis on the main Oregon State University campus. They spend the third year of the Pharm.D. program in Portland on the Oregon Health & Science University campus, offering all the benefits of a partnership with a renowned academic medical center in one of America's most livable cities. While students engage in hands-on learning during all four years of the program, the fourth year is entirely devoted to experiential education throughout the state of Oregon and beyond.</p>
+            <a href="#" class="button">See the Student Experience</a>
+            <p class=""></p>
+            <p class=""></p>
+            <p class="">Curious about what's in store for you?</p>
+            <div class="flex-container flex-dir-column md-flex-dir-row">
+              <a href="#" class="link-with-arrow">Learn About the Corvallis Campus</a>
+              <a href="#" class="link-with-arrow">Learn About the Portland Campus</a>
+            </div>
+          </div>
+        {% endblock %}
+      {% endembed %}
+    </div>
+  {% endstory %}
+
+{% endstories %}

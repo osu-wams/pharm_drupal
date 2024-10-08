@@ -1,0 +1,38 @@
+{#
+  If there is no button_text then we will create just a plain a tag to make the
+  whole box clickable.
+#}
+<div class="image-box-button">
+  {% if button_url is not empty and button_text is empty %}
+    <a href="{{ button_url }}" class="image-box-button__link"></a>
+  {% endif %}
+  <div class="image-box-button__image">
+    {% block image %}{% endblock %}
+  </div>
+  <div class="image-box-button__content">
+    <div class="image-box-button__content-inner color-white">
+      <div class="image-box-button__content-wrapper">
+        <div class="image-box-button__icon">
+          {% block icon %}{% endblock %}
+        </div>
+        <div class="image-box-button__content-text">
+          <{{ title_tag }} class="image-box-button__title text-center text-uppercase">
+            {{ title }}
+          </{{ title_tag }}>
+          <div class="image-box-button__description text-center">
+            {% block content %}{% endblock %}
+          </div>
+        </div>
+      </div>
+      {% if button_url is not empty and button_text is not empty %}
+        <div class="image-box-button__button">
+          {% include 'osu:button' with {
+            class: 'secondary',
+            link_href: button_url,
+            link_text: button_text
+          } %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

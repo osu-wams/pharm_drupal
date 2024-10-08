@@ -1,0 +1,11 @@
+uuid: d888edeb-7eda-4b36-9135-8042aef0c4b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.four_column_card_with_background_image
+label: 'Four Column Card With Background Image'
+description: ''
+targetEntityType: media
+cache: true

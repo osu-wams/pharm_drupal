@@ -1,0 +1,80 @@
+uuid: 63ce7bbc-cc93-4160-9507-71761d2457ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.article.body
+    - field.field.node.article.field_article_category
+    - field.field.node.article.field_header_cta_link
+    - field.field.node.article.field_header_cta_sub_title
+    - field.field.node.article.field_header_cta_title
+    - field.field.node.article.field_header_image
+    - field.field.node.article.field_image
+    - field.field.node.article.field_meta_tags
+    - field.field.node.article.field_show_header_cta
+    - node.type.article
+  module:
+    - smart_trim
+    - user
+id: node.article.teaser
+targetEntityType: node
+bundle: article
+mode: teaser
+content:
+  body:
+    type: smart_trim
+    label: hidden
+    settings:
+      trim_length: 333
+      trim_type: chars
+      trim_suffix: ...
+      wrap_output: false
+      wrap_class: trimmed
+      more:
+        display_link: false
+        target_blank: false
+        link_trim_only: false
+        class: more-link
+        text: More
+        aria_label: 'Read more about [node:title]'
+      summary_handler: trim
+      trim_options:
+        text: true
+        trim_zero: false
+        replace_tokens: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_article_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: news_teaser
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  computed_formatted_date: true
+  computed_node_url: true
+  field_header_cta_link: true
+  field_header_cta_sub_title: true
+  field_header_cta_title: true
+  field_header_image: true
+  field_meta_tags: true
+  field_show_header_cta: true
+  langcode: true

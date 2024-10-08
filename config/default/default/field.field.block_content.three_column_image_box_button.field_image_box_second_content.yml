@@ -1,0 +1,26 @@
+uuid: d49fe54d-9d99-4e86-872d-7483c26525b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.three_column_image_box_button
+    - field.storage.block_content.field_image_box_second_content
+    - filter.format.basic_html
+    - filter.format.full_html
+  module:
+    - text
+id: block_content.three_column_image_box_button.field_image_box_second_content
+field_name: field_image_box_second_content
+entity_type: block_content
+bundle: three_column_image_box_button
+label: 'Second Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+    - full_html
+field_type: text_long

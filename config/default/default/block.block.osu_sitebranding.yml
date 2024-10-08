@@ -1,0 +1,23 @@
+uuid: 67ed6a11-fd4e-4be8-a561-680364029e9d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - osu
+id: osu_sitebranding
+theme: osu
+region: footer_top
+weight: -12
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

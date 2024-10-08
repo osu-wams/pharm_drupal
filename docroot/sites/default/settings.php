@@ -854,6 +854,13 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # $settings['migrate_file_public_path'] = '';
 # $settings['migrate_file_private_path'] = '';
 
+$settings['file_scan_ignore_directories'] = [
+  'node_modules',
+  'bower_components',
+];
+$settings['entity_update_batch_size'] = 50;
+
+
 /**
  * Load local development override configuration, if available.
  *
@@ -871,6 +878,37 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
+
+// Automatically generated include for settings managed by ddev.
+if (getenv('IS_DDEV_PROJECT') == 'true' && file_exists(__DIR__ . '/settings.ddev.php')) {
+  include __DIR__ . '/settings.ddev.php';
+}
+
+
+$settings['config_sync_directory'] = '../config/default/default';
+
+$site_environment = getenv('SITE_ENV');
+$config['config_split.config_split.local']['status'] = FALSE;
+$config['config_split.config_split.dev']['status'] = FALSE;
+$config['config_split.config_split.stage']['status'] = FALSE;
+$config['config_split.config_split.prod']['status'] = FALSE;
+
+switch ($site_environment) {
+  case 'local':
+    $config['config_split.config_split.local']['status'] = TRUE;
+    break;
+  case 'dev':
+    $config['config_split.config_split.dev']['status'] = TRUE;
+    break;
+  case 'stage':
+    $config['config_split.config_split.stage']['status'] = TRUE;
+    break;
+  case 'prod':
+    $config['config_split.config_split.prod']['status'] = TRUE;
+    $settings['config_readonly'] = TRUE;
+    break;
+}
+
 // Newrelic Multisite
 if (extension_loaded('newrelic')) {
   $exploded_path = explode('/', dirname(__FILE__));

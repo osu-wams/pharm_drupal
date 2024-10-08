@@ -1,0 +1,11 @@
+uuid: 0889f49c-ca0d-4e1f-aeff-14eed30f7ba8
+langcode: en
+status: true
+dependencies: {  }
+id: offset_image_cta
+block_id: 'inline_block:offset_image_cta'
+category: ctas
+label: 'Offset Image CTA'
+image_path: /themes/custom/osu/images/lbb/offset-image-cta.png
+image_alt: ''
+weight: -7

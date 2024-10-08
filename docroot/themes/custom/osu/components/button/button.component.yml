@@ -1,0 +1,26 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Button
+description: 'A Button'
+status: stable
+props:
+  type: object
+  properties:
+    link_href:
+      type: string
+      title: 'Link'
+      description: 'The link for the button.'
+      examples:
+        - '#'
+    link_text:
+      type: string
+      title: 'Link Text'
+      description: 'The text for the link.'
+      examples:
+        - 'Link Text'
+    class:
+      type: string
+      title: 'Class'
+      description: 'The class for the button.'
+      examples:
+        - 'secondary'
+        - 'tertiary'

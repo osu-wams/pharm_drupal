@@ -1,0 +1,11 @@
+uuid: ca6635cc-1984-46e2-92af-dbae0c60f057
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.text_overlay_teaser
+label: 'Text Overlay Teaser'
+description: ''
+targetEntityType: node
+cache: true

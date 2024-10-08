@@ -1,0 +1,16 @@
+uuid: d30a49c7-32b2-4f6e-84eb-7bd22970ece0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.program
+  module:
+    - link
+    - osu_computed
+id: node.program.computed_node_url
+field_name: computed_node_url
+label: 'Node Url'
+entity_type: node
+bundle: program
+plugin_id: node_url
+plugin_config: {  }

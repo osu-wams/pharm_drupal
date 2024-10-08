@@ -1,0 +1,8 @@
+uuid: 4367b0f5-49d0-452d-a3f7-132e01915f84
+langcode: en
+status: true
+dependencies: {  }
+id: full_width_image_with_one_column
+label: 'Full Width Image with One Column Overlay'
+revision: false
+description: 'Desaturated background image with one column of WYSIWYG content.'

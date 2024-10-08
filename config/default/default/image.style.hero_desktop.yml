@@ -1,0 +1,26 @@
+uuid: 0ba5bf1d-490b-4268-9db6-9bc62bd141cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.hero_desktop_1920x570
+  module:
+    - automated_crop
+name: hero_desktop
+label: 'Hero Desktop (1920x570)'
+effects:
+  a880fdd7-6d32-428b-98d9-fd92dbc30479:
+    uuid: a880fdd7-6d32-428b-98d9-fd92dbc30479
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 1920
+      height: 570
+      anchor: center-center
+  bde85868-13b7-4fdc-8174-9c34f0bfa068:
+    uuid: bde85868-13b7-4fdc-8174-9c34f0bfa068
+    id: automated_crop
+    weight: -10
+    data:
+      crop_type: hero_desktop_1920x570
+      automatic_crop_provider: null

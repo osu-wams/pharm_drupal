@@ -1,0 +1,12 @@
+uuid: fad0cb1d-8daf-4891-aff7-5aa3aaefe9ba
+langcode: en
+status: true
+dependencies: {  }
+label: 'Hero Mobile'
+id: hero_mobile
+description: ''
+aspect_ratio: '786:380'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: 786
+hard_limit_height: 380

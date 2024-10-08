@@ -1,0 +1,11 @@
+uuid: 63940ccd-e496-4b80-b35d-8e1a9a578aea
+langcode: en
+status: true
+dependencies: {  }
+id: framed_content_box
+block_id: 'inline_block:framed_content_box'
+category: ctas
+label: 'Framed Content Box'
+image_path: /themes/custom/osu/images/lbb/framed-content-box.png
+image_alt: ''
+weight: -14

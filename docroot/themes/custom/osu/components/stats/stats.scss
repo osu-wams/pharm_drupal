@@ -1,0 +1,155 @@
+@import '../../src/utils/variables';
+
+.stats {
+  padding: 0 $gutter-width;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $md) {
+    display: grid;
+    gap: 30px;
+    padding: 0;
+    margin-bottom: 0;
+    grid-template-columns: 150px auto;
+    grid-template-areas:
+      "one_title one_content"
+      "two_title two_content"
+      "three_title three_content"
+      "empty four_content";
+  }
+
+  .stats__section-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+
+    @media screen and (min-width: $md) {
+      text-align: right;
+      font-size: 20px;
+      line-height: 27px;
+      margin: 0;
+    }
+  }
+
+  .stats__first__title {
+    grid-area: one_title;
+    margin-top: 0;
+  }
+
+  .stats__first__content {
+    grid-area: one_content;
+
+    .stat:first-of-type {
+      margin-right: 1rem;
+    }
+  }
+
+  .stats__second__title {
+    grid-area: two_title;
+  }
+
+  .stats__second__content {
+    grid-area: two_content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @media screen and (min-width: $md) {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+    }
+
+    .stat {
+      margin-bottom: 15px;
+
+      @media screen and (min-width: $md) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .stats__third__title {
+    grid-area: three_title;
+  }
+
+  .stats__third__content {
+    grid-area: three_content;
+  }
+
+  .stats__fourth {
+    grid-area: four_content;
+
+    @media screen and (min-width: $md) {
+      display: flex;
+      gap: 15px;
+    }
+  }
+
+  .stats__first__content {
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: $md) {
+      justify-content: flex-start;
+    }
+  }
+
+  .stats__section-content,
+  .stats__column {
+    p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    p:first-of-type {
+      margin-top: 0;
+    }
+
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 0;
+    }
+    
+    li {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 14px;
+    }
+  }
+
+  .stats__column {
+    &.text {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 0 3%;
+
+      @media screen and (min-width: $md) {
+        padding: 0 1%;
+      }
+
+      p {
+        margin: auto;
+      }
+    }
+
+    &.graphic {
+      img,
+      picture {
+        display: block;
+        margin: 15px auto;
+
+        @media screen and (min-width: $md) {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

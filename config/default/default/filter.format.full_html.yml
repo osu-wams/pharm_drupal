@@ -1,0 +1,93 @@
+uuid: 6e713d02-1665-4cc8-9429-be7e62af0e07
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.650x650
+    - core.entity_view_mode.media.article_card
+    - core.entity_view_mode.media.four_column_card_with_background_image
+    - core.entity_view_mode.media.framed_content_box
+    - core.entity_view_mode.media.full
+    - core.entity_view_mode.media.hero
+    - core.entity_view_mode.media.news_teaser
+    - core.entity_view_mode.media.rectange
+    - core.entity_view_mode.media.small
+    - core.entity_view_mode.media.testimonial
+  module:
+    - editor
+    - media
+_core:
+  default_config_hash: vpZysv3RHJjhYzq7O_q5q8mVlHdrSzKELmXyiX6RtV0
+name: 'Full HTML'
+format: full_html
+weight: 2
+filters:
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: true
+    weight: 11
+    settings: {  }
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: 8
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: true
+    weight: 9
+    settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -10
+    settings:
+      allowed_html: '<a class="button primary secondary tertiary"> <span class="header-family text-align-center-mobile">'
+      filter_html_help: true
+      filter_html_nofollow: false
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
+    provider: filter
+    status: true
+    weight: 15
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_view_modes:
+        default: default
+        650x650: 650x650
+        article_card: article_card
+        four_column_card_with_background_image: four_column_card_with_background_image
+        framed_content_box: framed_content_box
+        full: full
+        hero: hero
+        news_teaser: news_teaser
+        rectange: rectange
+        small: small
+        testimonial: testimonial
+      allowed_media_types:
+        image: image
+        remote_video: remote_video
+        video: video

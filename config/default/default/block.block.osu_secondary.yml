@@ -1,0 +1,25 @@
+uuid: 928608a3-f758-4376-a3e5-b0cc20aab7a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.secondary
+  module:
+    - system
+  theme:
+    - osu
+id: osu_secondary
+theme: osu
+region: secondary_menu
+weight: -11
+provider: null
+plugin: 'system_menu_block:secondary'
+settings:
+  id: 'system_menu_block:secondary'
+  label: Secondary
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

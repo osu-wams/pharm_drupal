@@ -1,0 +1,8 @@
+uuid: cc2df617-e456-4a0c-9b84-c6a22f1e363d
+langcode: en
+status: true
+dependencies: {  }
+id: framed_content_box
+label: 'Framed Content Box'
+revision: false
+description: ''

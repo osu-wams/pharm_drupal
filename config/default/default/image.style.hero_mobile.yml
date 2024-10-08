@@ -1,0 +1,26 @@
+uuid: 526c1e9e-0207-47b4-bf2c-f4e65329d1b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.hero_mobile
+  module:
+    - automated_crop
+name: hero_mobile
+label: 'Hero Mobile (786x380)'
+effects:
+  4bb324f1-e9d5-4355-a69c-fde9d1b6c510:
+    uuid: 4bb324f1-e9d5-4355-a69c-fde9d1b6c510
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 786
+      height: 380
+      anchor: center-center
+  3c93151b-4815-4c98-bff2-3818d24f4ad5:
+    uuid: 3c93151b-4815-4c98-bff2-3818d24f4ad5
+    id: automated_crop
+    weight: -10
+    data:
+      crop_type: hero_mobile
+      automatic_crop_provider: null

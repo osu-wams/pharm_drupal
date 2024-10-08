@@ -1,0 +1,629 @@
+@import '../utils/variables';
+
+.layout-container {
+  position: relative;
+}
+
+.main-site-content {
+  margin-top: 0;
+
+  &.has-sidebar {
+    @media screen and (min-width: $lg) {
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  .layout-sidebar-first {
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: $lg) {
+      order: -1;
+      margin: 0 40px 40px 50px;
+    }
+  }
+}
+
+.boxed-inner-row {
+  margin: 0 auto;
+  max-width: $boxed-row-width;
+  padding: 0 $gutter-width;
+
+  @media (min-width: calc($boxed-row-width + $gutter-width)) {
+    padding: 0;
+  }
+}
+
+.inner-row .boxed-inner-row {
+  margin: 0;
+  width: 96%;
+
+  @media screen and (min-width: $lg) {
+    width: 100%;
+  }
+}
+
+.row {
+  .inner-row,
+  .boxed-inner-row,
+  .row {
+    padding: 0;
+  }
+}
+
+.inner-row,
+.boxed-inner-row {
+  width: 92%;
+
+  @media screen and (min-width: $lg) {
+    width: 100%;
+  }
+}
+
+.flex-0-0 {
+  flex: 0 0 auto;
+}
+
+.gap-one {
+  gap: $gutter-width-px;
+
+  @supports not (gap) {
+    margin-right: $gutter-width-px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (min-width: $md) {
+    gap: calc($gutter-width-px + 10px);
+
+    *.md-flex-3 {
+      flex: 0 0 calc(24% - #{$gutter-width-px});
+      max-width: calc(24% - #{$gutter-width-px});
+    }
+
+    *.md-flex-4 {
+      flex: 0 0 calc(33% - #{$gutter-width-px});
+      max-width: calc(33% - #{$gutter-width-px});
+    }
+
+    *.md-flex-6 {
+      flex: 0 0 calc(50% - #{$gutter-width-px});
+    }
+
+    *.md-flex-5 {
+      flex: 0 0 calc(41.6666666667% - #{$gutter-width-px});
+      max-width: calc(41.6666666667% - #{$gutter-width-px});
+    }
+
+    *.md-flex-7 {
+      flex: 0 0 calc(58.3333333333% - #{$gutter-width-px});
+      max-width: calc(58.3333333333% - #{$gutter-width-px});
+    }
+  }
+
+  @media screen and (min-width: $lg) {
+    gap: calc($gutter-width-px + 10px);
+
+    *.lg-flex-3 {
+      flex: 0 0 calc(24% - #{$gutter-width-px});
+      max-width: calc(24% - #{$gutter-width-px});
+    }
+
+    *.lg-flex-4 {
+      flex: 0 0 calc(33% - #{$gutter-width-px});
+      max-width: calc(33% - #{$gutter-width-px});
+    }
+
+    *.lg-flex-6 {
+      flex: 0 0 calc(50% - #{$gutter-width-px});
+    }
+
+    *.lg-flex-5 {
+      flex: 0 0 calc(41.6666666667% - #{$gutter-width-px});
+      max-width: calc(41.6666666667% - #{$gutter-width-px});
+    }
+
+    *.lg-flex-7 {
+      flex: 0 0 calc(58.3333333333% - #{$gutter-width-px});
+      max-width: calc(58.3333333333% - #{$gutter-width-px});
+    }
+  }
+
+  @media screen and (min-width: $xl) {
+    gap: calc($gutter-width-px + 10px);
+
+    *.xl-flex-3 {
+      flex: 0 0 calc(24% - #{$gutter-width-px});
+      max-width: calc(24% - #{$gutter-width-px});
+    }
+
+    *.xl-flex-4 {
+      flex: 0 0 calc(33% - #{$gutter-width-px});
+      max-width: calc(33% - #{$gutter-width-px});
+    }
+
+    *.xl-flex-6 {
+      flex: 0 0 calc(50% - #{$gutter-width-px});
+    }
+
+    *.xl-flex-5 {
+      flex: 0 0 calc(41.6666666667% - #{$gutter-width-px});
+      max-width: calc(41.6666666667% - #{$gutter-width-px});
+    }
+
+    *.xl-flex-7 {
+      flex: 0 0 calc(58.3333333333% - #{$gutter-width-px});
+      max-width: calc(58.3333333333% - #{$gutter-width-px});
+    }
+  }
+
+  &.nogap-on-mobile {
+    gap: 0;
+
+    @media screen and (min-width: $md) {
+      gap: $gutter-width-px;
+    }
+  }
+}
+
+.padding-zero {
+  padding: 0;
+
+  &-important {
+    padding: 0 !important;
+  }
+}
+
+
+.padding-one {
+  padding: $gutter-width-px $gutter-width;
+
+  &-important {
+    padding: $gutter-width-px $gutter-width !important;
+  }
+}
+
+.padding-two {
+  padding: ($gutter-width-px * 2) $gutter-width * 2;
+
+  &-important {
+    padding: ($gutter-width-px * 2) $gutter-width * 2 !important;
+  }
+}
+
+.padding-vertical-one {
+  padding-top: $gutter-width-px;
+  padding-bottom: $gutter-width-px;
+
+  &-important {
+    padding-top: $gutter-width-px !important;
+    padding-bottom: $gutter-width-px !important;
+  }
+}
+
+.padding-vertical-two {
+  padding-top: $gutter-width-px * 2;
+  padding-bottom: $gutter-width-px * 2;
+
+  &-important {
+    padding-top: $gutter-width-px * 2 !important;
+    padding-bottom: $gutter-width-px * 2 !important;
+  }
+}
+
+.padding-bottom-two {
+  padding-bottom: $gutter-width-px * 2;
+
+  &-important {
+    padding-bottom: $gutter-width-px * 2 !important;
+  }
+}
+
+.padding-horizontal-one {
+  padding-left: $gutter-width;
+  padding-right: $gutter-width;
+
+  &-important {
+    padding-left: $gutter-width !important;
+    padding-right: $gutter-width !important;
+  }
+}
+
+.padding-horizontal-two {
+  padding-left: $gutter-width * 2;
+  padding-right: $gutter-width * 2;
+
+  &-important {
+    padding-left: $gutter-width * 2 !important;
+    padding-right: $gutter-width * 2 !important;
+  }
+}
+
+.padding-horizontal-three {
+  padding-left: $gutter-width * 3;
+  padding-right: $gutter-width * 3;
+
+  &-important {
+    padding-left: $gutter-width * 3 !important;
+    padding-right: $gutter-width * 3 !important;
+  }
+}
+
+.margin-zero {
+  margin: 0;
+
+  &-important {
+    margin: 0 !important;
+  }
+}
+
+.margin-one {
+  margin: $gutter-width-px $gutter-width;
+
+  &-important {
+    margin: $gutter-width-px $gutter-width !important;
+  }
+}
+
+.margin-two {
+  margin: ($gutter-width-px * 2) $gutter-width * 2;
+
+  &-important {
+    margin: ($gutter-width-px * 2) $gutter-width * 2 !important;
+  }
+}
+
+.margin-horizontal-one {
+  margin-left: $gutter-width;
+  margin-right: $gutter-width;
+
+  &-important {
+    margin-left: $gutter-width !important;
+    margin-right: $gutter-width !important;
+  }
+}
+
+.margin-horizontal-two {
+  margin-left: $gutter-width * 2;
+  margin-right: $gutter-width * 2;
+
+  &-important {
+    margin-left: $gutter-width * 2 !important;
+    margin-right: $gutter-width * 2 !important;
+  }
+}
+
+.margin-horizontal-two-rem {
+  margin: 0 2rem;
+
+  &-important {
+    margin: 0 2rem !important;
+  }
+}
+
+.margin-vertical-one {
+  margin-top: $gutter-width-px;
+  margin-bottom: $gutter-width-px;
+
+  &-important {
+    margin-top: $gutter-width-px !important;
+    margin-bottom: $gutter-width-px !important;
+  }
+}
+
+.margin-vertical-two {
+  margin-top: $gutter-width-px * 2;
+  margin-bottom: $gutter-width-px * 2;
+
+  &-important {
+    margin-top: $gutter-width-px * 2 !important;
+    margin-bottom: $gutter-width-px * 2 !important;
+  }
+}
+
+.margin-bottom-two {
+  margin-bottom: $gutter-width-px * 2;
+
+  &-important {
+    margin-bottom: $gutter-width-px * 2 !important;
+  }
+}
+
+// Directional margin and padding
+@each $key, $value in $directional-padding-margin {
+  .margin-#{$key}-zero {
+    margin-#{$value}: 0;
+
+    &-important {
+      margin-#{$value}: 0 !important;
+    }
+  }
+
+  .margin-#{$key}-one {
+    margin-#{$value}: $gutter-width;
+
+    &-important {
+      margin-#{$value}: $gutter-width !important;
+    }
+  }
+
+  .margin-#{$key}-two {
+    margin-#{$value}: $gutter-width * 2;
+
+    &-important {
+      margin-#{$value}: $gutter-width * 2 !important;
+    }
+  }
+
+  .padding-#{$key}-zero {
+    padding-#{$value}: 0;
+
+    &-important {
+      padding-#{$value}: 0 !important;
+    }
+  }
+
+  .padding-#{$key}-one {
+    padding-#{$value}: $gutter-width;
+
+    &-important {
+      padding-#{$value}: $gutter-width !important;
+    }
+  }
+
+  .padding-#{$key}-two {
+    padding-#{$value}: $gutter-width * 2;
+
+    &-important {
+      padding-#{$value}: $gutter-width * 2 !important;
+    }
+  }
+}
+
+// Responsive padding.
+@each $key, $size in $breakpoints {
+  .#{$key}-padding-zero {
+    @media only screen and (min-width: $size) {
+      padding: 0;
+    }
+
+    &-important {
+      @media only screen and (min-width: $size) {
+        padding: 0 !important;
+      }
+    }
+  }
+
+  .#{$key}-padding-one {
+    @media only screen and (min-width: $size) {
+      padding: $gutter-width-px $gutter-width;
+    }
+
+    &-important {
+      @media only screen and (min-width: $size) {
+        padding: $gutter-width-px $gutter-width !important;
+      }
+    }
+  }
+
+  .#{$key}-padding-two {
+    @media only screen and (min-width: $size) {
+      padding: $gutter-width-px $gutter-width * 2;
+    }
+
+    &-important {
+      @media only screen and (min-width: $size) {
+        padding: $gutter-width-px $gutter-width * 2 !important;
+      }
+    }
+  }
+
+  .#{$key}-padding-vertical-zero {
+    @media only screen and (min-width: $size) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    &-important {
+      @media only screen and (min-width: $size) {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+    }
+  }
+
+  .#{$key}-padding-vertical-one {
+    @media only screen and (min-width: $size) {
+      padding-top: $gutter-width-px;
+      padding-bottom: $gutter-width-px;
+    }
+
+    &-important {
+      @media only screen and (min-width: $size) {
+        padding-top: $gutter-width-px !important;
+        padding-bottom: $gutter-width-px !important;
+      }
+    }
+  }
+
+  .#{$key}-padding-vertical-two {
+    @media only screen and (min-width: $size) {
+      padding-top: $gutter-width-px * 2;
+      padding-bottom: $gutter-width-px * 2;
+    }
+
+    &-important {
+      @media only screen and (min-width: $size) {
+        padding-top: $gutter-width-px * 2 !important;
+        padding-bottom: $gutter-width-px * 2 !important;
+      }
+    }
+  }
+
+  .#{$key}-padding-horizontal-zero {
+    @media only screen and (min-width: $size) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &-important {
+      @media only screen and (min-width: $size) {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+  }
+
+  .#{$key}-padding-horizontal-one {
+    @media only screen and (min-width: $size) {
+      padding-left: $gutter-width;
+      padding-right: $gutter-width;
+    }
+
+    &-important {
+      @media only screen and (min-width: $size) {
+        padding-left: $gutter-width !important;
+        padding-right: $gutter-width !important;
+      }
+    }
+  }
+
+  .#{$key}-padding-horizontal-two {
+    @media only screen and (min-width: $size) {
+      padding-left: $gutter-width * 2;
+      padding-right: $gutter-width * 2;
+    }
+
+    &-important {
+      @media only screen and (min-width: $size) {
+        padding-left: $gutter-width * 2 !important;
+        padding-right: $gutter-width * 2 !important;
+      }
+    }
+  }
+
+  .#{$key}-padding-right-one {
+    @media only screen and (min-width: $size) {
+      padding-right: $gutter-width;
+    }
+
+    &-important {
+      @media only screen and (min-width: $size) {
+        padding-right: $gutter-width !important;
+      }
+    }
+  }
+
+  .#{$key}-padding-right-two {
+    @media only screen and (min-width: $size) {
+      padding-right: $gutter-width * 2;
+    }
+
+    &-important {
+      @media only screen and (min-width: $size) {
+        padding-right: $gutter-width * 2 !important;
+      }
+    }
+  }
+
+  .#{$key}-padding-right-three {
+    @media only screen and (min-width: $size) {
+      padding-right: $gutter-width * 3;
+    }
+
+    &-important {
+      @media only screen and (min-width: $size) {
+        padding-right: $gutter-width * 3 !important;
+      }
+    }
+  }
+
+  .#{$key}-padding-left-one {
+    @media only screen and (min-width: $size) {
+      padding-left: $gutter-width;
+    }
+
+    &-important {
+      @media only screen and (min-width: $size) {
+        padding-left: $gutter-width !important;
+      }
+    }
+  }
+
+  .#{$key}-padding-left-two {
+    @media only screen and (min-width: $size) {
+      padding-left: $gutter-width * 2;
+    }
+
+    &-important {
+      @media only screen and (min-width: $size) {
+        padding-left: $gutter-width * 2 !important;
+      }
+    }
+  }
+}
+
+.block-field-blocknodeprogramfield-program-overview {
+  margin: 0 1.5rem;
+}
+
+.block-inline-blockbasic {
+  // padding: 22px 0 0 !important;
+
+  @media screen and (min-width: $md) {
+    padding: 22px 22px 0 !important;
+  }
+
+  &.padding-zero-important {
+    padding: 0 !important;
+  }
+
+  .text-align-center {
+    text-align: left !important;
+
+    @media screen and (min-width: $md) {
+      text-align: center !important;
+    }
+  }
+
+  .text-align-center-mobile {
+    @media screen and (max-width: $md + 1) {
+      text-align: center !important;
+      display: block;
+    }
+  }
+
+  hr {
+    margin: 20px 0;
+
+    @media screen and (min-width: $md) {
+      margin: 20px auto;
+    }
+  }
+}
+
+.block-inline-blocktwo-column-framed-content-box {
+  display: grid;
+  gap: 15px;
+  margin-bottom: 15px;
+
+  @media screen and (min-width: $md) {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 0;
+  }
+}
+
+body .bs-border-style-solid {
+  border-style: none !important;
+  width: 100%;
+
+  @media screen and (min-width: $md) {
+    border-style: solid !important;
+    padding-bottom: 1rem;
+    width: 95%;
+  }
+}

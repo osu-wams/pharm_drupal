@@ -1,0 +1,7 @@
+name: 'OSU Search Enhanced'
+type: module
+description: 'Built-in Drupal Search Enhancements'
+package: Custom
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:search

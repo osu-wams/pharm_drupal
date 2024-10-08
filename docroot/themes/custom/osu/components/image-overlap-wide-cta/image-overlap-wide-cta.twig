@@ -1,0 +1,20 @@
+{% set attributes = create_attribute() %}
+{% set classes = [
+  "component",
+  "image-overlap-wide-cta",
+  "flex-container",
+  "md-flex-dir-row",
+  "flex-dir-column",
+  "flex-jc-center",
+  "md-flex-jc-space-between",
+  "md-flex-ai-start",
+  background_color is not empty ? background_color : "",
+] %}
+<div {{ attributes.addClass(classes) }}>
+  <div class="image-overlap-wide-cta__image flex-1-1 md-flex-2-5">
+    {% block image %}{% endblock %}
+  </div>
+  <div class="image-overlap-wide-cta__content flex-1-1 md-flex-3-5">
+    {% block content %}{% endblock %}
+  </div>
+</div>

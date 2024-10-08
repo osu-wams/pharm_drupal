@@ -1,0 +1,39 @@
+{% stories full_width_image_with_text_box_overlay with { title: 'Components/Full Width Image with Text Box Overlay' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: {
+      title: 'History of the College',
+      title_tag: 'h3',
+    }
+  } %}
+    {% embed 'osu:full-width-image-with-text-box-overlay' with {
+      'title': title,
+      'title_tag': title_tag,
+    } %}
+      {% block image %}
+        <img src="https://placekeanu.com/1800/800" alt="Random kitten placeholder photo">
+      {% endblock %}
+      {% block content %}
+        <p>
+          The College of Pharmacy at Oregon State University can trace its beginnings back to 1898 at what was then the Oregon Agricultural College. Chemistry and pharmacy were in a single department and students could graduate with a Bachelors of Science (B.S.) in Pharmacy upon completion of a four-year program. This was one of the earliest four-year programs in the country.
+        </p>
+      {% endblock %}
+      {% block button %}
+        {% include 'osu:button' with {
+          'class': 'secondary',
+          'link_href': '#',
+          'link_text': 'Read Our History',
+        } %}
+      {% endblock %}
+      {% block secondary_button %}
+        {% include 'osu:button' with {
+          'class': 'tertiary',
+          'link_href': '#',
+          'link_text': 'High-Throughput Screening',
+        } %}
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+{% endstories %}

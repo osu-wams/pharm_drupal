@@ -1,0 +1,8 @@
+uuid: e18d1cfe-36c6-4716-a358-383dbbe0c148
+langcode: en
+status: true
+dependencies: {  }
+id: testimonials
+label: Testimonials
+revision: false
+description: 'Create a list of testimonies.'

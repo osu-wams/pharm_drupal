@@ -1,0 +1,26 @@
+uuid: 14696d4e-ac41-4bd4-baa8-b6003a4d1aec
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.portrait
+  module:
+    - automated_crop
+name: portrait_474x674
+label: 'Portrait (474x674)'
+effects:
+  081a6bac-6464-4a84-9ca3-5d197f48b0b5:
+    uuid: 081a6bac-6464-4a84-9ca3-5d197f48b0b5
+    id: automated_crop
+    weight: 1
+    data:
+      crop_type: portrait
+      automatic_crop_provider: null
+  4058b172-3288-44eb-a148-f14bf8132bc0:
+    uuid: 4058b172-3288-44eb-a148-f14bf8132bc0
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 674
+      height: 474
+      anchor: center-center

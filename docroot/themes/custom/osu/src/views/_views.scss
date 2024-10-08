@@ -1,0 +1,93 @@
+@import '../../src/utils/variables';
+
+.campus-list {
+  margin-bottom: 2rem;
+
+  .view-header {
+    text-align: center;
+
+    h2 {
+      font-size: 24px;
+
+      @media screen and (min-width: $lg) {
+        font-size: 40px;
+      }
+    }
+  }
+
+  .view-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: $gutter-width;
+    width: 90%;
+    margin: 0 auto;
+
+    @media screen and (min-width: $md) {
+      width: 100%;
+      margin: 0;
+    }
+
+    .views-row {
+      flex: 1 0 calc(50% - #{$gutter-width});
+      display: flex;
+      margin-bottom: 1.5rem;
+
+      @media screen and (min-width: $lg) {
+        margin-bottom: unset;
+      }
+
+      .framed-content-box {
+        flex: 1 0 100%;
+      }
+
+      .framed-content-box__image {
+        filter: saturate(0.1);
+      }
+
+      h4 {
+        font-size: 22px;
+
+        @media screen and (min-width: $lg) {
+          font-size: 32px;
+        }
+      }
+    }
+
+    .framed-content-box {
+      background-color: $color-gray;
+    
+      .framed-content-box__image {
+        img {
+          width: 100%;
+          min-height: unset;
+          max-height: unset;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .geofield-google-map {
+      height: 375px !important;
+
+      @media screen and (min-width: $md) {
+        height: 308px !important;
+      }
+    }
+
+    @media screen and (min-width: $lg) {
+      flex-direction: row;
+    }
+  }
+}
+
+.view-events {
+  padding: 1rem 22px;
+
+  .view-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

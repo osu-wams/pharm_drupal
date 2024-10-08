@@ -1,0 +1,8 @@
+uuid: be2524f9-7222-44be-a2e4-73b7209b9b1c
+langcode: en
+status: true
+dependencies: {  }
+id: photo_text
+label: 'Photo + Text'
+revision: false
+description: 'Photo left with body field on right.'

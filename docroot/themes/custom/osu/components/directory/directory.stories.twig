@@ -1,0 +1,42 @@
+{% stories directory with { title: 'Components/Directory/Individual Directory Item' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: {
+      first_name: 'First',
+      last_name: 'Last',
+      position: 'Position',
+      department: 'Department',
+      email: 'email@oregonstate.edu',
+      phone: '123-456-7890',
+      location: 'Robertson Life Scrience Building',
+      research_topic: 'Research Topic',
+      show_research_highlights: true
+    }
+  } %}
+    {% embed 'osu:directory' with {
+      'first_name': first_name,
+      'last_name': last_name,
+      'position': position,
+      'department': department,
+      'email': email,
+      'phone': phone,
+      'location': location,
+      'research_topic': research_topic,
+      'show_research_highlights': show_research_highlights
+    } %}
+      {% block image %}
+        <img class="sized-image circle-image" src="https://placekeanu.com/125/125" alt="Random Keanu Reeves placeholder photo">
+      {% endblock %}
+      {% block research_highlights %}
+        <div class="directory_highlights__content">
+          Aut voluptas et quis sunt praesentium enim sed. Sunt animi
+          similique est. Ut tempore aut aspernatur. Et reiciendis quam
+          eligendi consequatur eos tenetur ea velit. Dolores aut esse
+          quae voluptas aut sit. Vitae rem quibusdam dolor.
+        </div>
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+{% endstories %}

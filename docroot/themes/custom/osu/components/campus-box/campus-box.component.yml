@@ -1,0 +1,32 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Campus Box
+description: ''
+status: stable
+props:
+  type: object
+  properties:
+    name:
+      type: string
+      title: 'Name'
+      description: 'The name of the campus'
+      examples:
+        - 'Corvallis Campus'
+        - 'Portland Campus'
+    address:
+      type: string
+      title: 'Address'
+      description: 'The address of the campus'
+      examples:
+        - '1601 SW Jefferson Way, Corvallis, OR 97331'
+        - '2730 SW Moody Ave., CL5CP Portland, OR 97201'
+
+slots:
+  image:
+    title: 'Map Image'
+    description: 'A map image showing where the campus is located.'
+  schedule-a-tour-link:
+    title: 'Schedule a Tour Link'
+    description: 'A link to a form for scheduling a campus tour.'
+  parking-directions-link:
+    title: 'Parking Directions Link'
+    description: 'A link to directions to campus parking.'

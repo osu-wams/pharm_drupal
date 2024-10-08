@@ -1,0 +1,25 @@
+@import '../../../src/utils/variables';
+
+.step-flag {
+  margin: 0 0 $gutter-width $gutter-width;
+  width: 90%;
+
+  @media screen and (min-width: $md) {
+    display: grid;
+    grid-template-columns: 155px 1fr;
+    margin-left: 0;
+    width: 98%;
+  }
+
+  .flag__text {
+    padding: 0 1rem;
+  }
+
+  .step-flag__content {
+    @media screen and (min-width: $md) {
+      p:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{# some/path/in/your/code/base/my-card.stories.twig #}
+{% stories button with { title: 'Components/Scroll To Top' } %}
+
+  {% story default with {
+    name: '1. Default',
+  } %}
+    {# Write any Twig for the "default" story. The `args` above will be made #}
+    {# available as variables for the template 👇 #}
+    {% include 'osu:sroll-to-top' %}
+  {% endstory %}
+
+{% endstories %}

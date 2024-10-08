@@ -1,0 +1,11 @@
+uuid: 524cee03-2c8d-43d3-9b6b-99b17684180e
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.small
+label: Small
+description: 'Small sized media items (300x300)'
+targetEntityType: media
+cache: true

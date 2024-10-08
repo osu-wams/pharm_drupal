@@ -1,0 +1,11 @@
+uuid: 163d3182-b183-4fb9-8809-534d1eead36d
+langcode: en
+status: true
+dependencies: {  }
+id: testimonial
+block_id: 'inline_block:testimonials'
+category: lists_views
+label: Testimonial
+image_path: /themes/custom/osu/images/lbb/testimonial.png
+image_alt: ''
+weight: -100

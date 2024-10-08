@@ -1,0 +1,17 @@
+{# some/path/in/your/code/base/my-card.stories.twig #}
+{% stories calendar_icon with { title: 'Components/Calendar Icon' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: {
+      date: "2024-04-04T12:00:00.000Z"
+    }
+  } %}
+    {% embed 'osu:calendar-icon' with {
+      'date': date,
+    } %}
+    {% endembed %}
+  {% endstory %}
+
+
+{% endstories %}

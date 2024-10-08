@@ -1,0 +1,29 @@
+uuid: a97fe8f6-05dd-4034-a01e-247d4d9edf6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_video
+    - media.type.video
+    - node.type.page
+id: node.page.field_header_video
+field_name: field_header_video
+entity_type: node
+bundle: page
+label: 'Header Video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

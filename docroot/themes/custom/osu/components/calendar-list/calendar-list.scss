@@ -1,0 +1,58 @@
+@import '../../src/utils/variables';
+
+.calendar-list-item {
+  margin-bottom: 40px;
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    "date content"
+    "date location";
+  grid-template-columns: 70px auto;
+
+  @media screen and (min-width: $md) {
+    grid-template-areas:
+      "date content location";
+    grid-template-columns: 120px auto 33%;
+  }
+
+  .calendar-list-item__calendar {
+    grid-area: date;
+  }
+
+  .calendar-list-item__content {
+    grid-area: content;
+
+    h4 {
+      margin-top: 0;
+      margin-bottom: 10px;
+
+      a {
+        color: $color-black;
+      }
+    }
+  }
+
+  .calendar-list-item__content__body {
+    font-size: 16px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .calendar-list-item__location {
+    grid-area: location;
+  }
+
+  .calendar-list-item__info {
+    border-left: 1px solid $color-crater;
+    line-height: 27px;
+    padding-left: 13px;
+    font-weight: 400;
+    font-size: 17px;
+  }
+
+  .calendar-list-item__info__link {
+    margin-top: 10px;
+  }
+}

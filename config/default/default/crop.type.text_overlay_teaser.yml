@@ -1,0 +1,12 @@
+uuid: ede4e639-0571-4d4e-8ed3-f1a71d85cb4c
+langcode: en
+status: true
+dependencies: {  }
+label: 'Text overlay teaser'
+id: text_overlay_teaser
+description: ''
+aspect_ratio: '414:243'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

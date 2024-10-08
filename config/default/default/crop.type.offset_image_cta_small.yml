@@ -1,0 +1,12 @@
+uuid: 8960a27a-aed8-4160-97d3-871a4cf2cdfd
+langcode: en
+status: true
+dependencies: {  }
+label: 'Offset Image CTA Small'
+id: offset_image_cta_small
+description: ''
+aspect_ratio: '294:248'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: 294
+hard_limit_height: 248

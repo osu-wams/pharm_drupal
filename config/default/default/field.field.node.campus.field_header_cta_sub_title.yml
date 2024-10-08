@@ -1,0 +1,19 @@
+uuid: b267a51a-7a99-46ac-8482-c966780f6f3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_cta_sub_title
+    - node.type.campus
+id: node.campus.field_header_cta_sub_title
+field_name: field_header_cta_sub_title
+entity_type: node
+bundle: campus
+label: 'Header CTA Sub Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,8 @@
+uuid: 5ace7e6a-2965-4e81-96b0-7f1418a32759
+langcode: en
+status: true
+dependencies: {  }
+id: three_column_card_with_backgroun
+label: 'Three Column Card With Background Image'
+revision: false
+description: ''

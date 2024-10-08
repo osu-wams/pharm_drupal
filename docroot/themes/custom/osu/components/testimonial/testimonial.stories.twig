@@ -1,0 +1,117 @@
+{# some/path/in/your/code/base/my-card.stories.twig #}
+{% stories testimonial with { title: 'Components/Testimonial' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: {
+      name: 'Victor Tran',
+      title: 'Pharm.D. student',
+    }
+  } %}
+    {% embed 'osu:testimonial' with {
+      'title': title,
+      'name': name,
+    } %}
+      {% block testimony %}
+        <div>
+          <p>
+            "One of the most fun hands-on experience I had during my first year
+            in pharmacy school was practicing drug counseling and taking patient
+            vital signs in pharmacy practice lab. The pharmacy profession is
+            constantly changing so by the time we graduate from school, I think
+            pharmacists will play a much larger role in providing healthcare to
+            patients. I believe the material covered in pharmacy practice is
+            essential for getting us ready for our profession."
+          </p>
+        </div>
+      {% endblock %}
+      {% block image %}
+        <div>
+          <img src="https://placekeanu.com/122/122" alt="Random Keanu Reeves placeholder photo">
+        </div>
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+  {% story listing with {
+    name: '2. Listing',
+    args: {
+      name: 'Victor Tran',
+      title: 'Pharm.D. student',
+    }
+  } %}
+    <div class="testimonal-listing">
+      {% embed 'osu:testimonial' with {
+      'title': title,
+      'name': name,
+      } %}
+        {% block testimony %}
+          <div>
+            <p>
+              "One of the most fun hands-on experience I had during my first year
+              in pharmacy school was practicing drug counseling and taking patient
+              vital signs in pharmacy practice lab. The pharmacy profession is
+              constantly changing so by the time we graduate from school, I think
+              pharmacists will play a much larger role in providing healthcare to
+              patients. I believe the material covered in pharmacy practice is
+              essential for getting us ready for our profession."
+            </p>
+          </div>
+        {% endblock %}
+        {% block image %}
+          <div>
+            <img src="https://placekeanu.com/122/122" alt="Random Keanu Reeves placeholder photo">
+          </div>
+        {% endblock %}
+      {% endembed %}
+      {% embed 'osu:testimonial' with {
+        'title': title,
+        'name': name,
+      } %}
+        {% block testimony %}
+          <div>
+            <p>
+              "One of the most fun hands-on experience I had during my first year
+              in pharmacy school was practicing drug counseling and taking patient
+              vital signs in pharmacy practice lab. The pharmacy profession is
+              constantly changing so by the time we graduate from school, I think
+              pharmacists will play a much larger role in providing healthcare to
+              patients. I believe the material covered in pharmacy practice is
+              essential for getting us ready for our profession."
+            </p>
+          </div>
+        {% endblock %}
+        {% block image %}
+          <div>
+            <img src="https://placekeanu.com/122/122" alt="Random Keanu Reeves placeholder photo">
+          </div>
+        {% endblock %}
+      {% endembed %}
+      {% embed 'osu:testimonial' with {
+        'title': title,
+        'name': name,
+      } %}
+        {% block testimony %}
+          <div>
+            <p>
+              "One of the most fun hands-on experience I had during my first year
+              in pharmacy school was practicing drug counseling and taking patient
+              vital signs in pharmacy practice lab. The pharmacy profession is
+              constantly changing so by the time we graduate from school, I think
+              pharmacists will play a much larger role in providing healthcare to
+              patients. I believe the material covered in pharmacy practice is
+              essential for getting us ready for our profession."
+            </p>
+          </div>
+        {% endblock %}
+        {% block image %}
+          <div>
+            <img src="https://placekeanu.com/122/122" alt="Random Keanu Reeves placeholder photo">
+          </div>
+        {% endblock %}
+      {% endembed %}
+    </div>
+
+  {% endstory %}
+
+
+{% endstories %}

@@ -1,0 +1,47 @@
+{# some/path/in/your/code/base/my-card.stories.twig #}
+{% stories stat with { title: 'Components/Stat' } %}
+
+  {% story default with {
+    name: '1. Stat',
+    args: {
+      stat: '93%'
+    }
+  } %}
+    {% embed 'osu:stat' with {
+      'stat': stat,
+    } %}
+      {% block stat_info %}
+        <div>
+          2018 4-Year<br>
+          Graduation Rate
+        </div>
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+  {% story graphic with {
+    name: '2. Stat With Graphic',
+    args: {
+      stat: '89%'
+    }
+  } %}
+    {% embed 'osu:stat' with {
+      'stat': stat,
+    } %}
+      {% block stat_info %}
+        <div>
+          2022 NAPLEX<br>
+          First-Attempt Pass Rate<br>
+          <i><span style="font-size: 14px;">State-wide Pass Rate: 82%</span></i><br>
+          <i><span style="font-size: 14px;">National Pass Rate: 80%</span></i>
+        </div>
+      {% endblock %}
+      {% block stat_graphic %}
+        <div>
+          <img src="https://placekeanu.com/129/174" alt="Random Keanu Reeves placeholder photo">
+        </div>
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+{% endstories %}

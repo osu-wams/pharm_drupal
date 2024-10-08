@@ -1,0 +1,11 @@
+uuid: 4d5f8a5c-5fff-45bc-82b7-5a5ac2563c9f
+langcode: en
+status: true
+dependencies: {  }
+id: alumni_listing
+block_id: 'views_block:alumni-block_1'
+category: lists_views
+label: 'Alumni Listing'
+image_path: /themes/custom/osu/images/lbb/alumni-listing.png
+image_alt: ''
+weight: -100

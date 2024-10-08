@@ -1,0 +1,19 @@
+uuid: a9ef12aa-ce80-434c-beb1-3016fe3925c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+id: block_content.field_img_ovly_wide_cta_content
+field_name: field_img_ovly_wide_cta_content
+entity_type: block_content
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

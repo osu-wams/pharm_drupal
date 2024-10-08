@@ -1,0 +1,52 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Article
+description: 'Article'
+status: stable
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: 'Title'
+      description: 'The title of the article.'
+      examples:
+        - 'Faculty Advancements'
+    date:
+      type: string
+      title: 'Date'
+      description: 'The date of the article.'
+      examples:
+        - 'May 7, 2021'
+    when:
+      type: string
+      title: 'When'
+      description: 'The time of the article.'
+      examples:
+        - '10:00 AM'
+    where:
+      type: string
+      title: 'Where'
+      description: 'The location of the article.'
+      examples:
+        - 'Austin Hall'
+
+slots:
+  image:
+    title: 'Article Image'
+    description: 'A map image showing where the campus is located.'
+  body:
+    title: 'Article Body'
+    description: 'The body of the article.'
+  link:
+    title: 'Article Link'
+    description: 'The link of the article.'
+  register_details:
+    title: 'Register/Details Link'
+    description: 'The link to the registration or article details.'
+  tags:
+    title: 'Article Tags'
+    description: 'The tags of the article.'

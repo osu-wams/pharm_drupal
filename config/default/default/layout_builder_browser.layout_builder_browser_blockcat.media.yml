@@ -1,0 +1,8 @@
+uuid: 3df50d13-4365-4547-b4ca-c78f8eab25c3
+langcode: en
+status: true
+dependencies: {  }
+id: media
+label: Media
+weight: -6
+opened: false

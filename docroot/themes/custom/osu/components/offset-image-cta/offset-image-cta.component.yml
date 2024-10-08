@@ -1,0 +1,25 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Offset Image CTA
+description: 'Image with a background color .'
+status: stable
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
+props:
+  type: object
+  properties:
+    text:
+      type: string
+      title: 'Text'
+      description: 'short CTA text.'
+      examples:
+        - "Want more details about the kinds of support you'll receive at OSU College of Pharmacy?"
+
+slots:
+  buttons:
+    title: buttons
+    description: 'The buttons.'
+  image:
+    title: Image
+    description: 'The image.'

@@ -1,0 +1,26 @@
+uuid: 4e5ce953-ae0d-415f-909a-6d28d105c0f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.text_overlay_teaser
+  module:
+    - automated_crop
+name: text_overlay_teaser
+label: 'Text Overlay Teaser (414x243)'
+effects:
+  d30161d7-26ee-4fae-8cfa-ba882d531283:
+    uuid: d30161d7-26ee-4fae-8cfa-ba882d531283
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 414
+      height: 243
+      anchor: center-center
+  58f7fceb-504f-47c2-afbe-405ef94e3e90:
+    uuid: 58f7fceb-504f-47c2-afbe-405ef94e3e90
+    id: automated_crop
+    weight: -10
+    data:
+      crop_type: text_overlay_teaser
+      automatic_crop_provider: null

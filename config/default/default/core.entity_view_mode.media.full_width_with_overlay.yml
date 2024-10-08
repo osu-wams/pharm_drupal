@@ -1,0 +1,11 @@
+uuid: 7c12d601-1537-4250-b27d-59d4a48c83b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.full_width_with_overlay
+label: 'Full width with overlay'
+description: ''
+targetEntityType: media
+cache: true

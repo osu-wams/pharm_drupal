@@ -1,0 +1,59 @@
+@import '../../src/utils/variables';
+
+.photo-left-text {
+  margin: 2rem $gutter-width;
+
+  @media screen and (min-width: $md) {
+    margin: 0 0 3rem;
+  }
+
+  h2,
+  h3,
+  h4 {
+    margin-top: 0;
+  }
+
+  &__image {
+    position: relative;
+    margin: 0 0 1rem;
+
+    @media screen and (min-width: $md) {
+      margin: 0 1rem;
+
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__image.square-corner {
+    img {
+      position: relative;
+      top: -80px;
+      left: 20px;
+      height: auto;
+      margin-bottom: -60px;
+      max-width: calc(100% - 20px);
+    }
+
+    &::before {
+      background-color: $color-moondust;
+      content: '';
+      display: block;
+      width: 100px;
+      height: 100px;
+      position: relative;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+
+  .photo-left-text__text {
+    @media screen and (min-width: $md) {
+      margin: 0 2rem 0 3rem;
+    }
+  }
+}

@@ -1,0 +1,226 @@
+uuid: 5afabf05-1190-4586-bbdc-d899f64a348b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.program.field_header_cta_link
+    - field.field.node.program.field_header_cta_sub_title
+    - field.field.node.program.field_header_cta_title
+    - field.field.node.program.field_header_image
+    - field.field.node.program.field_header_sub_title
+    - field.field.node.program.field_hide_sidebar_menu
+    - field.field.node.program.field_image
+    - field.field.node.program.field_meta_tags
+    - field.field.node.program.field_program_overview
+    - field.field.node.program.field_show_header_cta
+    - field.field.node.program.layout_builder__layout
+    - node.type.program
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - link
+    - metatag
+    - sdc_display
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          61c3435e-b4fe-4c25-82f1-0df383930d75:
+            uuid: 61c3435e-b4fe-4c25-82f1-0df383930d75
+            region: content
+            configuration:
+              id: 'field_block:node:program:field_program_overview'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          51d40933-6610-4cfc-85a9-35e4bcf2f205:
+            uuid: 51d40933-6610-4cfc-85a9-35e4bcf2f205
+            region: content
+            configuration:
+              id: 'field_block:node:program:field_header_sub_title'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          125689bd-818c-4da8-ac30-08efeb31ba03:
+            uuid: 125689bd-818c-4da8-ac30-08efeb31ba03
+            region: content
+            configuration:
+              id: 'field_block:node:program:field_meta_tags'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: metatag_empty_formatter
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+        third_party_settings: {  }
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts:
+        - 'bootstrap_layout_builder:blb_col_1'
+        - 'bootstrap_layout_builder:blb_col_2'
+        - 'bootstrap_layout_builder:blb_col_3'
+        - 'bootstrap_layout_builder:blb_col_4'
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: node.program.default
+targetEntityType: node
+bundle: program
+mode: default
+content:
+  computed_link_to_node:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  computed_node_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  field_header_cta_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_header_cta_sub_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_header_cta_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_header_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_header_sub_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_hide_sidebar_menu:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_program_overview:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_show_header_cta:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  layout_builder__layout: true

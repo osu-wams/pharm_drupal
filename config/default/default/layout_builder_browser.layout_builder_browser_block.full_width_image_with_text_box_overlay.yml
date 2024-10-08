@@ -1,0 +1,11 @@
+uuid: 23aca396-db01-4e33-bc04-c37b6f9f55cc
+langcode: en
+status: true
+dependencies: {  }
+id: full_width_image_with_text_box_overlay
+block_id: 'inline_block:full_image_with_text_box_overlay'
+category: ctas
+label: 'Full Width Image with Text Box Overlay'
+image_path: /themes/custom/osu/images/lbb/image-text-box-overlay.png
+image_alt: 'Preview of the Full Width Image with Text Box Overlay component'
+weight: -13

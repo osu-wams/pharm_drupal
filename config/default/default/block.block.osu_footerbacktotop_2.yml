@@ -1,0 +1,25 @@
+uuid: 93b51115-dcf3-40a7-b650-ba309bcad078
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:back_to_top:a11606c0-945e-4de0-9cf8-71ea54d9faa6'
+  module:
+    - block_content
+  theme:
+    - osu
+id: osu_footerbacktotop_2
+theme: osu
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:a11606c0-945e-4de0-9cf8-71ea54d9faa6'
+settings:
+  id: 'block_content:a11606c0-945e-4de0-9cf8-71ea54d9faa6'
+  label: 'Footer Back To Top'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

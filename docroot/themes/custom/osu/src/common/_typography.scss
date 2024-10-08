@@ -1,0 +1,79 @@
+@import '../../src/utils/variables';
+
+h4 {
+  font-weight: 400;
+}
+
+h5,
+.h5 {
+  text-transform: uppercase;
+  letter-spacing: 0.045rem;
+}
+
+h6,
+.h6 {
+  font-style: italic;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-thin {
+  font-weight: 300;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.white-text,
+.text-white {
+  color: $color-white;
+
+  &--important {
+    color: $color-white !important;
+  }
+}
+
+.small,
+.text-small {
+  font-size: 14px;
+}
+
+.black-text,
+.text-black {
+  color: $color-black;
+
+  &--important {
+    color: $color-black !important;
+  }
+
+  > a {
+    color: $color-black;
+  }
+}
+
+.header-family {
+  font-family: $header-font-family;
+}

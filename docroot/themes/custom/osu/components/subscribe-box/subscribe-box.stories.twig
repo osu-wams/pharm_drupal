@@ -1,0 +1,13 @@
+{# some/path/in/your/code/base/my-card.stories.twig #}
+{% stories subscribe_box with { title: 'Components/Subscribe Box' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: { text: 'Sign Up for The Newsletter', subtext: 'Get the latest articles and events.' }
+  } %}
+    {# Write any Twig for the "default" story. The `args` above will be made #}
+    {# available as variables for the template 👇 #}
+    {% include 'osu:subscribe-box' with { text, subtext } %}
+  {% endstory %}
+
+{% endstories %}

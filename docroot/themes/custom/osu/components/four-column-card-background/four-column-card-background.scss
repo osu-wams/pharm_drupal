@@ -1,0 +1,144 @@
+@import '../../src/utils/variables';
+
+.four-column-card-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  .four-column-card-background__image {
+    position: absolute;
+    height: 100%;
+
+    @media screen and (min-width: $lg) {
+      width: 85%;
+    }
+
+    div {
+      height: 100%;
+    }
+
+    img,
+    picture,
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .four-column-card-background__title {
+    position: relative;
+    line-height: 27px;
+
+    @media screen and (min-width: $lg) {
+      max-width: 625px;
+      line-height: 48px;
+      margin: 1.5rem auto 3rem;
+    }
+  }
+
+  .four-column-card-background__content {
+    padding: 25px $gutter-width;
+
+    @media screen and (min-width: $lg) {
+      padding: 25px;
+    }
+  }
+
+  .four-column-card-background__cards {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $lg) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    > div {
+      margin-bottom: 20px;
+
+      @media screen and (min-width: $lg) {
+        margin-bottom: 0;
+      }
+
+      &:first-child {
+        margin-bottom: 35px;
+
+        @media screen and (min-width: $lg) {
+          margin-bottom: 0;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .text-overlay-teaser {
+    position: relative;
+    cursor: pointer;
+
+    @media screen and (min-width: $lg) {
+      cursor: default;
+    }
+
+    &.is-active {
+      .text-overlay-teaser__body {
+        display: flex !important;
+      }
+
+      .text-overlay-teaser__link,
+      .text-overlay-teaser__info {
+        position: relative !important;
+      }
+
+      a {
+        text-indent: 0 !important;
+        position: static !important;
+        background: $color-beaver-orange !important;
+        display: inline-block !important;
+      }
+    }
+
+    .text-overlay-teaser__body {
+      display: none;
+
+      @media screen and (min-width: $lg) {
+        display: flex;
+      }
+    }
+
+    &:not(:first-child),
+    &:not(.is-active) {
+      .text-overlay-teaser__link,
+      .text-overlay-teaser__info {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        @media screen and (min-width: $lg) {
+          position: relative;
+        }
+
+        @media screen and (max-width: $lg) {
+          a {
+            text-indent: -9999px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: none;
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

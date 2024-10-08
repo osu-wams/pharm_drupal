@@ -1,0 +1,52 @@
+uuid: c1fb7642-48f9-499c-9a3c-3cf7021da1bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.program.field_header_cta_link
+    - field.field.node.program.field_header_cta_sub_title
+    - field.field.node.program.field_header_cta_title
+    - field.field.node.program.field_header_image
+    - field.field.node.program.field_header_sub_title
+    - field.field.node.program.field_hide_sidebar_menu
+    - field.field.node.program.field_image
+    - field.field.node.program.field_meta_tags
+    - field.field.node.program.field_program_overview
+    - field.field.node.program.field_show_header_cta
+    - field.field.node.program.layout_builder__layout
+    - node.type.program
+  module:
+    - user
+id: node.program.teaser
+targetEntityType: node
+bundle: program
+mode: teaser
+content:
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: news_teaser
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  computed_node_url: true
+  field_header_cta_link: true
+  field_header_cta_sub_title: true
+  field_header_cta_title: true
+  field_header_image: true
+  field_header_sub_title: true
+  field_hide_sidebar_menu: true
+  field_meta_tags: true
+  field_program_overview: true
+  field_show_header_cta: true
+  langcode: true
+  layout_builder__layout: true

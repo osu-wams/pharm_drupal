@@ -1,0 +1,38 @@
+uuid: 5a7d902c-6ddd-44af-8912-f70d906d6241
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.upcoming_events_category_filtere
+    - field.field.block_content.upcoming_events_category_filtere.field_category
+id: block_content.upcoming_events_category_filtere.default
+targetEntityType: block_content
+bundle: upcoming_events_category_filtere
+mode: default
+content:
+  field_category:
+    type: entity_reference_autocomplete
+    weight: 27
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

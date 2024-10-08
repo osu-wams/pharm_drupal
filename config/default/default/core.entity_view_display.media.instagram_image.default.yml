@@ -1,0 +1,32 @@
+uuid: 63773853-fbe7-46bc-9ff4-4c23f1226a25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.instagram_image.field_media_image_1
+    - image.style.large
+    - media.type.instagram_image
+  module:
+    - image
+id: media.instagram_image.default
+targetEntityType: media
+bundle: instagram_image
+mode: default
+content:
+  field_media_image_1:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

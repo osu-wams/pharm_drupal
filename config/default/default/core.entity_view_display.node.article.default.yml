@@ -1,0 +1,228 @@
+uuid: 814339ad-50e8-47ca-bc45-67e42a57b5ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.article.body
+    - field.field.node.article.field_article_category
+    - field.field.node.article.field_header_cta_link
+    - field.field.node.article.field_header_cta_sub_title
+    - field.field.node.article.field_header_cta_title
+    - field.field.node.article.field_header_image
+    - field.field.node.article.field_image
+    - field.field.node.article.field_meta_tags
+    - field.field.node.article.field_show_header_cta
+    - node.type.article
+  module:
+    - link
+    - metatag
+    - nomarkup
+    - sdc_display
+    - text
+    - user
+third_party_settings:
+  sdc_display:
+    enabled: true
+    component:
+      machine_name: 'osu:article'
+      show_deprecated: null
+    mappings:
+      static:
+        props:
+          title: ''
+          date: ''
+          when: ''
+          where: ''
+        slots:
+          image:
+            value: ''
+            format: basic_html
+          body:
+            value: ''
+            format: basic_html
+          link:
+            value: ''
+            format: basic_html
+          tags:
+            value: ''
+            format: basic_html
+      dynamic:
+        props:
+          title: title
+          date: computed_formatted_date
+          when: ''
+          where: ''
+        slots:
+          image:
+            field_image: field_image
+            body: null
+            computed_formatted_date: null
+            field_article_category: null
+            field_header_cta_link: null
+            field_header_cta_sub_title: null
+            field_header_cta_title: null
+            field_header_image: null
+            field_show_header_cta: null
+            links: null
+            uid: null
+            title: null
+            created: null
+          body:
+            body: body
+            computed_formatted_date: null
+            field_article_category: null
+            field_header_cta_link: null
+            field_header_cta_sub_title: null
+            field_header_cta_title: null
+            field_header_image: null
+            field_image: null
+            field_show_header_cta: null
+            links: null
+            uid: null
+            title: null
+            created: null
+          tags:
+            field_article_category: field_article_category
+            body: null
+            computed_formatted_date: null
+            field_header_cta_link: null
+            field_header_cta_sub_title: null
+            field_header_cta_title: null
+            field_header_image: null
+            field_image: null
+            field_show_header_cta: null
+            links: null
+            uid: null
+            title: null
+            created: null
+          link:
+            body: null
+            computed_formatted_date: null
+            field_article_category: null
+            field_header_cta_link: null
+            field_header_cta_sub_title: null
+            field_header_cta_title: null
+            field_header_image: null
+            field_image: null
+            field_show_header_cta: null
+            links: null
+            uid: null
+            title: null
+            created: null
+id: node.article.default
+targetEntityType: node
+bundle: article
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  computed_formatted_date:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_article_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 3
+    region: content
+  field_header_cta_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_header_cta_sub_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_header_cta_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_header_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: article_header
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: '1'
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
+    region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_show_header_cta:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  computed_node_url: true
+  langcode: true

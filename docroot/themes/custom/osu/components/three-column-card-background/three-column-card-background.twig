@@ -1,0 +1,21 @@
+<div class="three-column-card-background">
+  <div class="three-column-card-background__image">
+    {% block background_image %}{% endblock %}
+  </div>
+  <div class="three-column-card-background__content">
+    <h3 class="three-column-card-background__title text-center color-white">
+      {{ title }}
+    </h3>
+    <div class="three-column-card-background__cards">
+      <div class="three-column-card-background__card bg-color-gray">
+        {% block card_1 %}{% endblock %}
+      </div>
+      <div class="three-column-card-background__card bg-color-gray">
+        {% block card_2 %}{% endblock %}
+      </div>
+      <div class="three-column-card-background__card bg-color-gray">
+        {% block card_3 %}{% endblock %}
+      </div>
+    </div>
+  </div>
+</div>

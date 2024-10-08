@@ -1,0 +1,8 @@
+uuid: c1ecc05f-c986-404c-aeb7-f9e42b6b3899
+langcode: en
+status: true
+dependencies: {  }
+id: round_photo_text
+label: 'Round Photo + Text'
+revision: false
+description: 'Photo left with body field on right.'

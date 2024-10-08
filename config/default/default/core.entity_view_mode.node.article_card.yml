@@ -1,0 +1,11 @@
+uuid: ae81ef97-00f9-4482-8222-6050647da5d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.article_card
+label: 'Article Card'
+description: 'A larger teaser card.'
+targetEntityType: node
+cache: true

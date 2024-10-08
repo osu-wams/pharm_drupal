@@ -1,0 +1,38 @@
+uuid: 9f250992-a146-44fa-a0f5-69ce2121e540
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.instagram_post.body
+    - field.field.node.instagram_post.field_instagram_media
+    - node.type.instagram_post
+  module:
+    - text
+    - user
+id: node.instagram_post.default
+targetEntityType: node
+bundle: instagram_post
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_instagram_media:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

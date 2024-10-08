@@ -1,0 +1,115 @@
+uuid: e933ab81-ddc4-42d7-8c6b-828fd610701e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.storage.testimony.field_image
+    - field.field.storage.testimony.field_testimony
+    - field.field.storage.testimony.field_title
+    - storage.storage_type.testimony
+  module:
+    - nomarkup
+    - sdc_display
+third_party_settings:
+  sdc_display:
+    enabled: true
+    component:
+      machine_name: 'osu:testimonial'
+      show_deprecated: null
+    mappings:
+      static:
+        props:
+          name: ''
+          title: ''
+        slots:
+          testimony:
+            value: ''
+            format: basic_html
+          image:
+            value: ''
+            format: basic_html
+      dynamic:
+        props:
+          name: name
+          title: field_title
+        slots:
+          testimony:
+            field_testimony: field_testimony
+          image:
+            field_image: field_image
+id: storage.testimony.default
+targetEntityType: storage
+bundle: testimony
+mode: default
+content:
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: testimonial
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: '1'
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: -4
+    region: content
+  field_testimony:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: -3
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: -2
+    region: content
+  name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: -5
+    region: content
+hidden:
+  langcode: true
+  user_id: true

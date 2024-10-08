@@ -1,0 +1,29 @@
+uuid: ebfd1ab9-dcfe-4980-819a-5e7564468816
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2d8dcecb-2e50-4cfe-b78a-a40ba9502bf3'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - osu
+third_party_settings:
+  block_class:
+    classes: apply-today-cta
+id: osu_footercta_2
+theme: osu
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:2d8dcecb-2e50-4cfe-b78a-a40ba9502bf3'
+settings:
+  id: 'block_content:2d8dcecb-2e50-4cfe-b78a-a40ba9502bf3'
+  label: 'Footer CTA'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

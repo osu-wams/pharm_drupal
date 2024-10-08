@@ -1,0 +1,13 @@
+uuid: 78cb7cd8-43d0-49a9-b3bb-acfc95e75561
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.back_to_top
+id: block_content.back_to_top.default
+targetEntityType: block_content
+bundle: back_to_top
+mode: default
+content: {  }
+hidden:
+  langcode: true

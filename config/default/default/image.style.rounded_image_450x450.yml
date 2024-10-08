@@ -1,0 +1,32 @@
+uuid: 7e545d09-dd2d-48d8-af59-1e9f34d41b7b
+langcode: en
+status: true
+dependencies:
+  module:
+    - imagick
+name: rounded_image_450x450
+label: 'Rounded Image (450x450)'
+effects:
+  5bb026d4-2331-4ac8-9990-7c080fe2d747:
+    uuid: 5bb026d4-2331-4ac8-9990-7c080fe2d747
+    id: image_rounded_corners
+    weight: -8
+    data:
+      x_rounding: '225'
+      y_rounding: '225'
+      stroke_width: '10'
+      displace: '5'
+      size_correction: '-6'
+  6bef25c1-7a66-40cc-889b-0396dbb576b5:
+    uuid: 6bef25c1-7a66-40cc-889b-0396dbb576b5
+    id: image_scale_and_crop
+    weight: -10
+    data:
+      width: 450
+      height: 450
+      anchor: center-center
+  87cce64d-b05a-40e7-b022-ad7ccf73b03b:
+    uuid: 87cce64d-b05a-40e7-b022-ad7ccf73b03b
+    id: image_transparent_background
+    weight: -9
+    data: {  }

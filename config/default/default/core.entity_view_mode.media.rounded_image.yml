@@ -1,0 +1,11 @@
+uuid: 4030186f-51ba-4c85-b1f7-01ae5a4a5d03
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.rounded_image
+label: 'Rounded Image'
+description: 'Scales and crops to 450x450 and then rounds into a circle.'
+targetEntityType: media
+cache: true

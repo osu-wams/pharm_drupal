@@ -1,0 +1,11 @@
+{% if attributes.hasClass('container') %}
+  {% set classes = ['boxed-inner-row'] %}
+{% elseif attributes.hasClass('container-fluid') %}
+  {% set classes = ['inner-row'] %}
+{% elseif attributes.hasClass('w-100') %}
+  {% set classes = ['row'] %}
+{% else %}
+  {% set classes = [] %}
+{% endif %}
+
+<div {{ attributes.addClass(classes) }}>{{ children }}</div>

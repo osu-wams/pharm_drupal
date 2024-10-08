@@ -1,0 +1,22 @@
+uuid: 149454fd-4f5a-4af7-b0fe-9b77deac7721
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: faculty
+label: 'Faculty & Staff'
+type: 'canonical_entities:node'
+pattern: 'faculty-staff/directory/[node:title]'
+selection_criteria:
+  6ee2f8bc-2bb8-4f12-bad1-caab1aa01018:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 6ee2f8bc-2bb8-4f12-bad1-caab1aa01018
+    context_mapping:
+      node: node
+    bundles:
+      faculty: faculty
+selection_logic: and
+weight: -5
+relationships: {  }

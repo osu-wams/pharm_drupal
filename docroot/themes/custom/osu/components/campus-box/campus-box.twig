@@ -1,0 +1,23 @@
+<div class="campus-box">
+  <div class="campus-box__map-image">
+    {% block image %}{% endblock %}
+  </div>
+  <div class="campus-box__info">
+    <div class="campus-box__name">
+      <h4>{{ name }}</h4>
+    </div>
+    <div class="campus-box__address">
+      <p>{{ address }}</p>
+    </div>
+    <div>
+      <div class="two_tertiary_buttons__row-column">
+        <div class="two_tertiary_buttons__link_spacing">
+          {% block schedule_a_tour_link %}{% endblock %}
+        </div>
+        <div class="two_tertiary_buttons__row-column">
+          {% block parking_directions_link %}{% endblock %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

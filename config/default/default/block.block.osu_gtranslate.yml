@@ -1,0 +1,20 @@
+uuid: 6b1d1483-163b-42bb-9658-c04b0ecf21bd
+langcode: en
+status: true
+dependencies:
+  module:
+    - gtranslate
+  theme:
+    - osu
+id: osu_gtranslate
+theme: osu
+region: secondary_menu
+weight: -10
+provider: null
+plugin: gtranslate_block
+settings:
+  id: gtranslate_block
+  label: GTranslate
+  label_display: '0'
+  provider: gtranslate
+visibility: {  }

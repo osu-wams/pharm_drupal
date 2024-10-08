@@ -1,0 +1,19 @@
+uuid: d418beae-cd46-43d1-90fd-9d2726d3b6c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.storage.field_title
+    - storage.storage_type.testimony
+id: storage.testimony.field_title
+field_name: field_title
+entity_type: storage
+bundle: testimony
+label: Title
+description: 'ex. "Pharm.D. Student"'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

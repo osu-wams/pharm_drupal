@@ -1,0 +1,33 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Search Result
+description: 'A simple search result component.'
+status: stable
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: 'Title'
+      description: 'The title of the content.'
+      examples:
+        - 'Early Assurance Program'
+    link:
+      type: string
+      title: 'Link'
+      description: 'The link of the content.'
+      examples:
+        - '#'
+    link_text:
+      type: string
+      title: 'Link Text'
+      description: 'The link text of the content.'
+      examples:
+        - 'Learn More'
+
+slots:
+  body:
+    title: Body
+    description: 'The text of the teaser.'
+  image:
+    title: Image
+    description: 'The image of the teaser.'

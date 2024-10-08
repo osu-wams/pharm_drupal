@@ -1,0 +1,199 @@
+@import '../../src/utils/variables';
+
+.site-header {
+  background-color: rgba(0, 0, 0, .75);
+  position: relative;
+  z-index: 1;
+
+  &.has-header-image {
+    background-color: rgba(0, 0, 0, .3);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+  }
+
+  .site-header__gradient {
+    background-color: $color-black;
+    background: linear-gradient(255.5deg, rgba(0, 0, 0, 0) 56.56%, rgba(0, 0, 0, 0.61) 89.73%);
+  }
+
+  .site-header__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .region-header {
+    padding: 10px;
+
+    @media screen and (min-width: $lg) {
+      display: flex;
+      flex: 1 1 30%;
+    }
+
+    .block-system-branding-block {
+      align-self: center;
+      padding-left: 0.5rem;
+
+      img {
+        width: 152px;
+
+        @media screen and (min-width: $md) {
+          padding-left: 1.5rem;
+          width: 180px;
+        }
+
+        @media screen and (min-width: $lg) {
+          width: 200px;
+        }
+
+        @media screen and (min-width: $xl) {
+          width: 260px;
+        }
+      }
+    }
+  }
+
+  .site-header__trigger {
+    grid-area: trigger;
+
+    @media (min-width: $lg) {
+      display: none;
+    }
+  }
+
+  .site-header__menus {
+    display: flex;
+    flex: 1 1 100%;
+    flex-direction: column;
+    background-color: $color-white;
+    margin-top: 75px;
+    max-height: 0;
+    position: absolute;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+    width: 100%;
+
+    @media screen and (min-width: $lg) {
+      flex: 2 1 60%;
+      flex-direction: column-reverse;
+      background-color: transparent;
+      margin-top: 0;
+      max-height: 100vh;
+      overflow: visible;
+      position: relative;
+    }
+
+    @media screen and (min-width: $xxl) {
+      flex: 2 1 40%;
+    }
+
+    &.is-open {
+      max-height: 140vh;
+    }
+  }
+
+  .region-secondary-menu {
+    background-color: $color-black;
+    color: $color-white;
+
+    @media screen and (min-width: $lg) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: flex-start;
+      flex-direction: row;
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $color-black;
+        z-index: -1;
+        right: -100%;
+      }
+    }
+
+    .menu {
+      a {
+        color: $color-white;
+      }
+    }
+
+    .menu--secondary {
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (min-width: $lg) {
+        flex: 0 1 82%;
+        flex-direction: row;
+      }
+    }
+
+    .menu-search {
+      grid-area: search;
+      padding: 12px;
+      padding-left: 30px;
+
+      @media screen and (min-width: $lg) {
+        flex: 0 1 30%;
+        padding-left: 0;
+      }
+
+      form {
+        position: relative;
+      }
+
+      input {
+        font-size: 14px;
+        margin: 0;
+        padding-left: 35px;
+      }
+
+      button[type='submit'] {
+        position: absolute;
+        background-image: url('/themes/custom/osu/images/icons/search.svg');
+        background-color: transparent;
+        color: transparent;
+        width: 15px;
+        height: 15px;
+        padding: 0;
+        border: 0;
+        cursor: pointer;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    .gtranslate_wrapper {
+      padding: 0 1rem 2rem 2rem;
+      white-space: nowrap;
+
+      @media screen and (min-width: $lg) {
+        padding: 0 1rem;
+      }
+
+      &::before {
+        content: url('/themes/custom/osu/images/icons/globe.svg');
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        vertical-align: text-top;
+      }
+
+      .gt_selector {
+        background-color: transparent;
+        border: 0;
+        color: $color-white;
+        font-family: $body-font-family;
+        font-size: 15px;
+      }
+    }
+  }
+}

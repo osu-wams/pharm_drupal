@@ -1,0 +1,29 @@
+@import '../../src/utils/variables';
+
+.campus-box {
+  $padding: 31px;
+
+  background-color: $color-gray;
+  max-width: 706px;
+
+  .campus-box__map-image {
+    img {
+      width: 100%;
+      min-height: 308px;
+      object-fit: cover;
+    }
+  }
+
+  .campus-box__info {
+    padding-left: $padding;
+    padding-bottom: $padding;
+
+    .campus-box__name {
+      color: $color-beaver-orange;
+    }
+
+    .campus-box__address {
+      color: $color-dark-body-text;
+    }
+  }
+}

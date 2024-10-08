@@ -1,0 +1,19 @@
+uuid: 9d55ad64-28db-405e-a06f-849ac76d74fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+third_party_settings:
+  crop:
+    image_field: _none
+id: instagram_video
+label: 'Instagram Video'
+description: 'This is used to store Instagram Videos'
+source: video_file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_video_file_1
+field_map:
+  name: name

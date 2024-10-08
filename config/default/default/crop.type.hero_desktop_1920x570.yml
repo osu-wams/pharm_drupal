@@ -1,0 +1,12 @@
+uuid: 61c5ded7-3d2a-4578-9bfa-7e1470f5fe85
+langcode: en
+status: true
+dependencies: {  }
+label: 'Hero Desktop (1920x570)'
+id: hero_desktop_1920x570
+description: ''
+aspect_ratio: '1920:570'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: 1920
+hard_limit_height: 570

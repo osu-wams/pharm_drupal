@@ -1,0 +1,39 @@
+uuid: 52d125c0-1757-4715-ae5d-29278189ace1
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.portrait_474x674
+    - image.style.wide
+  theme:
+    - osu
+id: full_width_overlay
+label: 'Full width with overlay'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: wide
+    breakpoint_id: osu.extra_large
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: wide
+    breakpoint_id: osu.large
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: portrait_474x674
+    breakpoint_id: osu.medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: portrait_474x674
+    breakpoint_id: osu.small
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: portrait_474x674
+    breakpoint_id: osu.extra_small
+    multiplier: 1x
+breakpoint_group: osu
+fallback_image_style: wide

@@ -1,0 +1,49 @@
+uuid: f5929670-c7e4-434f-9486-7638375ebf4e
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - custom_field
+id: block_content.field_second_section_stats
+field_name: field_second_section_stats
+entity_type: block_content
+type: custom
+settings:
+  columns:
+    value:
+      name: value
+      type: string
+      max_length: '255'
+      unsigned: 0
+      precision: '10'
+      scale: '2'
+      size: normal
+      datetime_type: datetime
+    info:
+      name: info
+      type: string_long
+      max_length: '255'
+      unsigned: 0
+      precision: '10'
+      scale: '2'
+      size: normal
+      datetime_type: datetime
+    graphic:
+      name: graphic
+      type: image
+      max_length: '255'
+      unsigned: 0
+      precision: '10'
+      scale: '2'
+      size: normal
+      datetime_type: datetime
+      target_type: file
+      uri_scheme: public
+module: custom_field
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

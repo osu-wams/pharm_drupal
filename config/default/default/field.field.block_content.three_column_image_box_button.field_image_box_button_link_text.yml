@@ -1,0 +1,19 @@
+uuid: 6f67b12c-4842-4d93-a07d-406881e862cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.three_column_image_box_button
+    - field.storage.block_content.field_image_box_button_link_text
+id: block_content.three_column_image_box_button.field_image_box_button_link_text
+field_name: field_image_box_button_link_text
+entity_type: block_content
+bundle: three_column_image_box_button
+label: 'Link Text'
+description: 'The text that goes inside the link. If no text is supplied, the entire box will become clickable with the link.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

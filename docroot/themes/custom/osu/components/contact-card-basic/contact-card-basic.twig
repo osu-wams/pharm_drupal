@@ -1,0 +1,26 @@
+<div class="component contact-card-basic flex-container flex-jc-flex-start">
+  <div class="contact-card-basic__image margin-bottom-one circle-image">
+    {% block image %}{% endblock %}
+  </div>
+  <div class="contact-card-basic__content-wrapper">
+    <div class="contact-card-basic__title-wrapper flex-container flex-dir-row flex-jc-flex-start flex-ai-center">
+      <p class="contact-card-basic__title-wrapper__title text-bold flex-0-0">{{ title }}</p>
+      {% if secondary_title is not empty %}
+        <div class="contact-card-basic__title-wrapper__divider flex-0-0">|</div>
+        <p class="contact-card-basic__title-wrapper__secondary-title flex-0-0">{{ secondary_title }}</p>
+      {% endif %}
+    </div>
+    {% if email is not empty %}
+      <div class="contact-card-basic__email-wrapper flex-container flex-dir-row flex-jc-flex-start flex-ai-center">
+        <i class="fas fa-envelope flex-0-0"></i>
+        <a href="mailto:{{ email }}" class="contact-card-basic__email-wrapper__email flex-0-0">{{ email }}</a>
+      </div>
+    {% endif %}
+    {% if phone is not empty %}
+      <div class="contact-card-basic__phone-wrapper flex-container flex-dir-row flex-jc-flex-start flex-ai-center">
+        <i class="fas fa-phone flex-0-0"></i>
+        <a href="tel:{{ phone }}" class="contact-card-basic__phone-wrapper__phone flex-0-0">{{ phone }}</a>
+      </div>
+    {% endif %}
+  </div>
+</div>

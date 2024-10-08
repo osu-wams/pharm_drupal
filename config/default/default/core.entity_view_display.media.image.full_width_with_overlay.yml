@@ -1,0 +1,62 @@
+uuid: f00453f2-3d42-4cfc-83cd-19eaa8dbc779
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full_width_with_overlay
+    - field.field.media.image.field_media_image
+    - media.type.image
+    - responsive_image.styles.full_width_overlay
+  module:
+    - layout_builder
+    - nomarkup
+    - responsive_image
+    - sdc_display
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+_core:
+  default_config_hash: 73xaTNkI5J6sfFcBmNYeuk070X3mQS_iwwWaPYyfG2M
+id: media.image.full_width_with_overlay
+targetEntityType: media
+bundle: image
+mode: full_width_with_overlay
+content:
+  field_media_image:
+    type: responsive_image
+    label: visually_hidden
+    settings:
+      responsive_image_style: full_width_overlay
+      image_link: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 1
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

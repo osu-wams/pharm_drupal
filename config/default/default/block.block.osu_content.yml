@@ -1,0 +1,22 @@
+uuid: 2c16af01-65dc-4c19-adc6-55d930712e66
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - osu
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: osu_content
+theme: osu
+region: content
+weight: -13
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

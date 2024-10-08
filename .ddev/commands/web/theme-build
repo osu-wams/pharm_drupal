@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cd docroot/themes/custom/osu;
+yarn build;

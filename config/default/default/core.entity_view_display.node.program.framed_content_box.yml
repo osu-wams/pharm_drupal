@@ -1,0 +1,81 @@
+uuid: 3be48ac5-7629-4808-98dc-b7de5557152f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.framed_content_box
+    - field.field.node.program.field_header_cta_link
+    - field.field.node.program.field_header_cta_sub_title
+    - field.field.node.program.field_header_cta_title
+    - field.field.node.program.field_header_image
+    - field.field.node.program.field_header_sub_title
+    - field.field.node.program.field_hide_sidebar_menu
+    - field.field.node.program.field_image
+    - field.field.node.program.field_meta_tags
+    - field.field.node.program.field_program_overview
+    - field.field.node.program.field_show_header_cta
+    - field.field.node.program.layout_builder__layout
+    - node.type.program
+  module:
+    - layout_builder
+    - smart_trim
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.program.framed_content_box
+targetEntityType: node
+bundle: program
+mode: framed_content_box
+content:
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: framed_content_box
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_program_overview:
+    type: smart_trim
+    label: hidden
+    settings:
+      trim_length: 164
+      trim_type: chars
+      trim_suffix: ''
+      wrap_output: false
+      wrap_class: trimmed
+      more:
+        display_link: false
+        target_blank: false
+        link_trim_only: false
+        class: more-link
+        text: More
+        aria_label: 'Read more about [node:title]'
+      summary_handler: trim
+      trim_options:
+        text: true
+        trim_zero: false
+        replace_tokens: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  computed_node_url: true
+  field_header_cta_link: true
+  field_header_cta_sub_title: true
+  field_header_cta_title: true
+  field_header_image: true
+  field_header_sub_title: true
+  field_hide_sidebar_menu: true
+  field_meta_tags: true
+  field_show_header_cta: true
+  langcode: true
+  layout_builder__layout: true

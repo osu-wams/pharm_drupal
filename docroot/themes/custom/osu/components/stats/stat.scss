@@ -1,0 +1,29 @@
+@import '../../src/utils/variables';
+
+.stat {
+  display: flex;
+  gap: 15px;
+
+  .stat__content__stat {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 45px;
+    margin-bottom: 5px;
+  }
+
+  .stat__info {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
+    p {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    i,
+    em {
+      font-size: 12px;
+    }
+  }
+}

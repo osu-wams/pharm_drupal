@@ -1,0 +1,21 @@
+uuid: 6f969530-6d6e-4997-90d1-99a9bc7b4d3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_geofield
+    - node.type.campus
+  module:
+    - geofield
+id: node.campus.field_geofield
+field_name: field_geofield
+entity_type: node
+bundle: campus
+label: Geofield
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geofield

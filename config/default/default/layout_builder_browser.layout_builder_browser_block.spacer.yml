@@ -1,0 +1,11 @@
+uuid: a6a830f1-df86-42e8-ae52-cdfe7307669f
+langcode: en
+status: true
+dependencies: {  }
+id: spacer
+block_id: 'inline_block:spacer'
+category: spacer
+label: Spacer
+image_path: /themes/custom/osu/images/lbb/spacer.png
+image_alt: 'spacer represented by a dashed line'
+weight: -100

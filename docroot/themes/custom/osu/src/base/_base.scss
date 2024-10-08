@@ -1,0 +1,108 @@
+@import 'fonts';
+@import 'normalize';
+@import 'typography';
+
+html {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+// https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+* {
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  font-size: 100%;
+  overflow-x: hidden;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.margin-around-15 {
+  margin: 15px;
+}
+
+.margin-none {
+  margin: 0;
+}
+
+.padding-around-15 {
+  padding: $gutter-width;
+}
+
+.padding-around-30 {
+  padding: $gutter-width * 2;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  max-width: 82%;
+
+  @media screen and (min-width: $lg) {
+    max-width: unset;
+  }
+
+  ul {
+    max-width: unset;
+  }
+}
+
+li {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media screen and (min-width: $lg) {
+    font-size: 18px;
+  }
+
+  &::marker {
+    color: $color-stratosphere;
+  }
+}

@@ -1,0 +1,23 @@
+uuid: f10f5ac5-71ac-486f-8117-758b86633d6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.three_column_image_box_button
+    - field.storage.block_content.field_image_box_third_link
+  module:
+    - link
+id: block_content.three_column_image_box_button.field_image_box_third_link
+field_name: field_image_box_third_link
+entity_type: block_content
+bundle: three_column_image_box_button
+label: 'Third Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

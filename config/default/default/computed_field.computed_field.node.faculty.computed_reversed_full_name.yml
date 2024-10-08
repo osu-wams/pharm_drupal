@@ -1,0 +1,15 @@
+uuid: f2923b7e-cab9-4f13-9e6d-b9cb73bb23c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.faculty
+  module:
+    - osu_computed
+id: node.faculty.computed_reversed_full_name
+field_name: computed_reversed_full_name
+label: 'Reversed Full Name'
+entity_type: node
+bundle: faculty
+plugin_id: reversed_full_name
+plugin_config: {  }

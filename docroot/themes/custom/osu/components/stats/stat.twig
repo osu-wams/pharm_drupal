@@ -1,0 +1,16 @@
+
+{% set _graphic = block('stat_graphic')|render %}
+
+<div class="stat">
+  <div class="stat__graphic">
+    {% block stat_graphic %}{% endblock %}
+  </div>
+  <div class="stat__content">
+    <div class="stat__content__stat color-beaver-orange">
+      {{ stat }}
+    </div>
+    <div class="stat__info">
+      {% block stat_info %}{% endblock %}
+    </div>
+  </div>
+</div>

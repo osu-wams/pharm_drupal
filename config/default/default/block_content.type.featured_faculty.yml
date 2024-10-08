@@ -1,0 +1,8 @@
+uuid: 4204ae30-012a-4c27-950f-b13ae831bb50
+langcode: en
+status: true
+dependencies: {  }
+id: featured_faculty
+label: 'Featured Faculty'
+revision: false
+description: 'Insert a single Faculty member using the Featured Person component.'

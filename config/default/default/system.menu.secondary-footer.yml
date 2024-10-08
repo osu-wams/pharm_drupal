@@ -1,0 +1,8 @@
+uuid: 4b20effd-f90e-4a64-95e5-4cc5a9882452
+langcode: en
+status: true
+dependencies: {  }
+id: secondary-footer
+label: 'Secondary Footer'
+description: 'Smaller footer navigation'
+locked: false

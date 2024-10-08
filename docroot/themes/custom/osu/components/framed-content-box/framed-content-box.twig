@@ -1,0 +1,40 @@
+<div class="framed-content-box">
+  <div class="framed-content-box__image">
+    <div class="overlay"></div>
+    {% block image %}{% endblock %}
+  </div>
+  <div class="framed-content-box__info">
+    <div class="framed-content-box__name">
+      <h2 class="color-beaver-orange">{{ name }}</h2>
+    </div>
+    <div class="framed-content__body">
+      {% block content_body %}{% endblock %}
+    </div>
+    <div class="framed-content-box__deadline">
+      {% if deadline_description %}
+        <div class="framed-content-box__deadline-description">
+          <p>{{ deadline_description }}</p>
+          <div class="framed-content-box__deadline-date">
+            <p>{{ deadline_date|date('F j, Y') }}</p>
+          </div>
+        </div>
+      {% endif %}
+      {% if schedule_a_tour_link or parking_directions_link %}
+        <div class="framed-content-box__buttons flex-container">
+          {% if schedule_a_tour_link %}
+            <div class="framed-content-box__link_spacing">
+              <div class="framed-content-box__button-container">
+                {% block schedule_a_tour_link %}{% endblock %}
+              </div>
+            </div>
+          {% endif %}
+          {% if parking_directions_link %}
+            <div class="framed-content-box__button-container">
+              {% block parking_directions_link %}{% endblock %}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

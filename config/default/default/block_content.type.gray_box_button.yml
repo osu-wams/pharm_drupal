@@ -1,0 +1,8 @@
+uuid: ae0574a7-89c4-4016-90e3-295ba313d2a8
+langcode: en
+status: true
+dependencies: {  }
+id: gray_box_button
+label: 'Gray Box Button'
+revision: false
+description: 'Gray box with centered content, icon, header, and default styled CTA button(s). Usually seen in a 3-column layout.'

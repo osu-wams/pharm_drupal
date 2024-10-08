@@ -1,0 +1,57 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Bio
+description: 'Bio Component.'
+status: stable
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: 'Title'
+      description: 'The Title.'
+      examples:
+        - 'John Doe'
+        - 'Part Time Faculty'
+    position:
+      type: string
+      title: 'Position'
+      description: 'The Position.'
+      examples:
+        - 'Professor'
+    department:
+      type: string
+      title: 'Department'
+      description: 'The Department.'
+      examples:
+        - 'School or Department'
+    email:
+      type: string
+      title: 'Email'
+      description: 'The Email.'
+      examples:
+        - 'email@oregeonstate.edu'
+    phone: 
+      type: string
+      title: 'Phone'
+      description: 'The Phone.'
+      examples:
+        - '123-456-7890'
+    location:
+      type: string
+      title: 'Location'
+      description: 'The Location.'
+      examples:
+        - 'Robertson life Sciences Building, 4N018'    
+slots:
+  image:
+    title: Image
+    description: 'The image of the faculty member.'
+  research_highlights:
+    title: Research Highlights
+    description: 'Research Highlights'
+  research_topics:
+    title: Research Topics
+    description: 'Research Topics'
+  body:
+    title: 'Body'
+    description: 'Description of Faculty Member.'

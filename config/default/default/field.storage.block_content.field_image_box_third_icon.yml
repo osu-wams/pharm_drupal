@@ -1,0 +1,20 @@
+uuid: 2bb72f73-9ec3-4b33-ae66-12c4697f0ee4
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - media
+id: block_content.field_image_box_third_icon
+field_name: field_image_box_third_icon
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

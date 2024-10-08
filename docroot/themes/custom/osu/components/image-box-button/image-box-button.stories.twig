@@ -1,0 +1,35 @@
+{# some/path/in/your/code/base/my-card.stories.twig #}
+{% stories image_box_button with { title: 'Components/Image Box Button' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: {
+      title: 'Phamaceutical Sciences',
+      title_tag: 'h3',
+      button_url: '#',
+      button_text: 'Learn More'
+    }
+  } %}
+    {% embed 'osu:image-box-button' with {
+      title: title,
+      title_tag: title_tag,
+      button_url: button_url,
+      button_text: button_text
+    } %}
+      {% block image %}
+        <img src="https://placekeanu.com/457/608" alt="Placeholder image of Keanu Reeves" />
+      {% endblock %}
+      {% block icon %}
+        <div>
+          <img src="https://osu-college-of-pharmacy.ddev.site/themes/custom/osu/images/icons/sample-icon.png" alt="Sample Icon" />
+        </div>
+      {% endblock %}
+      {% block content %}
+        <p>
+          Collaborate broadly with scientists and clinicians across Oregon to promote translation of research to import health for all.
+        </p>
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+{% endstories %}

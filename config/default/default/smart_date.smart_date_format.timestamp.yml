@@ -1,0 +1,15 @@
+uuid: dc318350-99d8-4f08-9787-2e5728bf9ea1
+langcode: en
+status: true
+dependencies: {  }
+id: timestamp
+label: Timestamp
+date_format: U
+time_format: ''
+time_hour_format: ''
+allday_label: ''
+separator: ' - '
+join: ''
+ampm_reduce: '1'
+date_first: '1'
+site_time_toggle: '0'

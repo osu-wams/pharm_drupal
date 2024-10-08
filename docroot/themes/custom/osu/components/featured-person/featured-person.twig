@@ -1,0 +1,36 @@
+<div class="featured-person">
+  <div class="featured-person__image">
+    {% block image %}{% endblock %}
+  </div>
+  <div class="featured-person__content">
+    <h4 class="featured-person__name">
+      {{ name }}
+    </h4>
+    {% if job_title or year %}
+      <div class="featured-person__info color-dark-body-text">
+        {% if year %}
+          <span class="featured-person__info-year">
+            {{ year }}
+          </span>
+        {% endif %}
+        {% if job_title %}
+          <span class="featured-person__info-title">
+            | {{ job_title }}
+          </span>
+        {% endif %}
+      </div>
+    {% endif %}
+    <div class="featured-person__bio color-dark-body-text">
+      {{ bio }}
+    </div>
+    {% if link %}
+      <div class="featured-person__link">
+        {% include 'osu:button' with {
+          class: 'tertiary',
+          link_href: link,
+          link_text: 'Read More'|t
+        } %}
+      </div>
+    {% endif %}
+  </div>
+</div>

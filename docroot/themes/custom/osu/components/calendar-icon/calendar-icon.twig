@@ -1,0 +1,12 @@
+{% set trimmed_date = date %}
+{% if date|split(' - ')|length > 1 %}
+  {% set trimmed_date = date|split(' - ')|first %}
+{% endif %}
+<div class="calendar-icon">
+  <div class="calendar-icon__month bg-color-beaver-orange text-center">
+    {{ trimmed_date|date('M')}}
+  </div>
+  <div class="calendar-icon__day text-center">
+    {{ trimmed_date|date('j')}}
+  </div>
+</div>

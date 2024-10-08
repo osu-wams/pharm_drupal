@@ -1,0 +1,18 @@
+{
+  "packageManager": "yarn@4.2.2",
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.17",
+    "@storybook/addon-links": "^7.6.17",
+    "@storybook/blocks": "^7.6.17",
+    "@storybook/server": "^7.6.17",
+    "@storybook/server-webpack5": "^7.6.17",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.6.17"
+  },
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "lint": "pushd docroot/themes/custom/osu && yarn lint"
+  }
+}

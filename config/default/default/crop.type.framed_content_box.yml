@@ -1,0 +1,12 @@
+uuid: e982e3cf-ef28-4c3d-a34d-e127911b3783
+langcode: en
+status: true
+dependencies: {  }
+label: 'Framed Content Box'
+id: framed_content_box
+description: ''
+aspect_ratio: '706:308'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: 706
+hard_limit_height: 308

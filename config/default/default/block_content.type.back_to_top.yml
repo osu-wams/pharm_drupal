@@ -1,0 +1,8 @@
+uuid: 41743222-e10a-4346-9fd7-3e466507ff6b
+langcode: en
+status: true
+dependencies: {  }
+id: back_to_top
+label: 'Back To Top'
+revision: false
+description: 'Places a "Back to Top" link that scrolls you up slowly.'

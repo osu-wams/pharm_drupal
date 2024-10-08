@@ -1,0 +1,25 @@
+uuid: ed47350c-da22-4ab9-b1ea-1ee80617be0d
+langcode: en
+status: true
+dependencies:
+  module:
+    - mailchimp_signup
+    - system
+  theme:
+    - osu
+id: osu_mailchimpsubscriptionformsignupforthenewsletter
+theme: osu
+region: content
+weight: -11
+provider: null
+plugin: 'mailchimp_signup_subscribe_block:sign_up_for_the_newsletter'
+settings:
+  id: 'mailchimp_signup_subscribe_block:sign_up_for_the_newsletter'
+  label: 'Sign Up for the Newsletter'
+  label_display: visible
+  provider: mailchimp_signup
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/beaverxnews\r\n/beaverxnews/*\r\n/news\r\n/news/*"

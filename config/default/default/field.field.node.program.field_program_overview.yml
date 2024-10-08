@@ -1,0 +1,26 @@
+uuid: 71c99f04-ad7f-4941-8a93-858667b8e9b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_overview
+    - filter.format.basic_html
+    - node.type.program
+  module:
+    - text
+id: node.program.field_program_overview
+field_name: field_program_overview
+entity_type: node
+bundle: program
+label: 'Program Overview'
+description: 'Summary is what will show in teasers of this program.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: true
+  allowed_formats:
+    - basic_html
+field_type: text_with_summary

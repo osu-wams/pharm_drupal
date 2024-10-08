@@ -1,0 +1,29 @@
+uuid: fae67f9c-cb16-4417-b8a7-99d967091c22
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.four_column_card_with_background
+    - field.storage.block_content.field_card
+    - node.type.program
+id: block_content.four_column_card_with_background.field_card
+field_name: field_card
+entity_type: block_content
+bundle: four_column_card_with_background
+label: Card
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      program: program
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

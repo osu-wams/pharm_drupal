@@ -1,0 +1,31 @@
+uuid: 39b87caa-a8ce-4224-a047-07585bcb473b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_instagram_media
+    - media.type.instagram_image
+    - media.type.instagram_video
+    - node.type.instagram_post
+id: node.instagram_post.field_instagram_media
+field_name: field_instagram_media
+entity_type: node
+bundle: instagram_post
+label: 'Instagram Media'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      instagram_image: instagram_image
+      instagram_video: instagram_video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: instagram_image
+field_type: entity_reference

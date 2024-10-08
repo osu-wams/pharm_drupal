@@ -1,0 +1,271 @@
+@import '../utils/variables';
+
+.latest-news-events {
+  margin-bottom: 40px;
+  overflow: hidden;
+  padding: 0 $gutter-width;
+  max-width: 100vw;
+
+  @media screen and (min-width: $lg) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .latest-news-events__intro {
+    @media screen and (min-width: $lg) {
+      flex: 0 1 25%;
+    }
+  }
+
+  .latest-news-events__intro-inner {
+    @media screen and (min-width: $lg) {
+      padding-right: 20px;
+    }
+  }
+
+  .latest-news-events__content {
+    @media screen and (min-width: $lg) {
+      flex: 0 1 75%;
+    }
+  }
+
+  .latest-news-events__title {
+    font-size: 26px;
+    font-weight: 400;
+    margin: 0;
+
+    @media screen and (min-width: $md) {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .latest-news-events__links {
+    .button {
+      margin-right: 20px;
+      font-size: 16px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .latest-news-events__subtitle {
+    font-family: $body-font-family;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.045rem;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @media screen and (min-width: $md) {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .view-latest-news {
+    .view-content {
+      @media screen and (min-width: $lg) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+      }
+    }
+  }
+}
+
+.view-campus.campus-list {
+  .view-content {
+    @media screen and (min-width: $md) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+  }
+}
+
+.view-latest-news {
+  .view-content {
+    @media screen and (min-width: $lg) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+  }
+
+  .individual-article {
+    margin-bottom: 25px;
+  }
+
+  .views-row {
+    > * {
+      height: 100%;
+    }
+  }
+}
+
+.for-events {
+  margin: 0 auto;
+  width: 90%;
+
+  @media screen and (min-width: $md) {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+    .view-content {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .views-row {
+      margin-bottom: 1.25rem;
+    }
+}
+
+.alumni-listing {
+  .view-content {
+    @media screen and (min-width: $md) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+  }
+}
+
+.view-faculty-directory {
+  padding: 0 2rem;
+
+  .views-exposed-form {
+    .form--inline {
+      display: grid;
+      grid-template-areas:
+      'search search'
+      'department research_topic'
+      'alphabetical alphabetical'
+      'clear clear';
+      gap: 15px;
+
+      @media screen and (min-width: $md) {
+        grid-template-areas:
+        'search department research_topic clear'
+        'alphabetical alphabetical alphabetical alphabetical';
+      }
+    }
+
+    label {
+      display: none;
+    }
+
+    .form-item-combine {
+      grid-area: search;
+      position: relative;
+
+      &::before {
+        content: '';
+        background: url('/themes/custom/osu/images/icons/search.svg') no-repeat;
+        width: 15px;
+        height: 15px;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+      }
+
+      input {
+        background-color: $color-gray;
+        padding: 20px;
+        padding-left: 35px;
+        margin: 0;
+        border: 0;
+      }
+    }
+
+    .form-item-field-department-target-id {
+      grid-area: department;
+    }
+
+    .form-item-field-faculty-research-topics-target-id {
+      grid-area: research_topic;
+    }
+
+    .form-composite {
+      grid-area: alphabetical;
+
+      .form-radios {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
+
+        @media screen and (min-width: $md) {
+          grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+        }
+
+        .form-item:first-child {
+          display: none;
+        }
+      }
+
+      label {
+        display: block;
+        color: $color-stratosphere;
+        font-weight: 700;
+        font-size: 18px;
+        cursor: pointer;
+
+        @media screen and (min-width: $lg) {
+          font-size: 22px;
+        }
+      }
+
+      input {
+        display: none;
+      }
+    }
+
+    .form-actions {
+      grid-area: clear;
+      margin: 0;
+    }
+  }
+}
+
+.slick-slide {
+  margin: 0 5px;
+}
+
+.slick-dots {
+  list-style: none;
+  padding: 0;
+  margin: 15px auto;
+  display: flex;
+  justify-content: center;
+
+  li {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    font-size: 0;
+    border: 1px solid $color-beaver-orange;
+    background-color: transparent;
+    margin-right: 12px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &.slick-active { // stylelint-disable-line selector-no-qualifying-type
+      background-color: $color-beaver-orange;
+    }
+
+    button {
+      display: none;
+    }
+  }
+}

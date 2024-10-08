@@ -1,0 +1,37 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% block content %}
+    <div class="latest-news-events">
+      <div class="latest-news-events__intro margin-bottom-two">
+        <div class="latest-news-events__intro-inner">
+          <span class="latest-news-events__subtitle text-uppercase">{{ 'Read the latest'|t }}</span>
+          <h2 class="latest-news-events__title color-beaver-orange">{{ 'BEAVERxNews'|t }}</h2>
+          <div class="latest-news-events__links">
+            {% include 'osu:button' with {
+              'class': 'tertiary',
+              'link_href': '/beaverxnews',
+              'link_text': "What's New"|t,
+            } %}
+            {% include 'osu:button' with {
+              'class': 'tertiary',
+              'link_href': '/events',
+              'link_text': "Event Calendar"|t,
+            } %}
+          </div>
+        </div>
+      </div>
+      <div class="latest-news-events__content">
+        {{ drupal_view('latest_news', 'latest_news') }}
+      </div>
+    </div>
+
+  {% endblock %}
+</div>

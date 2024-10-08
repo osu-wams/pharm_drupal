@@ -1,0 +1,29 @@
+uuid: 10888e05-0ebb-4908-999d-86f5499a22b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.faculty_basic_contact
+    - field.storage.block_content.field_faculty_member
+    - node.type.faculty
+id: block_content.faculty_basic_contact.field_faculty_member
+field_name: field_faculty_member
+entity_type: block_content
+bundle: faculty_basic_contact
+label: 'Faculty Member'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      faculty: faculty
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

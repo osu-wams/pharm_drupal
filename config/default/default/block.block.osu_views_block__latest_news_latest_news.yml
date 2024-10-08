@@ -1,0 +1,33 @@
+uuid: dd0844b3-41dc-46d7-bb3a-8073d5b8a7c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_news
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - osu
+third_party_settings:
+  block_class:
+    classes: for-events
+id: osu_views_block__latest_news_latest_news
+theme: osu
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:latest_news-latest_news'
+settings:
+  id: 'views_block:latest_news-latest_news'
+  label: 'Latest News & Events'
+  label_display: visible
+  provider: views
+  views_label: 'Latest News & Events'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/events/*'

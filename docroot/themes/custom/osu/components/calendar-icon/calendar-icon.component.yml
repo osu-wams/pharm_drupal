@@ -1,0 +1,13 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Calendar Icon
+description: 'A calendar showing month and day'
+status: stable
+props:
+  type: object
+  properties:
+    date:
+      type: string
+      title: 'Date'
+      description: 'The date of the calendar'
+      examples:
+        - '1715026587'

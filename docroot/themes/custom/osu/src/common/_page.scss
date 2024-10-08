@@ -1,0 +1,36 @@
+@import '../../src/utils/variables';
+
+.page-title {
+  letter-spacing: 0.035rem;
+  line-height: 1.2;
+  margin: 1rem $gutter-width 0;
+
+  @media screen and (min-width: $md) {
+    margin: 3.5rem 0 0 50px;
+  }
+}
+
+.path-user {
+  .user-login-form {
+    width: 90%;
+    margin: 0 auto;
+
+    @media screen and (min-width: $md) {
+      max-width: 350px;
+    }
+  }
+}
+
+.has-sidebar-first {
+  @media screen and (min-width: $lg) {
+    max-width: 70%;
+  }
+
+  @media screen and (min-width: $xl) {
+    max-width: 74%;
+  }
+
+  @media screen and (min-width: $xxl) {
+    max-width: 82%;
+  }
+}

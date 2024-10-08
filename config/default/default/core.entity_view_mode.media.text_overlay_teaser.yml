@@ -1,0 +1,11 @@
+uuid: 82816ddb-2874-4049-88cb-5409a5252607
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.text_overlay_teaser
+label: 'Text Overlay Teaser'
+description: ''
+targetEntityType: media
+cache: true

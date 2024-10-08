@@ -1,0 +1,8 @@
+uuid: 9bf537a8-16e6-4e13-abb3-6c4208a1fd20
+langcode: en
+status: true
+dependencies: {  }
+id: step_flag
+label: 'Step Flag'
+revision: false
+description: 'Show a flag with text.'

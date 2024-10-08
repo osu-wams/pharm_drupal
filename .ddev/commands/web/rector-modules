@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+
+vendor/bin/rector process ./docroot/modules/custom/  --dry-run

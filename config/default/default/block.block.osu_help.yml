@@ -1,0 +1,22 @@
+uuid: 1bbc3cc9-d24c-4914-9105-f583835736a6
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - osu
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: osu_help
+theme: osu
+region: sidebar_first
+weight: -9
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

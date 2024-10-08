@@ -1,0 +1,23 @@
+uuid: bf29b693-152c-4a80-84d8-286baa793abb
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.three_column_gray_box_button
+    - field.storage.block_content.field_second_link
+  module:
+    - link
+id: block_content.three_column_gray_box_button.field_second_link
+field_name: field_second_link
+entity_type: block_content
+bundle: three_column_gray_box_button
+label: 'Second Link'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

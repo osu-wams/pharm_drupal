@@ -1,0 +1,70 @@
+{# some/path/in/your/code/base/my-card.stories.twig #}
+{% stories framed_content_box with { title: 'Components/Framed Content Box' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: {
+      name: 'Early Assurance Program',
+      deadline_description: 'Fall Application Deadline:',
+      deadline_date: '2024-06-03T12:00:00.000Z'
+    }
+  } %}
+    {% embed 'osu:framed-content-box' %}
+      {% block image %}
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Montes_Carpatus-A._Ferruggia.jpg"
+             alt="Solar eclipse">
+      {% endblock %}
+      {% block content_body %}
+        <p>Optio quaerat omnis et aut incidunt suscipit ut unde. Nisi eos non vero
+        totam dolorum est. Molestias blanditiis qui id nisi omnis molestiae.
+        Ut quae vel est ad nihil aut ut. Iste rerum quia voluptas non omnis.
+        Nisi iste voluptates eveniet ut et amet. Iure</p>
+      {% endblock %}
+      {% block schedule_a_tour_link %}
+        {% include 'osu:button' with {
+          'class': 'secondary',
+          'link_href': '#',
+          'link_text': 'Schedule a Tour',
+        } %}
+      {% endblock %}
+      {% block parking_directions_link %}
+        {% include 'osu:button' with {
+          'class': 'secondary',
+          'link_href': '#',
+          'link_text': 'Parking Directions',
+        } %}
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+  {% story campus with {
+    name: '1. Campus',
+    args: {
+      name: 'Corvallis Campus',
+    }
+  } %}
+    {% embed 'osu:framed-content-box' %}
+      {% block image %}
+        <img src="https://placekeanu.com/706/308" alt="Random Keanu Reeves placeholder photo">
+      {% endblock %}
+      {% block content_body %}
+        1601 SW Jefferson Way, Corvallis, OR 97331
+      {% endblock %}
+      {% block schedule_a_tour_link %}
+        {% include 'osu:button' with {
+          'class': 'tertiary',
+          'link_href': '#',
+          'link_text': 'Schedule a Tour',
+        } %}
+      {% endblock %}
+      {% block parking_directions_link %}
+        {% include 'osu:button' with {
+          'class': 'tertiary',
+          'link_href': '#',
+          'link_text': 'Parking Directions',
+        } %}
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+{% endstories %}

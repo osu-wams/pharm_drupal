@@ -1,0 +1,29 @@
+uuid: 556e9635-3485-4e56-8764-ec9fc6b1c105
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_faculty
+    - field.storage.block_content.field_faculty_member
+    - node.type.faculty
+id: block_content.featured_faculty.field_faculty_member
+field_name: field_faculty_member
+entity_type: block_content
+bundle: featured_faculty
+label: 'Faculty Member'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      faculty: faculty
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

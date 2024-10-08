@@ -1,0 +1,20 @@
+{% stories full_width_image_with_text_overlay with { title: 'Components/Full Width Image with Text Overlay' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: {
+      text: 'Optimizing Lipids Nanoparticles for Retinal Gene Editing',
+      subtext: 'OSU COLLEGE OF PHARMACY',
+    }
+  } %}
+    {% embed 'osu:full-width-image-with-text-overlay' with {
+      'text': text,
+      'subtext': subtext,
+    } %}
+    {% block image %}
+      <img src="https://placekeanu.com/1800/800" alt="Random kitten placeholder photo">
+    {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+{% endstories %}

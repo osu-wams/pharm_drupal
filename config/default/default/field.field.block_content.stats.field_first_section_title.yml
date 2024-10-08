@@ -1,0 +1,19 @@
+uuid: 6264c17e-26d6-49a6-8433-89bf179f046e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.stats
+    - field.storage.block_content.field_first_section_title
+id: block_content.stats.field_first_section_title
+field_name: field_first_section_title
+entity_type: block_content
+bundle: stats
+label: 'First Section Title'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

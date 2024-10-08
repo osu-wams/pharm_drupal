@@ -1,0 +1,32 @@
+uuid: 1d8d3607-6626-419b-a169-53312e34051f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_news
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - osu
+third_party_settings:
+  block_class:
+    classes: stickit
+id: osu_exposedformlatest_newsnews_listing
+theme: osu
+region: sidebar_first
+weight: -8
+provider: null
+plugin: 'views_exposed_filter_block:latest_news-news_listing'
+settings:
+  id: 'views_exposed_filter_block:latest_news-news_listing'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: BeaverxNews
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/beaverxnews\r\n/beaverxnews/*\r\n/news\r\n/news/*"

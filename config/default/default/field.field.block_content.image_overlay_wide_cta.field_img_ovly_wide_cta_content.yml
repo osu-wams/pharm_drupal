@@ -1,0 +1,26 @@
+uuid: 7e212130-d087-4a6a-87e4-59402efbc1ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_overlay_wide_cta
+    - field.storage.block_content.field_img_ovly_wide_cta_content
+    - filter.format.basic_html
+    - filter.format.full_html
+  module:
+    - text
+id: block_content.image_overlay_wide_cta.field_img_ovly_wide_cta_content
+field_name: field_img_ovly_wide_cta_content
+entity_type: block_content
+bundle: image_overlay_wide_cta
+label: Content
+description: 'The primary content of this CTA block. Sits to the right next to the image.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+    - full_html
+field_type: text_long

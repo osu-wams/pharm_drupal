@@ -1,0 +1,21 @@
+<div class="gray-box-button">
+  <div class="gray-box-button__intersecting_part">
+    <div class="gray-box-button__intersecting_part__rectangle"></div>
+    <div class="gray-box-button__intersecting_part__icon">
+      {% block icon %}{% endblock %}
+    </div>
+  </div>
+  <div class="gray-box-button__content match-heights">
+    <div class="gray-box-button__content__inner">
+      <div class="gray-box-button__content__title">
+        <h2>{{ title }}</h2>
+      </div>
+      <div class="gray-box-button__description">
+        {% block body %}{% endblock %}
+      </div>
+    </div>
+    <div>
+      {% block link_button %}{% endblock %}
+    </div>
+  </div>
+</div>

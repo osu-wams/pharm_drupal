@@ -1,0 +1,16 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Plain Image
+description: 'Just an Image without markup.'
+status: stable
+props:
+  type: object
+  properties:
+    fake:
+      type: string
+      title: 'Fake'
+      description: 'Seems like this is needed.'
+
+slots:
+  image:
+    title: Image
+    description: 'The Image.'

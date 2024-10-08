@@ -1,0 +1,11 @@
+uuid: 3ad15946-0cab-490c-9f84-92d04fc2a592
+langcode: en
+status: true
+dependencies: {  }
+id: image_box_button
+block_id: 'inline_block:image_box_button'
+category: media
+label: 'Image Box Button'
+image_path: /themes/custom/osu/images/lbb/image-box-button.png
+image_alt: ''
+weight: -100

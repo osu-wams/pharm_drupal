@@ -1,0 +1,19 @@
+uuid: 5928786f-c478-48ae-b177-1adc8041604b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.two_column_framed_content_box
+    - field.storage.block_content.field_title
+id: block_content.two_column_framed_content_box.field_title
+field_name: field_title
+entity_type: block_content
+bundle: two_column_framed_content_box
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

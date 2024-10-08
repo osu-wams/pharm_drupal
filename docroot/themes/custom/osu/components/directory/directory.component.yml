@@ -1,0 +1,79 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Directory
+description: 'Directory Component.'
+status: stable
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
+props:
+  type: object
+  properties:
+    first_name:
+      type: string
+      title: 'First Name'
+      description: 'The First Name.'
+      examples:
+        - 'John'
+    last_name:
+      type: string
+      title: 'Last Name'
+      description: 'The Last Name.'
+      examples:
+        - 'Doe'
+    position:
+      type: string
+      title: 'Position'
+      description: 'The Position.'
+      examples:
+        - 'Professor'
+    department:
+      type: string
+      title: 'Department'
+      description: 'The Department.'
+      examples:
+        - 'School or Department'
+    email:
+      type: string
+      title: 'Email'
+      description: 'The Email.'
+      examples:
+        - 'email@oregonstate.edu'
+    phone:
+      type: string
+      title: 'Phone'
+      description: 'The Phone.'
+      examples:
+        - '123-456-7890'
+    location:
+      type: string
+      title: 'Location'
+      description: 'The Location.'
+      examples:
+        - 'Robertson life Sciences Building, 4N018'
+    research_topic:
+      type: string
+      title: 'Research Topic'
+      description: 'The Research Topic.'
+      examples:
+        - 'Research Topic / Specialty'
+    show_research_highlights:
+      type: string
+      title: 'Show Research Highlights'
+      description: 'Show Research Highlights.'
+      examples:
+        - 'true'
+    link:
+      type: string
+      title: 'Link'
+      description: 'The link to the person'
+      examples:
+        - '#'
+
+slots:
+  image:
+    title: Image
+    description: 'The Image.'
+  research_highlights:
+    title: Research Highlights
+    description: 'The Research Highlights.'

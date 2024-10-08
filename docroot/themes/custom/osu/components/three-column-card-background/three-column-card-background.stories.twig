@@ -1,0 +1,66 @@
+{# some/path/in/your/code/base/my-card.stories.twig #}
+{% stories three_column_card_background with { title: 'Components/Three Column Card Background' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: {
+      title: 'Our Goals & Projects',
+    }
+  } %}
+    {% embed 'osu:three-column-card-background' with {
+      'title': title,
+    } %}
+      {% block card_1 %}
+        <h4>Lorem Ipsum Supporting Students in Need</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+        'ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+        {% include 'osu:button' with {
+          'class': 'tertiary',
+          'link_href': '#',
+          'link_text': 'Read More'|t,
+        } %}
+      {% endblock %}
+      {% block card_2 %}
+        <h4>Lorem Ipsum Supporting Students in Need</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+        'ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+        {% include 'osu:button' with {
+          'class': 'tertiary',
+          'link_href': '#',
+          'link_text': 'Read More'|t,
+        } %}
+      {% endblock %}
+      {% block card_3 %}
+        <h4>Lorem Ipsum Supporting Students in Need</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+        'ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+        {% include 'osu:button' with {
+          'class': 'tertiary',
+          'link_href': '#',
+          'link_text': 'Read More'|t,
+        } %}
+      {% endblock %}
+      {% block background_image %}
+        <div>
+          <img src="https://placekeanu.com/1436/792" alt="Random Keanu Reeves placeholder photo">
+        </div>
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+{% endstories %}

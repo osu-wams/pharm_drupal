@@ -1,0 +1,9 @@
+uuid: 0d1d0ec3-ccb6-4fd3-b836-6e4bcce2843d
+langcode: en
+status: true
+dependencies: {  }
+name: 'Research Topics'
+vid: research_topics
+description: 'Research topics that can be assigned'
+weight: 0
+new_revision: false

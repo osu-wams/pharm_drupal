@@ -1,0 +1,26 @@
+uuid: 9182961e-7ba1-4b19-994b-63c426360728
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.full_image_w_two_column_overlay
+    - field.storage.block_content.field_content_column_2
+    - filter.format.basic_html
+    - filter.format.full_html
+  module:
+    - text
+id: block_content.full_image_w_two_column_overlay.field_content_column_2
+field_name: field_content_column_2
+entity_type: block_content
+bundle: full_image_w_two_column_overlay
+label: 'Column Two'
+description: 'Content for right column - bottom on mobile'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+    - full_html
+field_type: text_long

@@ -1,0 +1,11 @@
+uuid: 17b1f6fe-24d4-4242-84ab-e914c54cf514
+langcode: en
+status: true
+dependencies: {  }
+id: faculty_directory
+block_id: 'views_block:faculty_directory-block_1'
+category: lists_views
+label: 'Faculty Directory'
+image_path: /themes/custom/osu/images/lbb/faculty-directory.png
+image_alt: ''
+weight: -100

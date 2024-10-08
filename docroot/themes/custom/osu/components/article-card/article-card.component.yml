@@ -1,0 +1,36 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Article Card
+description: 'Article Card'
+status: stable
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: 'Title'
+      description: 'The title of the article.'
+      examples:
+        - 'Faculty Advancements'
+    date:
+      type: string
+      title: 'Date'
+      description: 'The date of the article.'
+      examples:
+        - 'May 7, 2021'
+    link:
+      type: string
+      title: 'Link'
+      description: 'The link to the article.'
+      examples:
+        - '#'
+
+slots:
+  image:
+    title: 'Article Image'
+    description: 'A map image showing where the campus is located.'
+  body:
+    title: 'Article Body'
+    description: 'The body of the article.'
+  tags:
+    title: 'Article Tags'
+    description: 'The tags of the article.'

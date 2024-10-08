@@ -1,0 +1,29 @@
+uuid: 29aaa3e8-d12b-43bd-b1f8-08a21a13d2cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.four_column_card_with_background
+    - field.storage.block_content.field_background_image
+    - media.type.image
+id: block_content.four_column_card_with_background.field_background_image
+field_name: field_background_image
+entity_type: block_content
+bundle: four_column_card_with_background
+label: 'Background Image'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

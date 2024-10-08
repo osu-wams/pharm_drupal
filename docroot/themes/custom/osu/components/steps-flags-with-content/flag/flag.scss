@@ -1,0 +1,10 @@
+@import '../../../src/utils/variables';
+
+.flag {
+  // Clip a polygon path in the shape of a right oriented chevron.
+  clip-path: polygon(80% 0%, 100% 50%, 80% 100%, 0% 100%, 20% 50%, 0% 0%);
+  width: fit-content;
+  max-width: 200px;
+  height: 40px;
+  padding: $gutter-width ($gutter-width * 2) $gutter-width ($gutter-width * 3 - 5);
+}

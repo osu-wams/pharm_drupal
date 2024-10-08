@@ -1,0 +1,29 @@
+uuid: e71bbdbb-3e4d-4cff-8ffb-362742efce66
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.two_column_framed_content_box
+    - field.storage.block_content.field_image
+    - media.type.image
+id: block_content.two_column_framed_content_box.field_image
+field_name: field_image
+entity_type: block_content
+bundle: two_column_framed_content_box
+label: Image
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: c36108b5-0ec8-49b0-b386-25fea5fc2f14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hide_sidebar_menu
+    - node.type.program
+id: node.program.field_hide_sidebar_menu
+field_name: field_hide_sidebar_menu
+entity_type: node
+bundle: program
+label: 'Hide Sidebar Menu'
+description: 'By default any internal page will have a sidebar menu, checking this will hide the menu for this page.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

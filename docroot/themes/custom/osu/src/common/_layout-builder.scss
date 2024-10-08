@@ -1,0 +1,354 @@
+@import '../utils/variables';
+
+.gin-secondary-toolbar {
+  z-index: 105 !important;
+}
+
+.glb_sidebar {
+  padding-top: 40px !important;
+}
+
+// stylelint-disable
+.layout-builder-configure-section,
+.layout-builder-add-section {
+  .fieldset--group {
+    border: 1px solid $color-crater;
+    padding: 0 $gutter-width;
+  }
+}
+
+// Fix for Gin LB + Bootstrap styles.
+.glb-form-item__label {
+  &.glb-option {
+    display: flex !important;
+  }
+}
+
+// LB Modal + Offcanvas styles.
+#drupal-off-canvas-wrapper {
+  .ui-dialog-titlebar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: $color-stratosphere !important;
+
+    .ui-dialog-title {
+      padding: 0;
+      color: $color-white !important;
+      font-weight: bold !important;
+    }
+
+    .ui-dialog-titlebar-close {
+      position: relative;
+      height: 35px;
+      width: 35px;
+      background-color: transparent;
+      margin: 0;
+      background: url("data:image/svg+xml,%3csvg width='12' height='12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11 1.318l-10 10M11 11.318l-10-10' stroke='%23FFFFFF' stroke-width='1.5'/%3e%3c/svg%3e") no-repeat 50%;
+
+      .ui-icon-closethick {
+        mask-image: none;
+        background: transparent;
+        background-color: transparent !important;
+      }
+    }
+  }
+}
+
+#drupal-off-canvas,
+#layout-builder-modal {
+  *:focus {
+    box-shadow: none;
+  }
+
+  details {
+    &[open] {
+      > summary {
+        &::after {
+          border: none !important;
+        }
+      }
+    }
+  }
+
+  #bs_nav-tabs {
+    margin-bottom: -1px;
+  }
+
+  .bs_input-boxes {
+    .fieldset-wrapper {
+      > div {
+        > div {
+          input {
+            + label {
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+
+    .js-form-type-radio {
+      margin: 0 !important;
+    }
+  }
+
+  .blb_breakpoint_cols {
+    .blb_breakpoint_col {
+      border: 1px solid $color-crater
+    }
+
+    input {
+      &:checked {
+        .blb_breakpoint_col {
+          border: none;
+        }
+      }
+    }
+  }
+
+  .js-layout-builder-category {
+    .glb-claro-details__wrapper {
+      display: flex;
+    }
+
+    .osu-layout-builder-ux-category-link {
+      background: $color-stratosphere;
+    }
+  }
+
+  // Need to override all the "radio" boxes to have auto width.
+  .fieldset__wrapper {
+    padding: calc($gutter-width - 5px) 0;
+
+    > div {
+      &[class*='glb-form-radios'] {
+        > div {
+          input {
+            &:not(.bs_input-circles) {
+              + label {
+                width: auto;
+                text-indent: 0;
+                font-size: $body-font-size-small;
+              }
+            }
+
+            &:checked {
+              + label {
+                padding: 10px;
+                border: 1px solid $color-black;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .glb-fieldset__legend {
+      margin: 0;
+    }
+  }
+
+  .spacing-preview {
+    .padding-box {
+      height: 102px;
+    }
+  }
+
+  .bs_tooltip {
+    color: $color-white !important;
+  }
+
+  .bs-shadow-preview {
+    width: auto;
+  }
+
+  input {
+    &.form-range {
+      border: none !important;
+      box-shadow: none !important;
+    }
+  }
+
+  .glb-form-wrapper {
+    summary {
+      margin: 0;
+      border-radius: 0;
+    }
+  }
+}
+
+// Layout builder UI styles.
+.glb-layout-builder-browser {
+  .layout-builder-browser-block-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex: 1 1 auto;
+
+    img {
+      width: 100%;
+      max-width: fit-content;
+      max-height: 250px;
+    }
+
+    .osu-layout-builder-ux-category-link {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: fit-content;
+      padding: calc($gutter-width / 2);
+      color: $color-white !important;
+
+      &::before {
+        // create a left chevron like a flag.
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -20px;
+        width: 0;
+        height: 0;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-left: 20px solid $color-stratosphere;
+      }
+    }
+  }
+}
+
+// For layouts with bg-colors we want to "shrink" the BG color so the content looks like it
+// breaks out of the constraints of the color.
+.boxed-in {
+  margin: $boxed-in-margin !important;
+
+  @media screen and (min-width: $md) {
+    margin: 0 $md-boxed-in-margin !important;
+  }
+
+  @media screen and (min-width: $lg) {
+    margin: 0 $lg-boxed-in-margin !important;
+  }
+
+  &-without-right {
+
+    @media screen and (min-width: $lg) {
+      margin: 0 0 0 $lg-boxed-in-margin !important;
+    }
+
+    // Now breakout the interior layout from the bg-color.
+    > * {
+      // Layout is technically wrapped with a "wrapper" bootstrap class like w-100 or container.
+      > .unboxed {
+        margin: 0 !important;
+
+        @media screen and (min-width: $md) {
+          margin: 0 (-($md-boxed-in-margin)) !important;
+        }
+
+        @media screen and (min-width: $lg) {
+          margin: 0 (-($lg-boxed-in-margin)) !important;
+        }
+
+        &-without-right {
+
+          @media screen and (min-width: $lg) {
+            margin: 0 0 0 (-($lg-boxed-in-margin));
+          }
+        }
+      }
+    }
+  }
+
+  // Now breakout the interior layout from the bg-color.
+  > * {
+    // Layout is technically wrapped with a "wrapper" bootstrap class like w-100 or container.
+    > .unboxed {
+      margin: 0 !important;
+
+      @media screen and (min-width: $md) {
+        margin: 0 (-($md-boxed-in-margin)) !important;
+      }
+
+      @media screen and (min-width: $lg) {
+        margin: 0 (-($lg-boxed-in-margin)) !important;
+      }
+
+      &-without-right {
+        @media screen and (min-width: $md) {
+          margin: 0 0 0 (-($md-boxed-in-margin)) !important;
+        }
+
+        @media screen and (min-width: $lg) {
+          margin: 0 0 0 (-($lg-boxed-in-margin)) !important;
+        }
+      }
+    }
+  }
+}
+// stylelint-enable
+
+.block-layout-builder {
+  .text-formatted {
+    img,
+    picture {
+      max-width: 100%;
+      height: auto;
+    }
+
+    iframe,
+    video {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      aspect-ratio: 16 / 9;
+
+      // Fallback set width, multiply by aspect ratio to get height
+      @supports not (aspect-ratio: 16 / 9) {
+        width: calc(100%);
+        height: calc(calc(100%) * 9 / calc(100%)) + 1px;
+        max-height: calc(calc(100%) * 9 / calc(100%)) + 1px;
+      }
+    }
+  }
+}
+
+.container-wrapper:has(> .inner-row) {
+  margin: 0 auto;
+  max-width: $inner-row-width;
+
+  @media (min-width: calc($inner-row-width + $gutter-width)) {
+    padding: 0;
+  }
+}
+
+.container-wrapper:has(> .row) {
+  margin: 0 auto;
+  max-width: $row-width;
+
+  @media (min-width: calc($row-width + $gutter-width)) {
+    padding: 0;
+  }
+}
+
+.container-wrapper:has(> .boxed-inner-row) {
+  margin: 0 auto;
+  max-width: $boxed-row-width;
+
+  @media (min-width: calc($boxed-row-width + $gutter-width)) {
+    padding: 0;
+  }
+}
+
+.breakout {
+  padding-bottom: 0 !important;
+
+  @media screen and (min-width: $md) {
+    padding-bottom: 1rem !important;
+  }
+}

@@ -1,0 +1,37 @@
+{# some/path/in/your/code/base/my-card.stories.twig #}
+{% stories next_steps_section with { title: 'Components/Next Steps Section' } %}
+
+  {% story default with {
+    name: '1. Default',
+    args: {
+      next_step_statement: "contact an advisor"
+    }
+  } %}
+    {% embed 'osu:next-steps-section' with {
+      'next_step_statement': next_step_statement,
+    } %}
+      {% block icon %}
+        <img src="https://placehold.co/100/white/d73f09?text=icon\nhere" alt="placeholder"/>
+      {% endblock %}
+      {% block next_step_description %}
+        If you're not finding the information you're looking for, please contact a College of
+        Pharmacy advisor. You can reach us by telephone or email, or schedule an online meeting
+      {% endblock %}
+      {% block link_button_1 %}
+        {% include 'osu:button' with {
+          'class': 'tertiary',
+          'link_href': '#',
+          'link_text': 'Schedule an Appointment',
+        } %}
+      {% endblock %}
+      {% block link_button_2 %}
+        {% include 'osu:button' with {
+          'class': 'tertiary',
+          'link_href': '#',
+          'link_text': 'Contact',
+        } %}
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+{% endstories %}
