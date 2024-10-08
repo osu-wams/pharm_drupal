@@ -29,7 +29,7 @@
         "drupal/automated_crop": "^3.0",
         "drupal/better_exposed_filters": "^6.0",
         "drupal/block_class": "^2.0",
-        "drupal/bootstrap_layout_builder": "^2.1",
+        "drupal/bootstrap_layout_builder": "^2.2",
         "drupal/bootstrap_styles": "^1.1",
         "drupal/bpmn_io": "^2.0",
         "drupal/calendar_view": "^2.1",
@@ -204,8 +204,7 @@
         },
         "patches": {
             "drupal/bootstrap_layout_builder": {
-                "#3325151": "https://git.drupalcode.org/project/bootstrap_layout_builder/-/merge_requests/22.diff",
-                "#3375928": "https://git.drupalcode.org/project/bootstrap_layout_builder/-/merge_requests/26.diff"
+                "#3375928": "https://www.drupal.org/files/issues/2023-07-20/3375928-depecated_notice_when_configuring_columns-3.patch"
             },
             "drupal/ckeditor5_font": {
                 "https://www.drupal.org/project/ckeditor5_font/issues/3368736 ('no config schema' Error)": "https://www.drupal.org/files/issues/2024-07-18/ckeditor5_font-schema-fix-10_3_x-3368736-53.patch"
@@ -220,7 +219,7 @@
                 "https://www.drupal.org/project/sdc_display/issues/3377609 (token replacement)": "https://git.drupalcode.org/project/sdc_display/-/merge_requests/1.patch"
             },
             "drupal/menu_block": {
-                "https://www.drupal.org/project/menu_block/issues/758184": "https://www.drupal.org/files/issues/2024-05-24/menu_block-active_level_fallback_when_no_children-758184-45.patch"
+                "https://www.drupal.org/project/menu_block/issues/758184": "https://www.drupal.org/files/issues/2024-08-28/menu_block-active_level_fallback_when_no_children-758184-46.patch"
             },
             "drupal/simple_menu_icons": {
                 "#3459278": "https://git.drupalcode.org/project/simple_menu_icons/-/merge_requests/10.diff"
