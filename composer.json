@@ -204,10 +204,12 @@
                 "https://www.drupal.org/project/ckeditor5_font/issues/3368736 ('no config schema' Error)": "https://www.drupal.org/files/issues/2024-07-18/ckeditor5_font-schema-fix-10_3_x-3368736-53.patch"
             },
             "drupal/core": {
-                "https://www.drupal.org/project/drupal/issues/3346430 (Wrong revision loaded in Entity::doPreSave)": "https://git.drupalcode.org/project/drupal/-/merge_requests/3599.diff"
+                "https://www.drupal.org/project/drupal/issues/3346430 (Wrong revision loaded in Entity::doPreSave)": "patches/3346430-3599.diff",
+                "An error occurs in Views when attempting to add an exposed filter by ID with the 'Allow multiple selections' option enabled." : "patches/3023924-7505.diff"
             },
             "drupal/instagram_feeds": {
-                "https://www.drupal.org/project/instagram_feeds/issues/3319317": "https://git.drupalcode.org/project/instagram_feeds/-/merge_requests/4.patch"
+                "https://www.drupal.org/project/instagram_feeds/issues/3319317": "https://git.drupalcode.org/project/instagram_feeds/-/merge_requests/4.patch",
+                "Basic Display API will no longer be available, starting December 4th, 2024" : "patches/3480467-5.diff"
             },
             "drupal/sdc_display": {
                 "https://www.drupal.org/project/sdc_display/issues/3377609 (token replacement)": "https://git.drupalcode.org/project/sdc_display/-/merge_requests/1.patch"

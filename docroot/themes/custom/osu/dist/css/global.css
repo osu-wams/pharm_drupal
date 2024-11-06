@@ -4815,6 +4815,10 @@ form .form-item--error-message {
   aspect-ratio: 1/1;
 }
 
+.text-formatted.field--name-body img {
+  width: unset;
+}
+
 .gin-secondary-toolbar {
   z-index: 105 !important;
 }

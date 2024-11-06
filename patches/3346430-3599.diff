@@ -1,0 +1,16 @@
+diff --git a/core/lib/Drupal/Core/Entity/EntityStorageBase.php b/core/lib/Drupal/Core/Entity/EntityStorageBase.php
+index 85d7ef4359a0d6b1682514cffef0067c3ec03015..7f18cbd9ee18737009d628d2d56f67f84e2ee73b 100644
+--- a/core/lib/Drupal/Core/Entity/EntityStorageBase.php
++++ b/core/lib/Drupal/Core/Entity/EntityStorageBase.php
+@@ -519,6 +519,11 @@ protected function doPreSave(EntityInterface $entity) {
+       throw new EntityStorageException("'{$this->entityTypeId}' entity with ID '$id' already exists.");
+     }
+ 
++    // Use the loaded revision instead of default if this is not the default revision.
++    if ($id_exists && !isset($entity->original) && $entity instanceof RevisionableInterface && !$entity->isDefaultRevision()) {
++      $entity->original = $this->loadRevision($entity->getLoadedRevisionId());
++    }
++
+     // Load the original entity, if any.
+     if ($id_exists && !isset($entity->original)) {
+       $entity->original = $this->loadUnchanged($id);

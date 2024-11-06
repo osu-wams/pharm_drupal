@@ -36,3 +36,9 @@
       aspect-ratio: 1/1;
     }
 }
+
+.text-formatted.field--name-body {
+  img {
+    width: unset;
+  }
+}

@@ -1,0 +1,32 @@
+diff --git a/src/Entity/InstagramAccount.php b/src/Entity/InstagramAccount.php
+index c349d3f96fedf9f4ec27be80fb5ff2a9f94075bc..12fae66bcc44def4b9b315df66f32ca9beefcf47 100644
+--- a/src/Entity/InstagramAccount.php
++++ b/src/Entity/InstagramAccount.php
+@@ -311,10 +311,12 @@ class InstagramAccount extends ContentEntityBase implements InstagramAccountInte
+    * {@inheritdoc}
+    */
+   public function getOauthUrl($client_id): Url {
+-    $url = static::INSTAGRAM_API_ENDPOINT . '/oauth/authorize?' . http_build_query([
++    $url = 'https://www.instagram.com/oauth/authorize?' . http_build_query([
++      'enable_fb_login' => 0,
++      'force_authentication' => 1,
+       'client_id' => $client_id,
+       'redirect_uri' => Url::fromRoute('entity.instagram_account.add_form')->setAbsolute()->toString(),
+-      'scope' => 'user_profile,user_media',
++      'scope' => 'instagram_business_basic',
+       'response_type' => 'code',
+     ]);
+     return Url::fromUri($url);
+diff --git a/src/Plugin/OpenIDConnectClient/InstagramFeedsClient.php b/src/Plugin/OpenIDConnectClient/InstagramFeedsClient.php
+index 4565159c240765c36542f765a957453e5817509e..55076167e0b66ab6d1498fcee484036be1cb11b9 100644
+--- a/src/Plugin/OpenIDConnectClient/InstagramFeedsClient.php
++++ b/src/Plugin/OpenIDConnectClient/InstagramFeedsClient.php
+@@ -123,7 +123,7 @@ class InstagramFeedsClient extends OpenIDConnectClientBase {
+    */
+   public function getEndpoints(): array {
+     return [
+-      'authorization' => 'https://api.instagram.com/oauth/authorize',
++      'authorization' => 'https://instagram.com/oauth/authorize',
+       'token' => 'https://api.instagram.com/oauth/access_token',
+       'userinfo' => 'https://graph.instagram.com/me',
+     ];
