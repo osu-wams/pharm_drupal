@@ -8,12 +8,12 @@
         return
       }
 
-      let articles = document.querySelectorAll('.article');
-      articles.forEach(article => {
-        article.style.height = '100%';
-        let articleHeight = article.offsetHeight - 40;
-        article.style.height = articleHeight + 'px';
-      });
+      // let articles = document.querySelectorAll('.article');
+      // articles.forEach(article => {
+      //   article.style.height = '100%';
+      //   let articleHeight = article.offsetHeight - 40;
+      //   article.style.height = articleHeight + 'px';
+      // });
 
     },
     attach: function (context) {
