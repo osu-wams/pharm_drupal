@@ -7524,6 +7524,32 @@ hr {
   padding: 0;
 }
 
+.pager {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.pager .pager__items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  gap: 20px;
+}
+.pager .pager__item a {
+  color: #535651;
+}
+.pager .pager__item.is-active a {
+  color: #006A8E;
+  font-weight: bold;
+}
+.pager .pager__item.pager__item--next a, .pager .pager__item.pager__item--last a, .pager .pager__item.pager__item--first a, .pager .pager__item.pager__item--previous a {
+  color: #006A8E;
+}
+
 .campus-list {
   margin-bottom: 2rem;
 }

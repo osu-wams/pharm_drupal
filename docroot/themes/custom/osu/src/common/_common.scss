@@ -41,3 +41,58 @@ hr {
     padding: 0;
   }
 }
+
+.pager {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  margin-bottom: $padding-base * 4px;
+
+  .pager__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: 20px;
+  }
+
+  .pager__item {
+    a {
+      color: $color-dark-body-text;
+    }
+    &.is-active {
+      a {
+        color: $color-stratosphere;
+        font-weight: bold;
+      }
+    }
+    &.pager__item--next,
+    &.pager__item--last,
+    &.pager__item--first,
+    &.pager__item--previous {
+      a {
+        color: $color-stratosphere;
+      }
+    }
+    // &[class*="pager__item--"] {
+    //   padding: $padding-base * 1px;
+    //   border: 1px solid $color-moondust-2;
+    //   background-color: $color-moondust-3;
+    //   text-decoration: none;
+    // }
+
+    // &:not(:first-child) {
+    //   margin-left: $padding-base * 3px;
+    //   font-size: $body-font-size;
+    // }
+
+    // &.is-active {
+    //   text-decoration: underline;
+    //   text-underline-offset: 2px;
+    //   text-decoration-thickness: 2px;
+    //   text-decoration-color: $color-stratosphere;
+    // }
+  }
+}

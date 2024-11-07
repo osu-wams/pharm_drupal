@@ -22,6 +22,8 @@ $databases['default']['default']['driver'] = $driver;
 
 $settings['hash_salt'] = '0a3526496ad7ccb3e6ec18139f42329c6fe9f08cb6e0418990870ae48b53c4ce';
 
+$settings['config_exclude_modules'] = ['devel_generate', 'devel', 'stage_file_proxy', 'twig_vardumper', 'upgrade_status', 'console'];
+
 // Recommended setting for Drupal 10 only
 $settings['state_cache'] = TRUE;
 
