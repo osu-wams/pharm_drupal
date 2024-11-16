@@ -4217,6 +4217,10 @@ li::marker {
 .site-footer__top .region-footer-top {
   display: inline-block;
 }
+.site-footer__top .region-footer-top .block-system-branding-block div.site-name {
+  display: none;
+  visibility: hidden;
+}
 .site-footer__top .return-to-osu {
   margin: 0;
 }

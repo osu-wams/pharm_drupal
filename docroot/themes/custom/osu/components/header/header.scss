@@ -252,28 +252,28 @@
         }
 
         &:nth-child(2) {
-          background-color: $color-beaver-orange-lighter;
+          background-color: $color-moondust;
 
           &::before {
-            border-top: 30px solid $color-beaver-orange-lighter;
-            border-bottom: 30px solid $color-beaver-orange-lighter;
+            border-top: 30px solid $color-moondust;
+            border-bottom: 30px solid $color-moondust;
           }
 
           &::after {
-            border-left: 30px solid $color-beaver-orange-lighter;
+            border-left: 30px solid $color-moondust;
           }
         }
 
         &:nth-child(3) {
-          background-color: $color-beaver-orange-light;
+          background-color: $color-moondust;
 
           &::before {
-            border-top: 30px solid $color-beaver-orange-light;
-            border-bottom: 30px solid $color-beaver-orange-light;
+            border-top: 30px solid $color-moondust;
+            border-bottom: 30px solid $color-moondust;
           }
 
           &::after {
-            border-left: 30px solid $color-beaver-orange-light;
+            border-left: 30px solid $color-moondust;
           }
         }
 

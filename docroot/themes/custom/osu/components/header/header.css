@@ -233,24 +233,24 @@
   }
 }
 .component.header .header_links a:nth-child(2) {
-  background-color: #FF7949;
+  background-color: #C6DAE7;
 }
 .component.header .header_links a:nth-child(2)::before {
-  border-top: 30px solid #FF7949;
-  border-bottom: 30px solid #FF7949;
+  border-top: 30px solid #C6DAE7;
+  border-bottom: 30px solid #C6DAE7;
 }
 .component.header .header_links a:nth-child(2)::after {
-  border-left: 30px solid #FF7949;
+  border-left: 30px solid #C6DAE7;
 }
 .component.header .header_links a:nth-child(3) {
-  background-color: #F05D29;
+  background-color: #C6DAE7;
 }
 .component.header .header_links a:nth-child(3)::before {
-  border-top: 30px solid #F05D29;
-  border-bottom: 30px solid #F05D29;
+  border-top: 30px solid #C6DAE7;
+  border-bottom: 30px solid #C6DAE7;
 }
 .component.header .header_links a:nth-child(3)::after {
-  border-left: 30px solid #F05D29;
+  border-left: 30px solid #C6DAE7;
 }
 .component.header .header_links a:last-child {
   background-color: #D73F09;
