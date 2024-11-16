@@ -39,7 +39,7 @@ form .form-actions input.secondary, form .form-actions a.secondary:not(.link), .
   color: #FFF;
 }
 form .form-actions input.secondary:hover, form .form-actions a.secondary:hover:not(.link), .secondary.button:hover {
-  background-color: #BC390A;
+  background-color: #212529;
 }
 form .form-actions input.tertiary, form .form-actions a.tertiary:not(.link), .tertiary.button {
   background-color: transparent;
