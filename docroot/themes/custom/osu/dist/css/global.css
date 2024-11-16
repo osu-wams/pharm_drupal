@@ -4626,6 +4626,9 @@ form .form-item--error-message {
 .site-header .region-header .block-system-branding-block {
   align-self: center;
   padding-left: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 .site-header .region-header .block-system-branding-block img {
   width: 152px;
@@ -4644,6 +4647,28 @@ form .form-item--error-message {
 @media screen and (min-width: 1200px) {
   .site-header .region-header .block-system-branding-block img {
     width: 260px;
+  }
+}
+.site-header .region-header .block-system-branding-block div.site-name {
+  border-left: 1px solid #fff;
+  padding-left: 30px;
+  margin-left: 30px;
+}
+.site-header .region-header .block-system-branding-block div.site-name a {
+  font-family: Stratum2;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #fff;
+}
+@media screen and (min-width: 600px) {
+  .site-header .region-header .block-system-branding-block div.site-name a {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 36px;
   }
 }
 .site-header .site-header__trigger {
