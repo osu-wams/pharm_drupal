@@ -45,7 +45,6 @@ elements: |-
           '#title': 'Email Address'
           '#placeholder': yourname@provider.com
           '#required': true
-          '#default_value': '[current-user:mail]'
         phone_number:
           '#type': tel
           '#title': 'Phone Number'
@@ -83,6 +82,10 @@ elements: |-
       help_box_text:
         '#type': webform_markup
         '#markup': '<h3>Have questions?<br>We''re here to help!</h3><hr><p>For general inquiries, please contact the main office.&nbsp;<br><br><a class="icon-link mail-link" href="mailto:pharmacy@oregonstate.edu">pharmacy@oregonstate.edu</a><br><a class="icon-link phone-link" href="tel:(541)%20737-3424">(541) 737-3424</a><br>&nbsp;</p><p>To contact specific individuals please search our Faculty &amp; Staff Directory.</p><p><a class="button tertiary" href="/faculty-staff/directory">Search the Directory</a></p>'
+  form_url:
+    '#type': hidden
+    '#title': 'Form URL'
+    '#default_value': '[current-page:url]'
 css: ''
 javascript: ''
 settings:
@@ -135,7 +138,7 @@ settings:
   submission_label: ''
   submission_exception_message: ''
   submission_locked_message: ''
-  submission_log: false
+  submission_log: true
   submission_excluded_elements: {  }
   submission_exclude_empty: false
   submission_exclude_empty_checkbox: false
@@ -190,7 +193,7 @@ settings:
   confirmation_type: inline
   confirmation_url: '<front>'
   confirmation_title: ''
-  confirmation_message: '<p>Your message has been sent.</p>'
+  confirmation_message: '<p><strong>Thank you! Your message has been sent.</strong></p>'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -286,12 +289,12 @@ handlers:
       cc_options: {  }
       from_mail: _default
       from_options: {  }
-      from_name: _default
-      reply_to: ''
+      from_name: 'OSU College of Pharmacy'
+      reply_to: no-reply@oregonstate.edu
       return_path: ''
       sender_mail: ''
       sender_name: ''
-      subject: '[webform_submission:values:subject:raw]'
+      subject: 'College of Pharmacy | Contact form submission'
       body: '[webform_submission:values:message:value]'
       excluded_elements: {  }
       ignore_access: false
@@ -308,7 +311,7 @@ handlers:
     id: email
     handler_id: email_notification
     label: 'Email notification'
-    notes: ''
+    notes: 'Sends an email to Noelle if the phd-program/connect-with-us form is filled out.'
     status: true
     conditions: {  }
     weight: 2
@@ -323,12 +326,12 @@ handlers:
       cc_options: {  }
       from_mail: _default
       from_options: {  }
-      from_name: '[webform_submission:values:name:raw]'
+      from_name: 'OSU College of Pharmacy phd-program'
       reply_to: ''
       return_path: ''
       sender_mail: ''
       sender_name: ''
-      subject: '[webform_submission:values:subject:raw]'
+      subject: 'College of Pharmacy | Contact form submission'
       body: '[webform_submission:values:message:value]'
       excluded_elements: {  }
       ignore_access: false

@@ -1,7 +1,7 @@
 _core:
   default_config_hash: ByOVf1cU9r5NkZ4ieBJ7k9sUid6jb03ojMN1gjJ0-OU
-site_key: 6LeLuvIpAAAAAGnzYLuDia0aYGHSJ_M4cZlmZvAn
-secret_key: 6LeLuvIpAAAAAA0-KJkueefLnK_KdePaZ2v6Bops
+site_key: 6LeJiLwSAAAAAGetfcheXX-2ds_ahdZQEmqLA5RI
+secret_key: 6LeJiLwSAAAAAIkzJK4mqJ7FOG-LnKW6M7rmlWvy
 verify_hostname: false
 use_globally: false
 widget:

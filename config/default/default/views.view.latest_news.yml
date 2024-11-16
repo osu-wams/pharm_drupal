@@ -7,12 +7,10 @@ dependencies:
     - core.entity_view_mode.node.detailed_teaser
     - node.type.article
     - node.type.event
-    - taxonomy.vocabulary.news_category
   module:
     - better_exposed_filters
     - node
     - smart_date
-    - taxonomy
     - user
 id: latest_news
 label: 'Latest News'
@@ -387,6 +385,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 6
           total_pages: null
           id: 0
@@ -404,7 +403,6 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-          pagination_heading_level: h4
       exposed_form:
         type: bef
         options:
@@ -506,55 +504,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-        field_article_category_target_id:
-          id: field_article_category_target_id
-          table: node__field_article_category
-          field: field_article_category_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: taxonomy_index_tid
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_article_category_target_id_op
-            label: Topics
-            description: ''
-            use_operator: false
-            operator: field_article_category_target_id_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: category_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              content_administrator: '0'
-              administrator: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          vid: news_category
-          type: select
-          hierarchy: true
-          limit: true
-          error_message: true
       filter_groups:
         operator: OR
         groups:
@@ -588,7 +537,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions

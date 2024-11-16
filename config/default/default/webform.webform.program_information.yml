@@ -158,7 +158,7 @@ settings:
   form_novalidate: false
   form_disable_inline_errors: false
   form_required: false
-  form_autofocus: true
+  form_autofocus: false
   form_details_toggle: false
   form_reset: false
   form_access_denied: default
@@ -177,7 +177,7 @@ settings:
   submission_label: ''
   submission_exception_message: ''
   submission_locked_message: ''
-  submission_log: false
+  submission_log: true
   submission_excluded_elements: {  }
   submission_exclude_empty: false
   submission_exclude_empty_checkbox: false
@@ -232,7 +232,7 @@ settings:
   confirmation_type: inline
   confirmation_url: '<front>'
   confirmation_title: ''
-  confirmation_message: '<p>Your message has been sent.</p>'
+  confirmation_message: '<p><strong>Thank you! Your message has been sent.</strong></p>'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -328,12 +328,12 @@ handlers:
       cc_options: {  }
       from_mail: _default
       from_options: {  }
-      from_name: _default
-      reply_to: ''
+      from_name: 'OSU College of Pharmacy'
+      reply_to: no-reply@oregonstate.edu
       return_path: ''
       sender_mail: ''
       sender_name: ''
-      subject: '[webform_submission:values:subject:raw]'
+      subject: 'College of Pharmacy | Request Program Info form submission'
       body: '[webform_submission:values:message:value]'
       excluded_elements: {  }
       ignore_access: false
@@ -365,12 +365,12 @@ handlers:
       cc_options: {  }
       from_mail: _default
       from_options: {  }
-      from_name: '[webform_submission:values:name:raw]'
+      from_name: 'OSU College of Pharmacy'
       reply_to: ''
       return_path: ''
       sender_mail: ''
       sender_name: ''
-      subject: '[webform_submission:values:subject:raw]'
+      subject: 'College of Pharmacy | Request Program Info form submission'
       body: '[webform_submission:values:message:value]'
       excluded_elements: {  }
       ignore_access: false
