@@ -15,16 +15,11 @@
 #}
 {% block content %}
   {% if site_logo %}
-    <a href="{{ path('<front>') }}" rel="home" class="site-logo">
+    <a href="https://oregonstate.edu/" rel="home" class="site-logo">
       <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" fetchpriority="high" />
     </a>
   {% endif %}
-  
     <div class="site-name">
       <a href="{{ path('<front>') }}" rel="home">College of<br />Pharmacy</a>
     </div>
-  
-  {% if site_slogan %}
-    <div class="site-slogan">{{ site_slogan }}</div>
-  {% endif %}
 {% endblock %}
