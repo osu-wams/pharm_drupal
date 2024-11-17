@@ -3002,6 +3002,7 @@ h6 {
 }
 
 h1 {
+  font-family: "stratum-2-web", sans-serif;
   font-size: 28px;
   line-height: 1;
 }
@@ -3012,6 +3013,7 @@ h1 {
 }
 
 h2 {
+  font-family: "stratum-2-web", sans-serif;
   font-size: 26px;
   line-height: 1;
 }
@@ -3022,6 +3024,7 @@ h2 {
 }
 
 h3 {
+  font-family: "stratum-2-web", sans-serif;
   font-size: 24px;
   line-height: 1;
   font-weight: 400;
@@ -3033,6 +3036,7 @@ h3 {
 }
 
 h4 {
+  font-family: "stratum-2-web", sans-serif;
   font-size: 22px;
   line-height: 1;
 }
@@ -3072,6 +3076,10 @@ p {
   p {
     font-size: 18px;
   }
+}
+
+em {
+  font-family: "Open-Sans";
 }
 
 small {
@@ -4659,7 +4667,7 @@ form .form-item--error-message {
   margin-left: 30px;
 }
 .site-header .region-header .block-system-branding-block div.site-name a {
-  font-family: Stratum2;
+  font-family: "stratum-2-web", sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 24px;

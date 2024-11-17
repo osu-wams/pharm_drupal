@@ -38,8 +38,6 @@
 
         @media screen and (min-width: $xl + 40px) {
           padding-bottom: ($gutter-width-px * 12);
-
-
           .header__text__heading {
             font-size: 52px;
           }
@@ -229,7 +227,7 @@
               content: "";
               position: absolute;
               top: 0;
-              left: -30px;
+              left: -29px;
               width: 0;
               height: 0;
               border-top: 30px solid $color-beaver-orange;
@@ -240,7 +238,7 @@
             &::after {
               content: "";
               position: absolute;
-              right: -30px;
+              right: -29px;
               bottom: 0;
               width: 0;
               height: 0;
@@ -313,8 +311,7 @@
       }
 
       @media screen and (min-width: $lg) {
-        font-size: 54px;
-
+        font-size: 70px;
       }
     }
 

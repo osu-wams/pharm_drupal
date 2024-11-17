@@ -21,6 +21,7 @@ h6 {
 }
 
 h1 {
+  font-family: "stratum-2-web", sans-serif;
   font-size: $h1-size-small;
   line-height: 1;
 
@@ -30,6 +31,7 @@ h1 {
 }
 
 h2 {
+  font-family: "stratum-2-web", sans-serif;
   font-size: $h2-size-small;
   line-height: 1;
 
@@ -39,6 +41,7 @@ h2 {
 }
 
 h3 {
+  font-family: "stratum-2-web", sans-serif;
   font-size: $h3-size-small;
   line-height: 1;
   font-weight: 400;
@@ -49,6 +52,7 @@ h3 {
 }
 
 h4 {
+  font-family: "stratum-2-web", sans-serif;
   font-size: $h4-size-small;
   line-height: 1;
 
@@ -84,6 +88,10 @@ p {
   @media (min-width: $header-font-breakpoint) {
     font-size: $body-font-size;
   }
+}
+
+em {
+  font-family: "Open-Sans";
 }
 
 small {

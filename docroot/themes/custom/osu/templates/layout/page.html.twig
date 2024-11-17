@@ -133,7 +133,13 @@
   <footer role="contentinfo" class="site-footer">
     <div class="site-footer__inner row">
       <div class="site-footer__top">
-        {{ page.footer_top }}
+        <div class="region region-footer-top">
+          <div id="block-osu-sitebranding" class="block block-system block-system-branding-block">
+            <a href="/" rel="home" class="site-logo">
+              <img src="/themes/custom/osu/logo.svg" alt="Home" fetchpriority="high">
+            </a>
+          </div>
+        </div>
       </div>
       <div class="site-footer__main">
         {{ page.footer }}
