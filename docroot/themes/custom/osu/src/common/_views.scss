@@ -3,7 +3,7 @@
 .latest-news-events {
   margin-bottom: 40px;
   overflow: hidden;
-  padding: 0 $gutter-width;
+  padding: 0;
   max-width: 100vw;
 
   @media screen and (min-width: $lg) {
@@ -76,6 +76,11 @@
       }
     }
   }
+
+  @media screen and (min-width: 1024px) {
+    padding: 0 $gutter-width;
+  }
+
 }
 
 .view-campus.campus-list {
