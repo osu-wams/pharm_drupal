@@ -13,7 +13,7 @@
 .calendar-icon .calendar-icon__day {
   height: 52px;
   font-size: 28px;
-  font-family: Georgia, serif;
+  font-family: "Open Sans Bold", arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;

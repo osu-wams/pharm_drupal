@@ -52,7 +52,7 @@
 .bio__grid .bio__title {
   grid-area: title;
   margin: 0;
-  font-family: Georgia, serif;
+  font-family: "Open Sans Bold", arial, sans-serif;
   font-weight: 400;
   font-size: 40px;
   align-self: end;
@@ -60,7 +60,7 @@
 .bio__grid .bio__position {
   grid-area: position;
   font-style: italic;
-  font-family: Georgia, serif;
+  font-family: "Open Sans Bold", arial, sans-serif;
   font-weight: 400;
   font-size: 20px;
   color: #535651;
@@ -77,7 +77,7 @@
   grid-area: contact-title;
   margin: 0.5rem 0;
   justify-self: start;
-  font-family: Georgia, serif;
+  font-family: "Open Sans Bold", arial, sans-serif;
   font-size: 24px;
   font-weight: 700;
   -webkit-font-smoothing: antialiased;
@@ -123,7 +123,7 @@
 .bio__grid .bio__research-topics-title {
   color: #000;
   grid-area: topics-title;
-  font-family: Georgia, serif;
+  font-family: "Open Sans Bold", arial, sans-serif;
   font-size: 24px;
   font-weight: 700;
   margin: 1.5rem 0 0.5rem;

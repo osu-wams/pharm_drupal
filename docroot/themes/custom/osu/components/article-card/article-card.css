@@ -31,7 +31,7 @@
   height: auto;
 }
 .article-card .article-card__date {
-  font-family: Georgia, serif;
+  font-family: "Open Sans Bold", arial, sans-serif;
   font-size: 18px;
 }
 @media screen and (min-width: 768px) {

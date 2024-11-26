@@ -2996,7 +2996,7 @@ h4,
 h5,
 h6 {
   color: #000;
-  font-family: Georgia, serif;
+  font-family: "Open Sans Bold", arial, sans-serif;
   font-weight: 400;
   margin: 24px 0;
 }
@@ -3079,7 +3079,7 @@ p {
 }
 
 em {
-  font-family: "Open-Sans";
+  font-family: "Open Sans";
 }
 
 small {
@@ -7275,7 +7275,7 @@ h6,
 }
 
 .header-family {
-  font-family: Georgia, serif;
+  font-family: "Open Sans Bold", arial, sans-serif;
 }
 
 .views-exposed-form.block-views-exposed-filter-blocklatest-news-news-listing {
