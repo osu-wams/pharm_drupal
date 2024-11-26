@@ -3,7 +3,7 @@
 .latest-news-events {
   margin-bottom: 40px;
   overflow: hidden;
-  padding: 0;
+  padding: 0 $gutter-width;
   max-width: 100vw;
 
   @media screen and (min-width: $lg) {
@@ -45,6 +45,7 @@
     .button {
       margin-right: 20px;
       font-size: 16px;
+      display: inline-block;
 
       &:last-child {
         margin-right: 0;
@@ -77,9 +78,9 @@
     }
   }
 
-  @media screen and (min-width: 1024px) {
-    padding: 0 $gutter-width;
-  }
+  // @media screen and (min-width: 1024px) {
+  //   padding: 0 $gutter-width;
+  // }
 
 }
 
