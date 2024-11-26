@@ -43,6 +43,7 @@
  */
 #}
 <div class="layout-container">
+  
   <header role="banner" class="site-header {% if header %}has-header-image{% endif %}">
     <div class="site-header__gradient">
       <div class="site-header__inner row">
@@ -105,6 +106,7 @@
   {{ page.highlighted }}
 
   {{ page.help }}
+
 
   <main role="main" class="main-site-content flex-container flex-wrap lg-flex-no-wrap row {% if page.sidebar_first|render|striptags|trim|length %}has-sidebar{% endif %}">
     {% set main_classes = '' %}
